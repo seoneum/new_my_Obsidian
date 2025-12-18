@@ -1,0 +1,41 @@
+# Obsidian workspace settings (user-specific)
+.obsidian/workspace.json
+.obsidian/workspace
+.obsidian/workspace-mobile.json
+
+# Obsidian cache and temporary files
+.obsidian/cache/
+.obsidian/plugins/*/data.json
+.obsidian/themes/*/
+.trash/
+
+# IndexedDB (cache data)
+.obsidian/IndexedDB/
+
+# Plugin-specific ignore patterns
+.obsidian/plugins/obsidian-git/data.json
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.*.swp
+.*.swo
+
+# Backup files
+*.bak
+*.backup
+
+# OS generated files
+__MACOSX
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Node modules (if using any Obsidian plugins locally)
+node_modules/
