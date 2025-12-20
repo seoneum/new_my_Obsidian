@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e0e8610129bc39be",
-            "type": "leaf",
-            "state": {
-              "type": "mk-space",
-              "state": {
-                "path": "🏛️CMDS/400. 🧱Reference/400. 📥️Anything_Reference"
-              },
-              "icon": "lucide-file",
-              "title": "400. 📥️Anything_Reference"
-            }
-          },
-          {
-            "id": "7cb03f4586f87174",
+            "id": "220b3c232b61bca1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🏛️CMDS/100. 📦️Inbox/110. 💻️Software/111. Git/Obsidian connection to Git.md",
+                "file": "CMDS/100. Inbox/102. 📝Daily_Note/2025-12-20.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -40,7 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Obsidian connection to Git"
+              "title": "2025-12-20"
+            }
+          },
+          {
+            "id": "f19f49894fcd9df4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CMDS/100. Inbox/110. Software/111. Git/Git과 obsidian 연결 방법.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Git과 obsidian 연결 방법"
             }
           }
         ],
@@ -76,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Philosophy",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +110,7 @@
             }
           },
           {
-            "id": "3ed1299a572610ac",
+            "id": "94c594aa7dcd44c1",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -112,7 +124,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5
+    "width": 287.5,
+    "collapsed": true
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -121,7 +134,7 @@
       {
         "id": "7164024d1a715217",
         "type": "tabs",
-        "dimension": 50.476190476190474,
+        "dimension": 38.6119257086999,
         "children": [
           {
             "id": "f11602c37004ce5a",
@@ -274,11 +287,11 @@
             "type": "leaf",
             "pinned": true,
             "state": {
-              "type": "graph-analysis",
+              "type": "empty",
               "state": {},
               "pinned": true,
-              "icon": "GA-ICON",
-              "title": "Graph Analysis"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           },
           {
@@ -292,14 +305,24 @@
               "icon": "wand-sparkles",
               "title": "Smart composer chat"
             }
+          },
+          {
+            "id": "009aa458761257f4",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "GA-ICON",
+              "title": "Graph Analysis"
+            }
           }
         ],
-        "currentTab": 11
+        "currentTab": 5
       },
       {
         "id": "fd0bf750fffcaa0b",
         "type": "tabs",
-        "dimension": 19.047619047619047,
+        "dimension": 30.889540566959923,
         "children": [
           {
             "id": "82c737fe6be308c8",
@@ -316,7 +339,7 @@
       {
         "id": "f09c08892ff399f1",
         "type": "tabs",
-        "dimension": 30.476190476190478,
+        "dimension": 30.498533724340177,
         "children": [
           {
             "id": "436dd9dd230f7509",
@@ -345,7 +368,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5
+    "width": 336.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -371,53 +395,92 @@
       "obsidian-importer:Open Importer": false,
       "copilot:Open Copilot Chat": false,
       "graph:Open graph view": false,
-      "periodic-notes:Open today": false,
       "audio-recorder:Start/stop recording": false,
       "workspaces:Manage workspace layouts": false,
-      "remotely-save:Remotely Save": false
+      "periodic-notes:Open today": false
     }
   },
-  "active": "7cb03f4586f87174",
+  "floating": {
+    "id": "f0dafc9ce3a1ffa5",
+    "type": "floating",
+    "children": [
+      {
+        "id": "b83bb4802fbe39ff",
+        "type": "window",
+        "children": [
+          {
+            "id": "75b8edab52d7e3de",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "50eef8fbe2878633",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://www.dropbox.com/oauth2/authorize?response_type=code&client_id=uwxv4ofkrmc4zzf&token_access_type=offline&code_challenge_method=S256&code_challenge=MzjN6oaQWYz_cySZi5FBnIiNEN0IZZI4kZZjnf_SRPE",
+                    "title": "API Request Authorization - Dropbox",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "API Request Authorization - Dropbox"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 448,
+        "y": 140,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "f19f49894fcd9df4",
   "lastOpenFiles": [
-    "🏛️CMDS/100. 📦️Inbox/110. 💻️Software/111. Git/Copilot cli.md",
-    "🏛️CMDS/100. 📦️Inbox/110. 💻️Software/111. Git/Obsidian connection to Git.md",
-    "🏛️CMDS/100. 📦️Inbox/110. 💻️Software/111. Git/Untitled.md",
-    "🏛️CMDS/400. 🧱Reference/400. 📥️Anything_Reference/400. 📥️Anything_Reference.md",
-    "🏛️CMDS/100. 📦️Inbox/110. 💻️Software/111. Git/CLI.md",
-    "🏛️CMDS/100. 📦️Inbox/110. 💻️Software/111. Git/111. Git.md",
-    "🏛️CMDS/100. 📦️Inbox/110. 💻️Software/111. Git",
-    "🏛️CMDS/500. 🛠️setting/502. CMDS setting/Plugins.md",
-    "🏛️CMDS/100. 📦️Inbox/100. 📥️Anything/Spaced repetition Test.md",
-    "🏛️CMDS/500. 🛠️setting/501. Template/Template_01. Daily Note.md",
-    "🏛️CMDS/500. 🛠️setting/504. Prompt/504. Prompt.md",
-    "🏛️CMDS/500. 🛠️setting/504. Prompt",
+    "CMDS/100. Inbox/102. 📝Daily_Note/2025-12-20.md",
+    "CMDS/100. Inbox/102. 📝Daily_Note/2025-12-16.md",
+    "CMDS/100. Inbox/102. 📝Daily_Note/2025-12-18.md",
+    "CMDS/500. setting/501. Template/Daily_Template.md",
+    "CMDS/500. setting/501. Template/Acquaintance People Template.md",
+    "CMDS/100. Inbox/130. Philosophy/134. Internet&Others/EBS_위대한 수업_헤겔_2_정신현상학(1) 절대적 관념론.md",
+    "CMDS/100. Inbox/130. Philosophy/134. Internet&Others/EBS_위대한 수업_헤겔_1_가장 논쟁적인 철학자.md",
+    "CMDS/100. Inbox/110. Software/111. Git/111. Git.md",
+    "CMDS/100. Inbox/110. Software/111. Git/Git과 obsidian 연결 방법.md",
+    "📌Guidline.md",
+    "CMDS/500. setting/502. CMDS setting/Plugins.md",
+    "CMDS/500. setting/502. CMDS setting/CMDS Process.md",
+    "CMDS/500. setting/502. CMDS setting/CMDS Guide.md",
+    "CMDS/500. setting/500. setting.md",
+    "CMDS/500. setting/501. Template/501. Template.md",
+    "CMDS/500. setting/501. Template/Master Template.md",
+    "CMDS/200. CMDS/280. Project/280. Project.md",
+    "CMDS/200. CMDS/280. Project",
+    "CMDS/400. Reference/490. People_Reference/494. Unknown/494. Unknown.md",
+    "CMDS/400. Reference/490. People_Reference/494. Unknown",
+    "CMDS/400. Reference/490. People_Reference/493. Philosophy/493. Philosophy.md",
+    "CMDS/400. Reference/490. People_Reference/493. Philosophy",
+    "CMDS/100. Inbox/102. 📝Daily_Note/102. 📝Daily_Note.md",
     "Vault.md",
-    "🏛️CMDS/500. 🛠️setting/504. Prompt/setting에서 smart composer의 Chat 시스템프롬프트.md",
-    "Tags/#flashcard",
-    "🏛️CMDS/100. 📦️Inbox/101. 🏦Daily_Note/2025-12-18.md",
-    "2025-12-18.md",
-    "attachments/Recording 20251218144330.m4a",
-    "attachments",
-    "🏛️CMDS/200. 🏗️CMDS/240. 🏭️Develop/240. 🏭️Develop.md",
-    "🏛️CMDS/200. 🏗️CMDS/260. 🌨️Share/260. 🌨️Share.md",
-    "🏛️CMDS/200. 🏗️CMDS/260. 🌨️Share",
-    "🏛️CMDS/200. 🏗️CMDS/240. 🏭️Develop",
-    "🏛️CMDS/100. 📦️Inbox/100. 📥️Anything/100. 📥️Anything.md",
-    "🏛️CMDS/500. 🛠️setting/501. Template/Daily.md",
-    "🏛️CMDS/100. 📦️Inbox/100. 📦️Inbox.md",
-    "CMDS/100. Inbox/101. Daily_Note/2025-12-18.md",
-    "CMDS/100. Inbox/101. Daily_Note",
-    "CMDS/100. Inbox",
-    "CMDS",
-    "🏛️CMDS/100. 📦️Inbox/101. 🏦Daily_Note/101. 🏦Daily_Note.md",
-    "🏛️CMDS/300. ❓️I don't know/300. ❓️I don't know.md",
-    "🏛️CMDS/🏛️CMDS.md",
-    "🏛️CMDS/500. 🛠️setting/500. 🛠️setting.md",
-    "🏛️CMDS/100. 📦️Inbox/110. 💻️Software/110. 💻️Software.md",
-    "CMDS/100. Inbox/100. anything/Untitled.md",
-    "🏛️CMDS/100. 📦️Inbox/100. 📥️Anything/Canvas_Test.canvas",
-    "🏛️CMDS/400. 🧱Reference/400. 📥️Anything_Reference/attachments/Pasted image 20251217193033.png",
-    "🏛️CMDS/400. 🧱Reference/400. 📥️Anything_Reference/attachments/Pasted image 20251215235003.png",
+    "CMDS/500. setting/504. Prompt/Feynman Prompt.md",
+    "CMDS/500. setting/501. Template/Web Cilpper Template.md",
+    "CMDS/500. setting/501. Template/Unknown People Template.md",
+    "CMDS/500. setting/501. Template/Philosophy People Template.md",
+    "CMDS/500. setting/501. Template/Engineering People Template.md",
+    "CMDS/400. Reference/490. People_Reference/492. Engineering",
+    "CMDS/400. Reference/490. People_Reference/491. Acquaintance",
+    "CMDS/400. Reference/490. People_Reference",
+    "CMDS/400. Reference/Untitled.canvas",
+    "Untitled",
+    "200. CMDS/201. Connect",
+    "200. CMDS",
+    "10. CMDS Process/11. Connect/Lectures/Phil",
+    "CMDS/100. Inbox/101. 📥️Anything/Canvas_Test.canvas",
+    "CMDS/400. Reference/400. Anything_Reference/attachments/Pasted image 20251217193033.png",
+    "CMDS/400. Reference/400. Anything_Reference/attachments/Pasted image 20251215235003.png",
     "CMDS/400/Untitled.canvas"
   ]
 }

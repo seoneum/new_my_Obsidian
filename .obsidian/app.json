@@ -4,5 +4,6 @@
   "attachmentFolderPath": "attachments",
   "alwaysUpdateLinks": true,
   "newFileFolderPath": "CMDS/100. Inbox/100. anything",
-  "trashOption": "local"
+  "trashOption": "local",
+  "promptDelete": false
 }
