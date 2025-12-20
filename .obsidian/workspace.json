@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "220b3c232b61bca1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CMDS/100. Inbox/102. 📝Daily_Note/2025-12-20.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2025-12-20"
-            }
-          },
-          {
             "id": "f19f49894fcd9df4",
             "type": "leaf",
             "state": {
@@ -55,8 +31,7 @@
               "title": "Git과 obsidian 연결 방법"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -124,8 +99,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287.5,
-    "collapsed": true
+    "width": 287.5
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -441,46 +415,49 @@
   },
   "active": "f19f49894fcd9df4",
   "lastOpenFiles": [
-    "CMDS/100. Inbox/102. 📝Daily_Note/2025-12-20.md",
-    "CMDS/100. Inbox/102. 📝Daily_Note/2025-12-16.md",
-    "CMDS/100. Inbox/102. 📝Daily_Note/2025-12-18.md",
-    "CMDS/500. setting/501. Template/Daily_Template.md",
-    "CMDS/500. setting/501. Template/Acquaintance People Template.md",
-    "CMDS/100. Inbox/130. Philosophy/134. Internet&Others/EBS_위대한 수업_헤겔_2_정신현상학(1) 절대적 관념론.md",
-    "CMDS/100. Inbox/130. Philosophy/134. Internet&Others/EBS_위대한 수업_헤겔_1_가장 논쟁적인 철학자.md",
-    "CMDS/100. Inbox/110. Software/111. Git/111. Git.md",
-    "CMDS/100. Inbox/110. Software/111. Git/Git과 obsidian 연결 방법.md",
     "📌Guidline.md",
-    "CMDS/500. setting/502. CMDS setting/Plugins.md",
-    "CMDS/500. setting/502. CMDS setting/CMDS Process.md",
-    "CMDS/500. setting/502. CMDS setting/CMDS Guide.md",
-    "CMDS/500. setting/500. setting.md",
-    "CMDS/500. setting/501. Template/501. Template.md",
-    "CMDS/500. setting/501. Template/Master Template.md",
-    "CMDS/200. CMDS/280. Project/280. Project.md",
-    "CMDS/200. CMDS/280. Project",
-    "CMDS/400. Reference/490. People_Reference/494. Unknown/494. Unknown.md",
-    "CMDS/400. Reference/490. People_Reference/494. Unknown",
-    "CMDS/400. Reference/490. People_Reference/493. Philosophy/493. Philosophy.md",
-    "CMDS/400. Reference/490. People_Reference/493. Philosophy",
-    "CMDS/100. Inbox/102. 📝Daily_Note/102. 📝Daily_Note.md",
-    "Vault.md",
-    "CMDS/500. setting/504. Prompt/Feynman Prompt.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Translate to Chinese.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Summarize.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Simplify.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Remove URLs.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Make shorter.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Make longer.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Generate table of contents.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Generate glossary.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Fix grammar and spelling.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Explain like I am 5.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Emojify.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts",
     "CMDS/500. setting/501. Template/Web Cilpper Template.md",
     "CMDS/500. setting/501. Template/Unknown People Template.md",
+    "CMDS/500. setting/501. Template/Template_70. Book Search.md",
+    "CMDS/500. setting/501. Template/Template_05. Meeting Minutes.md",
     "CMDS/500. setting/501. Template/Philosophy People Template.md",
+    "CMDS/500. setting/501. Template/Master Template.md",
+    "CMDS/500. setting/501. Template/Feynman Tamplate.md",
     "CMDS/500. setting/501. Template/Engineering People Template.md",
-    "CMDS/400. Reference/490. People_Reference/492. Engineering",
-    "CMDS/400. Reference/490. People_Reference/491. Acquaintance",
-    "CMDS/400. Reference/490. People_Reference",
-    "CMDS/400. Reference/Untitled.canvas",
-    "Untitled",
-    "200. CMDS/201. Connect",
-    "200. CMDS",
-    "10. CMDS Process/11. Connect/Lectures/Phil",
-    "CMDS/100. Inbox/101. 📥️Anything/Canvas_Test.canvas",
+    "CMDS/500. setting/501. Template/Daily_Template.md",
+    "CMDS/500. setting/501. Template/Acquaintance People Template.md",
+    "CMDS/500. setting/501. Template/501. Template.md",
+    "CMDS/500. setting/504. Prompt/setting에서 smart composer의 Chat 시스템프롬프트.md",
+    "CMDS/500. setting/copilot",
+    "CMDS/500. setting/504. Prompt",
+    "CMDS/500. setting/503. Properties",
+    "CMDS/500. setting/502. CMDS setting",
+    "CMDS/500. setting/501. Template",
+    "CMDS/500. setting",
+    "CMDS/400. Reference/400. Anything_Reference/attachments 1/Recording 20251218144330.m4a",
     "CMDS/400. Reference/400. Anything_Reference/attachments/Pasted image 20251217193033.png",
     "CMDS/400. Reference/400. Anything_Reference/attachments/Pasted image 20251215235003.png",
+    "CMDS/400. Reference/490. People_Reference/494. Unknown",
+    "CMDS/400. Reference/490. People_Reference/493. Philosophy",
+    "CMDS/100. Inbox/101. 📥️Anything/Canvas_Test.canvas",
+    "🏛️CMDS/400. 🧱Reference/400. 📥️Anything_Reference/attachments/Pasted image 20251217193033.png",
+    "🏛️CMDS/400. 🧱Reference/400. 📥️Anything_Reference/attachments/Pasted image 20251215235003.png",
+    "🏛️CMDS/100. 📦️Inbox/100. 📥️Anything/Canvas_Test.canvas",
+    "CMDS/400. Reference/Untitled.canvas",
     "CMDS/400/Untitled.canvas"
   ]
 }
