@@ -1,10 +1,10 @@
 <%*
 /**
- * MASTER ROUTER - CMDS Vault v3.0
+ * MASTER ROUTER - CMDS Vault v3.1
  * 
  * 노트 타입:
  * - 일상: DAILY, MEMO
- * - 학습: LECTURE, CONCEPT, PROBLEM
+ * - 학습: LECTURE, BOOK, CONCEPT, PROBLEM
  * - 정리: REFERENCE, WEB CLIP, DEVELOP
  * - 협업: PROJECT, MEETING
  * - 기타: QUESTION, PEOPLE, SHARE
@@ -114,6 +114,7 @@ const kind = await tp.system.suggester(
     "📝 MEMO: 빠른 메모",
     "━━━ 📚 학습 ━━━",
     "📚 LECTURE: 수업 노트",
+    "📕 BOOK: 독서 노트 (다회독)",
     "💡 CONCEPT: 개념 정리",
     "📐 PROBLEM: 문제 풀이",
     "━━━ 📖 정리 ━━━",
@@ -134,7 +135,7 @@ const kind = await tp.system.suggester(
   ],
   [
     null, "daily", "inbox",
-    null, "connect_lecture", "concept", "problem",
+    null, "connect_lecture", "book", "concept", "problem",
     null, "reference", "webclip", "develop",
     null, "project", "meeting",
     null, "question", "people", "share",
@@ -145,6 +146,8 @@ const kind = await tp.system.suggester(
 // ===== Redirect to specific templates =====
 if (kind === "daily") {
   tR += await tp.file.include("[[Daily_Template]]");
+} else if (kind === "book") {
+  tR += await tp.file.include("[[Book_Template]]");
 } else if (kind === "concept") {
   tR += await tp.file.include("[[Concept_Template]]");
 } else if (kind === "problem") {
