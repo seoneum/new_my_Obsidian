@@ -1,426 +1,675 @@
-# CMDS Vault Guide (배포용 Full Guideline)
+# 📌 CMDS Vault 완전 가이드
 
-이 문서는 이 볼트를 처음 받는 사람이 **바로 쓰기 시작할 수 있도록** 만든 사용설명서다.  
-핵심 목표는 “자료만 쌓는 볼트”가 아니라 **캡처 → 이해(내 지식) → 정리 → 산출/프로젝트**로 이어지는 공부 시스템을 제공하는 것.
-
----
-
-## 0) 5분 Quick Start
-
-### 0.1 필수 플러그인
-
-- **Templater** (필수)
-- (선택) Tag Wrangler, Dataview, Outliner, Omnisearch 등
-
-### 0.2 템플릿 설치
-
-1. `500. setting/501. Template/` 폴더에 템플릿 파일을 둔다.
-2. Obsidian → Settings → **Templater**에서
-    - Template folder location을 `500. setting/501. Template`로 지정한다.
-3. 새 노트 만들 때 `Master Template`을 실행한다.
-    - 권장: “Create new note from template” 단축키를 지정
-
-### 0.3 폴더 2개(없으면 생성)
-
-자동 이동(move)을 위해 아래 폴더는 존재해야 한다.
-
-- `200. CMDS/280. Project`
-- People 하위 폴더:
-    - `400. Reference/490. People_Reference/491. Acquaintance`
-    - `400. Reference/490. People_Reference/492. Engineering`
-    - `400. Reference/490. People_Reference/493. Philosophy`
-    - `400. Reference/490. People_Reference/494. Unknown`
+> 이 문서를 읽고 따라하면 **처음 쓰는 사람도 똑같이 사용**할 수 있습니다.
+> 복잡해 보여도 핵심은 간단합니다: **캡처 → 이해 → 정리 → 산출**
 
 ---
 
-## 1) 시스템 개요: “역할(Role) 기반”으로 분류한다
-
-이 볼트는 “주제(EE/철학/코딩)”가 아니라 **노트의 역할**로 정리한다.
-
-### 4가지 핵심 역할
-
-1. **Inbox (100)**: 아무거나 빠르게 넣는 곳(임시)
-2. **Connect (CMDS/201)**: 강의 필기/학습 캡처(받아쓰기)
-3. **Reference (400)**: 보관 가치가 확실한 자료 창고
-4. **My Knowledge (CMDS Merge/Develop/Share)**: 내 이해/정리/산출
-
-추가로,
-
-- **Project (CMDS/280)**: 로봇/대회/제작 프로젝트 작업장(실행의 본진)
-- **People (Reference/490)**: 인물 노트(지인/공학/철학/불명)
+## 목차
+1. [5분 퀵스타트](#1-5분-퀵스타트)
+2. [폴더 구조 (무엇을 어디에)](#2-폴더-구조-무엇을-어디에)
+3. [노트 타입별 사용법](#3-노트-타입별-사용법)
+4. [일일 루틴 가이드](#4-일일-루틴-가이드)
+5. [플래시카드 시스템](#5-플래시카드-시스템)
+6. [태그 & 속성 규칙](#6-태그--속성-규칙)
+7. [템플릿 사용법](#7-템플릿-사용법)
+8. [플러그인 가이드](#8-플러그인-가이드)
+9. [FAQ](#9-faq)
+10. [트러블슈팅](#10-트러블슈팅)
 
 ---
 
-## 2) 폴더 구조 설명(무엇을 넣고 무엇을 넣지 말아야 하는가)
+# 1. 5분 퀵스타트
 
-### 2.1 `100. Inbox/`
+## 1.1 필수 플러그인 설치
 
-**목적:** “생각/캡처를 멈추지 않게” 하는 임시 저장소  
-**여기에 넣는 것**
+Community Plugins에서 아래를 설치하세요:
 
-- 어디에 둘지 확실치 않은 메모
-- 당장 분류하기 귀찮은 아이디어/요약/링크
-- 임시 웹클립(나중에 버릴지/쓸지 모름)
+| 플러그인 | 필수 여부 | 역할 |
+|---------|----------|------|
+| **Templater** | ⭐ 필수 | 모든 템플릿 작동의 핵심 |
+| **Dataview** | ⭐ 필수 | 통계/자동 조회 기능 |
+| **Calendar** | 권장 | 달력에서 Daily 노트 클릭 생성 |
+| **Spaced Repetition** | 권장 | 플래시카드 복습 |
 
-**여기에 넣지 말 것**
+## 1.2 Templater 설정 (중요!)
 
-- 강의 필기(그건 Connect로)
-- 보관 가치가 확실한 논문/책/자료(그건 Reference로)
-- 내 지식 정리(그건 Merge/Develop로)
+1. Settings → Templater
+2. **Template folder location**: `CMDS/500. setting/501. Template`
+3. **Trigger Templater on new file creation**: OFF (수동 실행 권장)
 
-Inbox 세부 폴더는 “주제별 서랍” 역할:
+## 1.3 첫 노트 만들기
 
-- `101. 🚨Anything` : 정말 아무거나(기본)
-- `110. Software/111 Git/112 Linux` : 소프트웨어 잡메모
-- `120. Engineering` : 공학 잡메모
-- `130. Philosophy/...` : 철학 관련 메모(강의/서평/논문메모 등 임시)
-- `140. Web_Clipper` : 임시 웹클립 저장소
+1. 아무 곳에서나 새 노트 생성 (Ctrl+N)
+2. **Ctrl+T** (또는 Alt+N) → `Master Template` 선택
+3. 원하는 노트 타입 선택
+4. 끝! 자동으로 올바른 폴더로 이동됩니다
 
-> Inbox의 철학: “분류는 나중에.” 대신 **tagging/needed** 같은 표식으로 나중에 처리한다.
-
----
-
-### 2.2 `200. CMDS/201. Connect`
-
-**목적:** 학습 중 캡처(받아쓰기) 저장소  
-**여기에 넣는 것**
-
-- 강의 필기(대학 강의, 인터넷 강의 포함)
-- 세미나/유튜브 강연 받아적기
-
-**규칙**
-
-- 여기에는 “내 결론/내 주장”을 길게 쓰지 않는다.
-- 이해/정리는 **Merge에서** 한다.
-- Connect 노트는 “근거(원본 기록)”로 남긴다.
+> [!tip] 단축키 설정
+> Settings → Hotkeys에서 "Templater: Create new note from template"에 `Alt+N` 지정 권장
 
 ---
 
-### 2.3 `200. CMDS/220. Merge`
+# 2. 폴더 구조 (무엇을 어디에)
 
-**목적:** 내 지식 노트(파인만 방식)  
-**여기에 넣는 것**
+```
+CMDS/
+├── 100. Inbox/          → 빠른 캡처 (분류 나중에)
+├── 200. CMDS/           → 내 지식 시스템
+│   ├── 201. Connect/    → 강의 필기
+│   ├── 220. Merge/      → 내 지식 (파인만)
+│   │   ├── 221. Journaling/
+│   │   ├── 222. FlashCard/
+│   │   └── 223. Feynman/
+│   ├── 240. Develop/    → 이론 정리/치트시트
+│   ├── 260. Share/      → 외부 공유 산출물
+│   └── 280. Project/    → 프로젝트 본진
+├── 300. Thinking/       → 미해결 질문/아이디어
+├── 400. Reference/      → 자료 창고
+│   ├── 401~430/         → 분야별 자료
+│   └── 490. People/     → 인물 노트
+└── 500. setting/        → 템플릿/설정
+```
 
-- 내가 내 말로 설명할 수 있는 개념/원리/논증
-- 강의/논문/웹클립을 소화해서 만든 내 이해
+## 2.1 핵심 규칙: "역할"로 분류한다
 
-**규칙**
+**주제(EE/Phil/로봇)** 가 아니라 **노트의 역할**로 분류합니다.
 
-- 한 노트 = 한 개념/한 주장(가능하면)
-- 원본(Connect/Reference)을 링크로 달아 “근거”를 남긴다.
-
----
-
-### 2.4 `200. CMDS/240. Develop`
-
-**목적:** Merge를 압축한 이론 정리/치트시트  
-**여기에 넣는 것**
-
-- 정의/공식/절차/핵심 요약
-- 여러 Merge에서 반복되는 내용을 정제
-
----
-
-### 2.5 `200. CMDS/260. Share`
-
-**목적:** 외부 공유 가능한 산출물  
-**여기에 넣는 것**
-
-- 블로그 글 초안, 발표문, 보고서 형태의 정리본
-- “완결된 문서”
-
----
-
-### 2.6 `200. CMDS/280. Project` ✅ (중요)
-
-**목적:** 로봇/대회/제작 프로젝트의 본진  
-**여기에 넣는 것**
-
-- 요구사항/제약조건/성능지표
-- 일정/마일스톤/진척 로그
-- 설계 결정(Decision)과 이유
-- 테스트 계획/결과
-
-**규칙**
-
-- 프로젝트에서 필요한 개념/기술은 Merge로 만들고 프로젝트 노트에서 링크한다.
-- 자료는 Reference로 저장하고 프로젝트에서 링크한다.
-
-> Project는 PARA의 “프로젝트”와 비슷하지만, 여기서는 “실제로 만드는 프로젝트(로봇/대회)” 중심으로 운용한다.
+| 역할 | 폴더 | 언제 사용 |
+|-----|------|----------|
+| 빠른 메모 | 100. Inbox | 3초 안에 판단 안 될 때 |
+| 강의 필기 | 201. Connect | 받아쓰기, 남의 말 기록 |
+| 내 지식 | 220. Merge | 내 말로 설명할 수 있는 것 |
+| 치트시트 | 240. Develop | 공식/정의/절차 정리 |
+| 산출물 | 260. Share | 블로그/발표/보고서 |
+| 프로젝트 | 280. Project | 로봇/대회/제작 |
+| 미해결 질문 | 300. Thinking | 답 못 찾은 질문, 아이디어 |
+| 자료 보관 | 400. Reference | 논문/책/웹페이지 |
 
 ---
 
-### 2.7 `400. Reference/`
+# 3. 노트 타입별 사용법
 
-**목적:** 보관 가치가 확실한 자료 창고  
-**여기에 넣는 것**
+## 3.1 INBOX — 빠른 캡처
 
-- 논문, 책 메타/요약, 문서, 가치 있는 웹페이지(보존)
-- 분야별 분류:
-    - `400. Anything_Reference`
-    - `410. Software_Reference`
-    - `420. Engineering_Reference`
-    - `430. Philosophy_Reference`
+**언제**: 어디에 둘지 모르겠을 때, 일단 적고 싶을 때
 
-**규칙**
+```
+📥 INBOX 선택 → 분야 선택 → 제목 입력 → 끝
+```
 
-- Reference는 “자료”다. 내 지식은 Merge에서 만든다.
+- 자동으로 `tagging/needed` 태그가 붙음
+- 나중에 정리 세션에서 처리
 
----
+## 3.2 DAILY — 일일 노트
 
-### 2.8 `400. Reference/490. People_Reference/`
+**언제**: 매일 아침 (하루 시작할 때)
 
-**목적:** 인물 노트 저장소(내 정리)  
-**분류**
+```
+📅 DAILY 선택 → 하루 타입 선택 → 자동 생성
+```
 
-- `491 Acquaintance` : 지인
-- `492 Engineering` : 공학/기술 인물
-- `493 Philosophy` : 철학 인물
-- `494 Unknown` : 정보 부족
+### 하루 타입
 
----
+| 타입 | 설명 | 자동 생성 섹션 |
+|-----|------|---------------|
+| 📚 공부 Day | 학교/도서관 | Study Log |
+| 🔧 프로젝트 Day | 로봇/개발 | Project Log |
+| 📚🔧 혼합 Day | 둘 다 | Study + Project |
+| 🌴 쉬는 Day | 휴식 | Rest Day |
 
-### 2.9 `300. I don’t know`
+## 3.3 CONNECT — 강의 필기
 
-**상태:** 레거시 박스(기본 워크플로우에서 사용하지 않음)  
-**권장 사용처**
+**언제**: 수업/유튜브/세미나 들을 때
 
-- 기존 자료를 임시로 쓸어 담는 “이사 박스”
-- 초반에 정리할 시간 없을 때 백업용
+```
+📚 CONNECT 선택 → 분야 선택 → 과목/회차 입력 → 강의 URL(선택)
+```
 
-**중요:** 템플릿은 이 폴더로 자동 이동하지 않도록 설계되어 있다.  
-애매하면 `Inbox/101 Anything`로 넣는 것을 기본으로 한다.
+**규칙**: 여기에는 "남의 말"만 적습니다. 내 생각은 Merge에서!
 
----
+## 3.4 MERGE — 내 지식 (파인만 노트)
 
-## 3) 노트 생성 방법(마스터 템플릿 메뉴)
+**언제**: 배운 것을 내 말로 정리할 때
 
-새 노트를 만들 때 `Master Template`을 실행하고, 아래 중 하나를 고른다.
+```
+🧠 MERGE 선택 → 제목 입력 → 파인만 4단계로 작성
+```
 
-### 메뉴 설명(한 줄 요약)
+### 파인만 4단계
 
-- **INBOX**: 내 메모/생각/임시 기록
-- **DAILY**: 하루 운영
-- **CONNECT(lecture)**: 강의 필기(받아쓰기)
-- **WEB CLIP**: 웹페이지 저장(임시 vs 레퍼런스 분기)
-- **REFERENCE**: 논문/책/문서 저장
-- **PEOPLE**: 인물 노트(4분류)
-- **PROJECT**: 로봇/대회/제작 프로젝트
-- **MERGE**: 내 지식(파인만)
-- **DEVELOP**: 치트시트/이론 정리
-- **SHARE**: 외부 공유 산출물
+1. **Explain**: 12살에게 설명하듯 쓰기
+2. **Gaps**: 설명 중 막히는 부분 찾기
+3. **Repair**: 다시 공부해서 빈틈 채우기
+4. **Teach-back**: 3문장 → 1문장으로 압축
 
----
+## 3.5 THINKING — 미해결 질문/아이디어
 
-## 4) 웹클리퍼 “애매함”을 해결하는 규칙(핵심)
+**언제**: 답을 못 찾은 질문, 떠오른 아이디어, 고민
 
-웹은 가치 판단이 어렵기 때문에 2단계 저장을 사용한다.
+```
+💭 THINKING 선택 → 유형 선택 → 분야 선택 → 제목 입력
+```
 
-### 1단계: 임시 저장(대부분 여기에 들어가도 정상)
+### 사유 유형
 
-- 템플릿에서 “임시 클립” 선택 → `100. Inbox/140. Web_Clipper`로 저장
-- 나중에 버리거나, 살아남는 것만 Reference로 승격
+| 유형 | 언제 |
+|-----|------|
+| ❓ 미해결 질문 | 답을 모르는 질문 |
+| 💡 아이디어 | 검증 안 된 가설/아이디어 |
+| 🤔 고민/딜레마 | 선택지가 있는 결정 |
+| 🔗 연결점 | 두 개념 사이의 연결 발견 |
 
-### 2단계: 보관 가치 확실한 것만 Reference
+## 3.6 WEEKLY — 주간 복습
 
-- “보관 가치 있음” 선택 → `400. Reference/*_Reference`로 저장
+**언제**: 일요일 저녁
 
-이렇게 하면 “레퍼런스 폴더가 잡동사니로 오염되는 문제”를 막는다.
+```
+📊 WEEKLY 선택 → 자동으로 이번 주 노트 조회
+```
 
----
+- Dataview로 이번 주 노트 자동 표시
+- 주간 핵심 플래시카드 정리
+- 다음 주 목표 설정
 
-## 5) Inbox는 결국 어디에 쓰나? (왜 필요한가)
+## 3.7 PROJECT — 프로젝트
 
-Inbox는 “애매함을 위한 폴더”가 아니라 **기록 속도를 유지하기 위한 장치**다.
+**언제**: 로봇/대회/개발 프로젝트 시작할 때
 
-### Inbox가 필요한 이유
+```
+🔧 PROJECT 선택 → 분야 선택 → 목표/마감일 입력
+```
 
-- 공부 중에는 판단력이 떨어진다(분류 결정이 비싸다).
-- 그 비용을 줄여 “캡처→학습” 흐름을 끊지 않게 한다.
-
-### Inbox 사용 규칙
-
-- **모르면 Inbox** (특히 Anything)
-- 그리고 자동으로 붙는 `tagging/needed`를 통해 “나중에 정리”로 넘긴다.
-
----
-
-## 6) 태깅 규칙(처음 쓰는 사람을 위한 최소 규칙)
-
-이 볼트에서 태그는 “주제 분류”가 아니라 **작업 큐**로 쓴다.
-
-### 필수로 알아야 할 태그 1개
-
-- `tagging/needed` : 나중에 정리해야 함
-
-### 권장 태그(선택)
-
-- `to-merge` : 이 노트에서 Merge를 만들어야 함
-- `to-review` : 다시 읽을 자료
-- `flashcards` : 암기 카드로 뽑을 것
-
-> 주제(로봇/제어/윤리학/ROS 등)는 태그로 남발하지 말고, 링크([[개념]])로 연결하는 것을 추천한다.
+프로젝트 노트는 **컨트롤타워**입니다:
+- 개념이 필요하면 → Merge 만들고 링크
+- 자료가 필요하면 → Reference에 저장하고 링크
 
 ---
 
-## 7) 속성(Properties) 해석(이 볼트의 약속)
+# 4. 일일 루틴 가이드
 
-### 7.1 `authors` 규칙(매우 중요)
+## 4.1 풀 루틴 (권장)
 
-- **내 글이면** `authors: [[김선음]]`
-- **받아쓰기/원문 저장이면** `authors: []`
+```
+┌─────────────────────────────────────────────────────────────┐
+│  ☀️ 아침 (기상 ~ 출발)                                       │
+│  ├─ 1. 기상                                                  │
+│  ├─ 2. 📖 아침 독서 (40분) - 책 읽기                          │
+│  ├─ 3. 씻기 + 아침                                           │
+│  └─ 4. 📝 FC (아침) - 전날 노트 복습                          │
+├─────────────────────────────────────────────────────────────┤
+│  🏫 낮 (학교/도서관)                                         │
+│  ├─ Daily 노트에 Top 3 체크                                  │
+│  ├─ 공부/프로젝트 진행                                        │
+│  └─ 새로 배운 것 → Connect/Inbox에 기록                       │
+├─────────────────────────────────────────────────────────────┤
+│  🌙 저녁 (집 가기 1시간 전)                                   │
+│  ├─ 1. 🪞 Evening Reflection (사유 중심 저널링)               │
+│  │     ├─ 🔧 오늘의 공학                                     │
+│  │     ├─ 🏛️ 오늘의 철학                                     │
+│  │     └─ 💭 자유 사유 (공학+철학 교차점)                      │
+│  ├─ 2. 🧠 Feynman 노트 (오늘 배운 것 설명)                    │
+│  ├─ 3. 📝 FC (저녁) - 오늘 배운 것 플래시카드                  │
+│  └─ 4. 📋 내일 Top 3 미리 작성                               │
+└─────────────────────────────────────────────────────────────┘
+```
 
-이 덕분에 나중에 “내가 만든 지식만” 쉽게 모을 수 있다.
+## 4.2 사유 중심 저널링
 
-### 7.2 `type` 규칙
+이 볼트의 저널링은 **"감사일기"가 아닙니다**.
+**오늘 사유한 것**을 기록합니다.
 
-- `type`은 한 노트당 **1개 역할**만 부여한다.
-- 예: `lecture`, `reference`, `merge`, `develop`, `project`, `daily`, `basic`
+### 🔧 오늘의 공학 (Engineering)
+```markdown
+- 오늘 배운/작업한 기술:
+- 막혔던 문제:
+- 해결했거나 시도한 방법:
+- 내일 이어서 할 것:
+```
 
-### 7.3 `CMDS` 규칙
+### 🏛️ 오늘의 철학 (Philosophy)
+```markdown
+- 오늘 읽은/생각한 텍스트:
+- 핵심 논증/개념:
+- 내 해석/의문:
+- 더 생각해볼 질문:
+```
 
-- 작업 단계 표시(선택)
-- 보통:
-    - 강의/레퍼런스: `Connect`
-    - 내 지식: `Merge`
-    - 정리: `Develop`
-    - 산출: `Share`
+### 💭 자유 사유 (Free Thinking)
+```markdown
+- 오늘 머릿속을 맴돈 생각:
+- 공학과 철학이 만난 지점 (있다면):
+- 아직 답 못 찾은 질문 → [[300. Thinking]] 으로
+```
 
-### 7.4 `group` 규칙
+## 4.3 주간 루틴
 
-- 분야/도메인(EE/Phil/SE/Robotics/Japanese 등) 1개만 선택
-
----
-
-## 8) 실전 워크플로우(가장 추천되는 운영 루틴)
-
-### 루틴 A: 매일(캡처만)
-
-- 강의 들음 → Connect
-- 웹에서 저장 → Web Clip (임시 or 레퍼런스)
-- 생각 메모 → Inbox
-
-**중요:** 이 단계에서 정리하려고 멈추지 않는다.
-
-### 루틴 B: 주 2회(20~30분 정리 세션)
-
-1. 검색: `tagging/needed`
-2. 그중 3개만 처리:
-    - 버릴 것 삭제
-    - 레퍼런스로 옮길 것 → Reference로 이동
-    - 강의 성격 → Connect로 이동
-    - 이해가 필요 → Merge 1개 만들고 원본 링크
-3. 처리한 노트에서 `tagging/needed` 제거
-
-### 루틴 C: 프로젝트 진행 시(로봇/대회)
-
-- 프로젝트 본진은 `PRJ - ...` 노트
-- 매일:
-    - Log 1줄
-    - 결정(Decision) 1개만 남겨도 충분
-- 이해가 필요한 개념은 Merge로 만든 뒤 프로젝트에서 링크
-
----
-
-## 9) 프로젝트 운영법(처음 하는 사람도 적용 가능)
-
-프로젝트 노트(PRJ)는 아래 6가지만 있으면 굴러간다.
-
-1. Goal(목표 1줄)
-2. Requirements(요구사항)
-3. Constraints(제약)
-4. Plan(마일스톤)
-5. Log(날짜별 진행 기록)
-6. References/Merge links(근거/지식 링크)
-
-**팁:** 프로젝트에서 “모르는 것”이 생기면
-
-- 그 자리에서 자료를 찾고 Reference로 저장
-- 이해가 필요한 지점은 Merge로 만들고 프로젝트에 링크  
-    이렇게 하면 프로젝트 노트는 ‘컨트롤타워’가 된다.
+| 요일 | 추가 작업 |
+|-----|----------|
+| 월~토 | 일일 루틴 |
+| **일요일 저녁** | 📊 Weekly Review 작성 |
 
 ---
 
-## 10) 인물(People) 운영법
+# 5. 플래시카드 시스템
 
-### 언제 People을 만들까?
+## 5.1 스케줄
 
-- 자주 등장하거나, 반복해서 참고하게 되는 인물
-- 지인: 연락/관계/기억이 중요할 때
-- 철학/공학 인물: 핵심 개념/논증/업적을 연결할 때
-- 불명: 나중에 찾아볼 사람(단서 저장)
+| 시간 | 이름 | 복습 대상 |
+|-----|------|----------|
+| 아침 (출발 전) | FC Morning | 전날 노트 |
+| 저녁 (집 가기 전) | FC Evening | 오늘 노트 |
+| 일요일 저녁 | FC Weekly | 이번 주 전체 |
 
-### People 노트의 사용 방식
+## 5.2 플래시카드 작성법
 
-- People 노트는 “정보 저장소 + 링크 허브”
-- 관련 자료는 Reference에 두고 People에서 링크
-- 내 해석이 커지면 Merge에서 “이 인물의 관점으로 내가 이해한 것”을 별도 노트로 만든다.
+Spaced Repetition 플러그인 문법:
 
----
+```markdown
+질문:: 답변
+```
 
-## 11) 파일명 규칙(왜 Prefix를 쓰는가)
+또는 양방향:
 
-템플릿은 파일명 앞에 Prefix를 자동으로 붙인다.
+```markdown
+개념::: 정의
+```
 
-- `N -` Inbox 메모
-- `D -` Daily
-- `L -` Lecture(Connect)
-- `W -` Web clip(임시)
-- `R -` Reference
-- `PRJ -` Project
-- `M -` Merge
-- `DEV -` Develop
-- `SHARE -` Share
-- `PPL -` People
+### 분야별 태그
 
-**효과**
+```markdown
+#flashcards/philosophy
+#flashcards/engineering  
+#flashcards/math
+#flashcards/coding
+#flashcards/weekly
+```
 
-- 파일명만 봐도 역할이 보임
-- 검색/정렬 시 섞이지 않음
-- 배포 시 다른 사람도 규칙을 즉시 이해
+### 예시
 
----
+```markdown
+## 🔧 공학
+#flashcards/engineering
 
-## 12) FAQ (처음 쓰는 사람이 자주 묻는 질문)
+PID 제어기의 P항 역할:: 현재 오차에 비례하여 제어 출력을 생성
 
-### Q1. “이거 어디에 저장해야 하지?”
+## 🏛️ 철학
+#flashcards/philosophy
 
-- 3초 안에 결정 안 되면 **Inbox/Anything**
-- 그리고 `tagging/needed`로 나중에 처리
+칸트의 정언명령 첫 번째 정식화::: "네 의지의 준칙이 항상 동시에 보편적 법칙 수립의 원리로서 타당할 수 있도록 행위하라"
 
-### Q2. 웹클립이 애매해요.
+## 🔢 수학
+#flashcards/math
 
-- 템플릿에서 **임시** 선택 → Inbox Web_Clipper
-- 나중에 “살아남은 것만” Reference로 승격
+라그랑주 승수법:: $\nabla f = \lambda \nabla g$ 를 풀어 제약조건 하 극값 찾기
+```
 
-### Q3. 강의 필기에 내 생각이 섞였어요.
+## 5.3 복습 방법
 
-- 강의 노트는 그대로 두고,
-- **Merge 노트를 새로 만들어** 내 생각/설명을 거기서 한다.
-- 강의 노트 ↔ Merge 노트 서로 링크
-
-### Q4. `300. I don't know`는 쓰나요?
-
-- 기본 워크플로우에서는 쓰지 않는다.
-- 애매하면 Inbox로 간다.
+1. 왼쪽 사이드바 → 📚 아이콘 (Review)
+2. 또는 `Ctrl+P` → "Spaced Repetition: Review flashcards"
+3. 카드 보면서 난이도 선택 (Easy/Good/Hard)
 
 ---
 
-## 13) 배포용 체크리스트(이 볼트를 다른 사람이 쓸 수 있게)
+# 6. 태그 & 속성 규칙
 
-배포할 때 아래 4개가 있으면 충분하다.
+## 6.1 핵심 태그 (이것만 기억)
 
-1. 이 문서(Guide)
-2. `Master Template` 파일 1개
-3. People 템플릿(옵션)
-4. 폴더 구조 + “필수 폴더 생성 안내”(Project, People 하위폴더)
+| 태그 | 의미 |
+|-----|------|
+| `tagging/needed` | 나중에 정리 필요 |
+| `to-merge` | Merge 노트로 발전시킬 것 |
+| `flashcards/*` | 플래시카드 분야별 분류 |
+
+## 6.2 자동 생성 태그
+
+템플릿이 자동으로 붙이는 태그:
+
+- `daily`, `day/study`, `day/project` 등
+- `thinking/question`, `thinking/idea` 등
+- `lecture`, `reference`, `merge` 등
+
+## 6.3 속성(Properties) 규칙
+
+### authors 규칙 (중요!)
+
+```yaml
+# 내가 쓴 글
+authors:
+  - "[[김선음]]"
+
+# 남의 말 기록 (강의/논문)
+authors: []
+```
+
+이 규칙 덕분에 "내 지식만" 필터링 가능합니다.
+
+### type 규칙
+
+한 노트 = 한 타입
+
+```yaml
+type: daily      # 또는 lecture, reference, merge, develop, project, thinking 등
+```
+
+### group 규칙
+
+분야/도메인 1개만 선택
+
+```yaml
+group: EE        # 또는 Phil, SE, Math, Robotics, General
+```
 
 ---
 
-원하면 다음 단계로, 네 볼트 안에 실제로 넣을 “배포용 문서 파일” 3개를 **완성된 마크다운 파일 형태**로 만들어줄게:
+# 7. 템플릿 사용법
 
-- `README - Start Here.md`
-- `Guide - Folder Roles.md`
-- `Guide - Workflow & Tagging.md`
+## 7.1 템플릿 목록
 
-원하는 파일명/저장 위치(예: `500. setting/502. CMDS setting/`)만 말해줘.
+| 템플릿 | 단축 접근 | 용도 |
+|-------|----------|------|
+| Master Template | 메인 진입점 | 모든 노트 타입 선택 |
+| Daily_Template | DAILY 메뉴 | 일일 노트 |
+| Thinking_Template | THINKING 메뉴 | 미해결 질문/아이디어 |
+| Weekly_Review_Template | WEEKLY 메뉴 | 주간 복습 |
+| FC_Morning_Template | FC MORNING 메뉴 | 아침 플래시카드 |
+| FC_Evening_Template | FC EVENING 메뉴 | 저녁 플래시카드 |
+| Feynman Template | MERGE 후 수동 | 파인만 노트 |
+| People 템플릿 (4종) | PEOPLE 메뉴 | 인물 노트 |
+
+## 7.2 파일명 규칙 (Prefix)
+
+템플릿이 자동으로 붙입니다:
+
+| Prefix | 역할 |
+|--------|------|
+| `D -` | Daily |
+| `N -` | Inbox 메모 |
+| `L -` | Lecture (Connect) |
+| `W -` | Web clip (임시) |
+| `R -` | Reference |
+| `M -` | Merge |
+| `DEV -` | Develop |
+| `SHARE -` | Share |
+| `PRJ -` | Project |
+| `PPL -` | People |
+| `THK -` | Thinking |
+| `FC -` | FlashCard |
+| `FYN -` | Feynman |
+
+---
+
+# 8. 플러그인 가이드
+
+## 8.1 Kanban — 프로젝트 관리
+
+### 설치 & 기본 사용
+
+1. Community Plugins → Kanban 설치
+2. `Ctrl+P` → "Kanban: Create new board"
+3. 보드 이름 입력 → 생성
+
+### 실전 사용법
+
+**프로젝트별 Kanban 보드 만들기:**
+
+```
+┌──────────┬──────────┬──────────┬──────────┐
+│ Backlog  │ This Week│ In Progress│ Done   │
+├──────────┼──────────┼──────────┼──────────┤
+│ - 기능A  │ - 기능B  │ - 기능C  │ - 기능D  │
+│ - 기능E  │          │          │          │
+└──────────┴──────────┴──────────┴──────────┘
+```
+
+**추천 활용:**
+- 로봇 프로젝트 → `PRJ - 로봇대회` 노트에서 Kanban 링크
+- 학기별 과제 → 과목별 Kanban 보드
+
+### 카드 추가
+
+- 각 열 하단 `+ Add a card` 클릭
+- 또는 기존 노트를 드래그해서 넣기 (`[[노트명]]` 형태)
+
+### 설정 팁
+
+보드 왼쪽 위 ⚙️ → Settings:
+- `Lane width`: 300px 권장
+- `Show card checkbox`: ON (완료 체크)
+
+## 8.2 Zotero — 논문 관리
+
+### 워크플로우 개요
+
+```
+Zotero (논문 수집)
+    ↓ 
+Obsidian Reference 폴더 (노트 생성)
+    ↓
+Merge 노트 (내 이해)
+```
+
+### 설치
+
+1. [Zotero](https://www.zotero.org/) 설치
+2. Zotero Better BibTeX 플러그인 설치
+3. Obsidian: "Zotero Integration" 플러그인 설치
+
+### 설정
+
+1. Zotero → Edit → Preferences → Better BibTeX
+   - Citation key format: `[auth:lower][year]`
+2. Obsidian → Zotero Integration 설정
+   - Database: Zotero 라이브러리 경로 선택
+   - Note folder: `CMDS/400. Reference/420. Engineering_Reference` (또는 원하는 폴더)
+
+### 논문 가져오기
+
+1. Zotero에서 논문 추가 (PDF 드래그 또는 브라우저 플러그인)
+2. Obsidian에서 `Ctrl+P` → "Zotero: Insert citation"
+3. 논문 검색 → 선택 → 노트 자동 생성
+
+### 추천 템플릿 (Zotero Integration 설정)
+
+```markdown
+---
+type: reference
+title: "{{title}}"
+authors: {{authors}}
+year: {{date | format("YYYY")}}
+tags:
+  - reference
+  - paper
+---
+
+# {{title}}
+
+## Metadata
+- Authors: {{authors}}
+- Year: {{date | format("YYYY")}}
+- DOI: {{DOI}}
+
+## Abstract
+{{abstractNote}}
+
+## Notes
+- 
+
+## Key Points
+- 
+
+## Next
+- [ ] Merge로 발전시키기
+```
+
+## 8.3 Remotely-Save — 아이패드 동기화
+
+### 개요
+
+Obsidian Sync 없이 **Google Drive/Dropbox/OneDrive**로 무료 동기화
+
+### 설치
+
+1. Community Plugins → "Remotely Save" 설치
+2. 모바일 기기에도 동일하게 설치
+
+### Google Drive 설정 (권장)
+
+**PC에서:**
+
+1. Settings → Remotely Save
+2. Remote Service: `Google Drive (GDrive)`
+3. `Auth` 버튼 클릭 → Google 로그인
+4. 동기화 폴더: 기본값 사용 (`/Apps/remotely-save-obsidian/`)
+
+**아이패드에서:**
+
+1. Obsidian 설치
+2. 같은 vault 이름으로 빈 vault 생성
+3. Remotely Save 설치 → 같은 Google 계정 연결
+4. `Sync` 버튼 → 파일 동기화
+
+### 동기화 설정 권장값
+
+| 설정 | 권장값 |
+|-----|--------|
+| Sync on Save | ON |
+| Auto Sync Interval | 5분 |
+| Skip Large Files | ON (>50MB) |
+
+### 주의사항
+
+- **양쪽에서 동시 편집 금지** (충돌 발생 가능)
+- 편집 전 반드시 `Sync` 실행
+- 충돌 시 백업 폴더 확인 (`remotely-save-backup/`)
+
+### 트러블슈팅
+
+| 문제 | 해결 |
+|-----|------|
+| 동기화 안 됨 | Auth 다시 진행 |
+| 충돌 발생 | 백업 폴더에서 원본 확인 후 수동 병합 |
+| 느린 동기화 | Skip Large Files 활성화 |
+
+## 8.4 기타 유용한 플러그인
+
+| 플러그인 | 용도 | 핵심 단축키/기능 |
+|---------|------|-----------------|
+| Outliner | 글머리 기호 편집 | Ctrl+A (위계별 선택) |
+| Tag Wrangler | 태그 이름 일괄 변경 | 태그 우클릭 → Rename |
+| Omnisearch | 전체 검색 | Ctrl+Shift+O |
+| Calendar | 달력에서 Daily 노트 | 날짜 클릭 |
+
+---
+
+# 9. FAQ
+
+## Q1. "이거 어디에 저장해야 하지?"
+
+**3초 안에 결정 안 되면 → Inbox**
+
+나중에 `tagging/needed`로 정리하면 됩니다.
+
+## Q2. 웹클립이 애매해요
+
+- 임시로 저장 → Web Clip (임시) → Inbox
+- 확실히 보관할 것 → Web Clip (Reference) → Reference 폴더
+
+## Q3. 강의 필기에 내 생각이 섞였어요
+
+- 강의 노트는 그대로 둡니다
+- 내 생각은 **새 Merge 노트**에 작성
+- 서로 링크로 연결
+
+## Q4. 300. Thinking은 언제 쓰나요?
+
+Daily 저널링 중 **"아직 답 못 찾은 질문"**이 생기면:
+1. `💭 THINKING` 으로 새 노트 생성
+2. 질문/아이디어/딜레마/연결점 중 선택
+3. 나중에 답을 찾으면 Resolution 섹션 작성
+
+## Q5. 플래시카드가 너무 많아요
+
+- 아침/저녁 FC는 **당일 것만**
+- 주간 FC에서 **중요한 것만** 선별
+- 태그별로 복습 (Settings에서 태그 필터)
+
+## Q6. Dataview가 안 보여요
+
+1. Dataview 플러그인 설치 확인
+2. Settings → Dataview → Enable JavaScript Queries: ON
+3. Settings → Dataview → Enable Inline JavaScript: ON
+
+---
+
+# 10. 트러블슈팅
+
+## 템플릿이 작동 안 해요
+
+1. **Templater 설정 확인**
+   - Template folder: `CMDS/500. setting/501. Template`
+2. **문법 오류 확인**
+   - `<%` 와 `%>` 짝이 맞는지
+3. **콘솔 확인**
+   - `Ctrl+Shift+I` → Console 탭에서 에러 확인
+
+## 자동 이동이 안 돼요
+
+- 대상 폴더가 존재하는지 확인
+- 예: `CMDS/200. CMDS/220. Merge/222. FlashCard/` 폴더 있는지
+
+## 동기화 충돌 발생
+
+1. 양쪽 기기 모두 Obsidian 종료
+2. 클라우드 서비스에서 최신 버전 확인
+3. 한쪽에서만 편집 후 동기화
+4. 다른 쪽에서 Pull
+
+## Dataview 쿼리 에러
+
+- `dv.pages()` → 모든 노트
+- `dv.pages('"폴더명"')` → 특정 폴더 (따옴표 2개 필요)
+- 날짜 비교 시 `dv.date("YYYY-MM-DD")` 사용
+
+---
+
+# 부록: 빠른 참조 카드
+
+## 일일 체크리스트
+
+```
+☀️ 아침
+- [ ] 기상 + 독서 (40분)
+- [ ] FC Morning (전날 복습)
+
+🌙 저녁
+- [ ] Evening Reflection (공학/철학/자유사유)
+- [ ] Feynman 노트
+- [ ] FC Evening (오늘 복습)
+- [ ] 내일 Top 3
+
+📅 일요일
+- [ ] Weekly Review
+```
+
+## 노트 생성 흐름
+
+```
+Alt+N → Master Template → 타입 선택 → 정보 입력 → 완료!
+```
+
+## 핵심 단축키
+
+| 동작 | 단축키 |
+|-----|--------|
+| 새 노트 from 템플릿 | Alt+N |
+| 템플릿 삽입 | Ctrl+T |
+| 명령어 팔레트 | Ctrl+P |
+| 전체 검색 | Ctrl+Shift+O |
+| Daily 노트 | 캘린더에서 날짜 클릭 |
+
+---
+
+> 💡 **기억하세요**: 완벽하게 분류하려고 멈추지 마세요. 
+> 모르면 Inbox, 나중에 정리. 흐름을 유지하는 게 핵심입니다.

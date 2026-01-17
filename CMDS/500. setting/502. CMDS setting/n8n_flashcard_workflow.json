@@ -1,0 +1,261 @@
+{
+  "name": "Obsidian Flashcard Automation (Local)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 8
+            },
+            {
+              "triggerAtHour": 22
+            }
+          ]
+        }
+      },
+      "id": "schedule-trigger",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 날짜 계산\nconst now = new Date();\nconst hour = now.getHours();\n\n// 한국 시간 기준\nconst kstOffset = 9 * 60 * 60 * 1000;\nconst kstNow = new Date(now.getTime() + kstOffset);\n\nconst today = kstNow.toISOString().slice(0, 10);\nconst yesterday = new Date(kstNow.getTime() - 86400000).toISOString().slice(0, 10);\n\n// 8시면 어제 노트, 22시면 오늘 노트\nconst targetDate = hour < 12 ? yesterday : today;\nconst sessionType = hour < 12 ? 'Morning' : 'Evening';\n\nreturn [{\n  json: {\n    targetDate,\n    sessionType,\n    today,\n    yesterday,\n    hour,\n    timestamp: now.toISOString()\n  }\n}];"
+      },
+      "id": "code-date",
+      "name": "Calculate Dates",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "=find /data/obsidian/CMDS -name '*.md' -mtime -1 -type f 2>/dev/null | head -10"
+      },
+      "id": "exec-find",
+      "name": "Find Recent Files",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const output = $input.first().json.stdout || '';\nconst files = output.trim().split('\\n').filter(f => f && !f.includes('FlashCard'));\n\nif (files.length === 0) {\n  // 파일이 없으면 샘플 컨텐츠로 테스트\n  return [{\n    json: {\n      files: [],\n      content: '# 테스트\\n\\n오늘 공부한 내용이 없습니다. 노트를 작성해주세요.',\n      hasFiles: false\n    }\n  }];\n}\n\nreturn [{\n  json: {\n    files: files.slice(0, 5),\n    firstFile: files[0],\n    hasFiles: true\n  }\n}];"
+      },
+      "id": "code-filter",
+      "name": "Filter Files",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        660,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "=cat \"{{ $json.firstFile }}\" 2>/dev/null || echo 'File not found'"
+      },
+      "id": "exec-read",
+      "name": "Read File Content",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        880,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const content = $input.first().json.stdout || 'No content';\nconst filterData = $('Filter Files').first().json;\n\nreturn [{\n  json: {\n    content: content.slice(0, 8000), // Gemini 입력 제한\n    files: filterData.files,\n    hasFiles: filterData.hasFiles\n  }\n}];"
+      },
+      "id": "code-prep",
+      "name": "Prepare Content",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"contents\": [{\n    \"parts\": [{\n      \"text\": \"다음 Obsidian 노트 내용을 분석해서 Spaced Repetition 플러그인용 플래시카드를 생성해줘.\\n\\n## 규칙\\n1. 형식: 질문:: 답변 (콜론 두 개, 공백 없음)\\n2. 철학: 개념 정의, 논증 구조, 철학자 주장\\n3. 수학: 정리, 공식, 증명 핵심\\n4. 코딩: 알고리즘, 시간복잡도, 핵심 로직\\n5. 한 카드 = 한 개념\\n6. 답변은 1-2문장으로 간결하게\\n7. 최소 5개, 최대 10개\\n\\n## 노트 내용\\n{{ $json.content }}\\n\\n## 출력 형식\\n#flashcards 태그 없이 바로 Q:: A 형식으로만 출력해줘.\"\n    }]\n  }],\n  \"generationConfig\": {\n    \"temperature\": 0.7,\n    \"maxOutputTokens\": 2048\n  }\n}",
+        "options": {}
+      },
+      "id": "gemini-api",
+      "name": "Gemini Generate",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1320,
+        0
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "gemini-creds",
+          "name": "Gemini API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const geminiResponse = $input.first().json;\nconst flashcards = geminiResponse.candidates?.[0]?.content?.parts?.[0]?.text || '생성 실패';\nconst dateInfo = $('Calculate Dates').first().json;\nconst prepData = $('Prepare Content').first().json;\n\nconst fileName = `FC - ${dateInfo.today} (${dateInfo.sessionType}).md`;\nconst filePath = `/data/obsidian/CMDS/200. CMDS/220. Merge/222. FlashCard - Daily/${fileName}`;\n\nconst content = `---\ntype: flashcards\ntitle: \"${fileName}\"\ncreated: ${dateInfo.today}\nupdated: ${dateInfo.timestamp}\nauthor: \"[[김선음]]\"\ngroup: General\nstatus: \"[[🚜In Progress]]\"\ntags:\n  - flashcards\n  - daily\n  - ${dateInfo.sessionType.toLowerCase()}-review\n  - auto-generated\naliases: []\nreview_date: ${dateInfo.targetDate}\n---\n\n# ${fileName}\n\n> [!info] 자동 생성\n> - 생성 시간: ${dateInfo.timestamp}\n> - 리뷰 대상: ${dateInfo.targetDate}\n> - 소스 파일: ${prepData.files?.length || 0}개\n\n## Cards\n\n#flashcards/daily\n\n${flashcards}\n`;\n\nreturn [{\n  json: {\n    fileName,\n    filePath,\n    content\n  }\n}];"
+      },
+      "id": "code-format",
+      "name": "Format Output",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1540,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "=echo '{{ $json.content.replace(/'/g, \"'\\''\") }}' > \"{{ $json.filePath }}\""
+      },
+      "id": "exec-write",
+      "name": "Write FC File",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1760,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "command": "=cd /data/obsidian && git add . && git commit -m 'Auto-generate: {{ $json.fileName }}' && git push origin main 2>&1 || echo 'Git sync skipped'"
+      },
+      "id": "exec-git",
+      "name": "Git Sync",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1980,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Calculate Dates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculate Dates": {
+      "main": [
+        [
+          {
+            "node": "Find Recent Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find Recent Files": {
+      "main": [
+        [
+          {
+            "node": "Filter Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Files": {
+      "main": [
+        [
+          {
+            "node": "Read File Content",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read File Content": {
+      "main": [
+        [
+          {
+            "node": "Prepare Content",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Content": {
+      "main": [
+        [
+          {
+            "node": "Gemini Generate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini Generate": {
+      "main": [
+        [
+          {
+            "node": "Format Output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Output": {
+      "main": [
+        [
+          {
+            "node": "Write FC File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write FC File": {
+      "main": [
+        [
+          {
+            "node": "Git Sync",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

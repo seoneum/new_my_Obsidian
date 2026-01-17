@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e9fecca7e567cb21",
+        "id": "875676748780fd27",
         "type": "tabs",
         "children": [
           {
-            "id": "220b3c232b61bca1",
+            "id": "e7f0872693350a15",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CMDS/100. Inbox/102. 📝Daily_Note/2025-12-20.md",
+                "file": "📌Guidline.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,52 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-12-20"
+              "title": "📌Guidline"
             }
           },
           {
-            "id": "f19f49894fcd9df4",
+            "id": "7a7530ae7f598ed9",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "markdown",
+              "type": "terminal:terminal",
               "state": {
-                "file": "CMDS/100. Inbox/110. Software/111. Git/Git과 obsidian 연결 방법.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
+                "terminal:terminal": {
+                  "cwd": "/home/seoneum/new_my",
+                  "focus": false,
+                  "profile": {
+                    "args": [],
+                    "executable": "/bin/sh",
+                    "followTheme": true,
+                    "name": "",
+                    "platforms": {
+                      "linux": true
+                    },
+                    "pythonExecutable": "python3",
+                    "restoreHistory": false,
+                    "rightClickAction": "copyPaste",
+                    "successExitCodes": [
+                      "0",
+                      "SIGINT",
+                      "SIGTERM"
+                    ],
+                    "terminalOptions": {
+                      "documentOverride": null
+                    },
+                    "type": "integrated",
+                    "useWin32Conhost": true
+                  },
+                  "serial": null
                 }
               },
-              "icon": "lucide-file",
-              "title": "Git과 obsidian 연결 방법"
+              "pinned": true,
+              "icon": "terminal",
+              "title": "Terminal: OC | Quick feasibility check"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 1,
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -110,7 +127,7 @@
             }
           },
           {
-            "id": "94c594aa7dcd44c1",
+            "id": "05fdd6fd97a4dd51",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -124,8 +141,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287.5,
-    "collapsed": true
+    "width": 287.5
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -271,18 +287,6 @@
             }
           },
           {
-            "id": "6e2e3a04fd4ccc3e",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "copilot-chat-view",
-              "state": {},
-              "pinned": true,
-              "icon": "message-square",
-              "title": "Copilot"
-            }
-          },
-          {
             "id": "6812a9d94a57c602",
             "type": "leaf",
             "pinned": true,
@@ -307,7 +311,147 @@
             }
           },
           {
-            "id": "009aa458761257f4",
+            "id": "219c21a15df6a993",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "47821e815a0df249",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "bf570b4dcbe59e8b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "f09c966125dbf9ce",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "fdd7c4620b1fe0ca",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "b000d779b0b23210",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "fd83c48ad5da9cd6",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "2bd97e838d131a41",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "db82250a43aef7de",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "04f78e176c2699c3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "a7246a18b32433f0",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "2af05a40c6b82920",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "6f96861d59684185",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "10e89cd5569305ad",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "3d8ca2985b8f52b2",
             "type": "leaf",
             "state": {
               "type": "graph-analysis",
@@ -317,7 +461,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 25
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -368,8 +512,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5,
-    "collapsed": true
+    "width": 336.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -397,90 +540,61 @@
       "graph:Open graph view": false,
       "audio-recorder:Start/stop recording": false,
       "workspaces:Manage workspace layouts": false,
-      "periodic-notes:Open today": false
+      "periodic-notes:Open today": false,
+      "terminal:Open terminal": false
     }
   },
-  "floating": {
-    "id": "f0dafc9ce3a1ffa5",
-    "type": "floating",
-    "children": [
-      {
-        "id": "b83bb4802fbe39ff",
-        "type": "window",
-        "children": [
-          {
-            "id": "75b8edab52d7e3de",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "50eef8fbe2878633",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://www.dropbox.com/oauth2/authorize?response_type=code&client_id=uwxv4ofkrmc4zzf&token_access_type=offline&code_challenge_method=S256&code_challenge=MzjN6oaQWYz_cySZi5FBnIiNEN0IZZI4kZZjnf_SRPE",
-                    "title": "API Request Authorization - Dropbox",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "API Request Authorization - Dropbox"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 448,
-        "y": 140,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "f19f49894fcd9df4",
+  "active": "7a7530ae7f598ed9",
   "lastOpenFiles": [
-    "CMDS/100. Inbox/102. 📝Daily_Note/2025-12-20.md",
-    "CMDS/100. Inbox/102. 📝Daily_Note/2025-12-16.md",
-    "CMDS/100. Inbox/102. 📝Daily_Note/2025-12-18.md",
-    "CMDS/500. setting/501. Template/Daily_Template.md",
-    "CMDS/500. setting/501. Template/Acquaintance People Template.md",
-    "CMDS/100. Inbox/130. Philosophy/134. Internet&Others/EBS_위대한 수업_헤겔_2_정신현상학(1) 절대적 관념론.md",
-    "CMDS/100. Inbox/130. Philosophy/134. Internet&Others/EBS_위대한 수업_헤겔_1_가장 논쟁적인 철학자.md",
-    "CMDS/100. Inbox/110. Software/111. Git/111. Git.md",
-    "CMDS/100. Inbox/110. Software/111. Git/Git과 obsidian 연결 방법.md",
     "📌Guidline.md",
-    "CMDS/500. setting/502. CMDS setting/Plugins.md",
-    "CMDS/500. setting/502. CMDS setting/CMDS Process.md",
-    "CMDS/500. setting/502. CMDS setting/CMDS Guide.md",
-    "CMDS/500. setting/500. setting.md",
-    "CMDS/500. setting/501. Template/501. Template.md",
-    "CMDS/500. setting/501. Template/Master Template.md",
-    "CMDS/200. CMDS/280. Project/280. Project.md",
-    "CMDS/200. CMDS/280. Project",
-    "CMDS/400. Reference/490. People_Reference/494. Unknown/494. Unknown.md",
-    "CMDS/400. Reference/490. People_Reference/494. Unknown",
-    "CMDS/400. Reference/490. People_Reference/493. Philosophy/493. Philosophy.md",
-    "CMDS/400. Reference/490. People_Reference/493. Philosophy",
-    "CMDS/100. Inbox/102. 📝Daily_Note/102. 📝Daily_Note.md",
-    "Vault.md",
-    "CMDS/500. setting/504. Prompt/Feynman Prompt.md",
-    "CMDS/500. setting/501. Template/Web Cilpper Template.md",
-    "CMDS/500. setting/501. Template/Unknown People Template.md",
-    "CMDS/500. setting/501. Template/Philosophy People Template.md",
-    "CMDS/500. setting/501. Template/Engineering People Template.md",
-    "CMDS/400. Reference/490. People_Reference/492. Engineering",
-    "CMDS/400. Reference/490. People_Reference/491. Acquaintance",
-    "CMDS/400. Reference/490. People_Reference",
-    "CMDS/400. Reference/Untitled.canvas",
-    "Untitled",
-    "200. CMDS/201. Connect",
-    "200. CMDS",
-    "10. CMDS Process/11. Connect/Lectures/Phil",
-    "CMDS/100. Inbox/101. 📥️Anything/Canvas_Test.canvas",
+    "CMDS/200. CMDS/220. Merge/222. FlashCard/FC - 수학 플래시카드 (MIT 18.01 Calculus).md",
+    "CMDS/200. CMDS/220. Merge/222. FlashCard/FC - C++ 플래시카드 (Modern C++).md",
+    "20260113_Bipedal_01.md",
+    "CMDS/100. Inbox/FC - C++ 플래시카드 (Modern C++).md",
+    "CMDS/100. Inbox/FC - 수학 플래시카드 (MIT 18.01 Calculus).md",
+    "CMDS/100. Inbox/101. 🚨Anything/Spaced repetition Test.md",
+    "CMDS/200. CMDS/220. Merge/222. FlashCard/FC - 2026-01-03.md",
+    "CMDS/200. CMDS/220. Merge/222. FlashCard/FC - 2026-01-04.md",
+    "CMDS/200. CMDS/220. Merge/222. FlashCard/FC - 2026-01-05.md",
+    "CMDS/200. CMDS/220. Merge/222. FlashCard/FC - 2026-01-06.md",
+    "CMDS/200. CMDS/220. Merge/222. FlashCard/FC - 2026-01-09.md",
+    "CMDS/100. Inbox/110. Software/111. Git/111. Git.md",
+    "CMDS/100. Inbox/110. Software/112. Linux/112. Linux.md",
+    "CMDS/200. CMDS/220. Merge/221. Journaling/JRN - 2026-01-02 draft.md",
+    "CMDS/100. Inbox/102. 📝Daily_Note/D - 2025-12-22 draft.md",
+    "CMDS/200. CMDS/220. Merge/225. Feynman/FYN - 2026-01-09.md",
+    "CMDS/200. CMDS/220. Merge/225. Feynman/FYN - 2026-01-06.md",
+    "CMDS/200. CMDS/220. Merge/225. Feynman/FYN - 2026-01-05.md",
+    "CMDS/200. CMDS/220. Merge/225. Feynman/FYN - 2026-01-04.md",
+    "CMDS/200. CMDS/220. Merge/225. Feynman",
+    "CMDS/400. Reference/490. People_Reference/493. Philosophy/Georg Wilhelm Friedrich Hegel.md",
+    "CMDS/200. CMDS/220. Merge/224. Problem/Math/P - Exam Practice 1a.md",
+    "CMDS/200. CMDS/220. Merge/224. Problem/Math/P - MIT 18.01 PS1B.md",
+    "CMDS/200. CMDS/220. Merge/224. Problem/Math/P - MIT 18.01 PS1.md",
+    "CMDS/200. CMDS/280. Project/PRJ - Hexapod.md",
+    "CMDS/200. CMDS/280. Project/PRJ - Bipedal.md",
+    "CMDS/400. Reference/450. Meeting/26-1/Bipedal",
+    "CMDS/400. Reference/450. Meeting/26-1/회장단",
+    "CMDS/400. Reference/450. Meeting/26-1/Hexapod",
+    "CMDS/400. Reference/450. Meeting/26-1",
+    "CMDS/400. Reference/450. Meeting",
+    "CMDS/200. CMDS/220. Merge/224. Problem/Math",
+    "CMDS/200. CMDS/220. Merge/224. Problem/Coding",
+    "CMDS/200. CMDS/220. Merge/224. Problem",
+    "CMDS/200. CMDS/220. Merge/223. Concept/Robotics",
+    "CMDS/100. Inbox/101. 🚨Anything/Canvas_Test.canvas",
     "CMDS/400. Reference/400. Anything_Reference/attachments/Pasted image 20251217193033.png",
     "CMDS/400. Reference/400. Anything_Reference/attachments/Pasted image 20251215235003.png",
+    "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221181950.png",
+    "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180732.png",
+    "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180648.png",
+    "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180523.png",
+    "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180301.png",
+    "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221145306.png",
+    "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221144414.png",
+    "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251217193033.png",
+    "🏛️CMDS/100. 📦️Inbox/100. 📥️Anything/Canvas_Test.canvas",
+    "CMDS/400. Reference/Untitled.canvas",
     "CMDS/400/Untitled.canvas"
   ]
 }

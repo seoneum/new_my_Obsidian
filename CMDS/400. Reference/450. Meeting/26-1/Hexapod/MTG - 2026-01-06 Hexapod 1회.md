@@ -1,0 +1,31 @@
+---
+type: meeting
+title: MTG - 2026-01-06 Hexapod 1회
+created: 2026-01-06
+updated: 2026-01-06T21:35:04
+author: "[[김선음]]"
+meeting_type: Hexapod
+meeting_number: 1
+status: "[[🌱Seed]]"
+tags:
+  - meeting
+  - Hexapod
+  - project
+aliases: []
+---
+
+# MTG - 2026-01-06 Hexapod 회의 1회
+
+## Notes
+
+1. 주제 
+	1) 산업
+	2) 방범
+	3) 방산
+	4) 탐사
+	5) 
+2. 
+
+## Next
+[[PRJ - Hexapod]]
+

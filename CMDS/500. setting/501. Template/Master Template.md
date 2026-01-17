@@ -1,17 +1,14 @@
 <%*
 /**
- * MASTER ROUTER (Aligned to your vault structure)
- * Decisions applied:
- * - Lecture notes => 200. CMDS/201. Connect
- * - Project (robot/contest/build) => 200. CMDS/280. Project
- * - People => 400. Reference/490. People_Reference/{491..494}
- * - Web clips => Inbox(Web_Clipper) OR Reference (one question)
- * - 300. I don't know => not used by router (legacy box)
- *
- * Properties schema (yours):
- * tags, aliases, index[], type[], title, created, cover_url, updated,
- * my_rate, authors, CMDS[], started, status[], group[], publishDate,
- * start_read_date, finish_read_date
+ * MASTER ROUTER - CMDS Vault v3.0
+ * 
+ * 노트 타입:
+ * - 일상: DAILY, MEMO
+ * - 학습: LECTURE, CONCEPT, PROBLEM
+ * - 정리: REFERENCE, WEB CLIP, DEVELOP
+ * - 협업: PROJECT, MEETING
+ * - 기타: QUESTION, PEOPLE, SHARE
+ * - 복습: FC MORNING, FC EVENING, WEEKLY
  */
 
 const ME = '[[김선음]]';
@@ -40,8 +37,8 @@ async function pickStatus(def='[[🚜In Progress]]') {
   return (await tp.system.suggester(labels, values)) ?? def;
 }
 async function pickGroup(def="General") {
-  const labels = ["SE","EE","Phil","Math","General","Japanese","Robotics"];
-  const values = ["SE","EE","Phil","Math","General","Japanese","Robotics"];
+  const labels = ["CS","EE","Phil","Math","General","Robotics","SLAM","AI"];
+  const values = ["CS","EE","Phil","Math","General","Robotics","SLAM","AI"];
   return (await tp.system.suggester(labels, values)) ?? def;
 }
 async function renameAndMove(newTitle, folder) {
@@ -51,44 +48,51 @@ async function renameAndMove(newTitle, folder) {
   }
 }
 
-// ===== Paths (your screenshot) =====
+// ===== Paths =====
 const PATH = {
   // Inbox
-  inbox_any: "100. Inbox/101. 🚨Anything",
-  inbox_daily: "100. Inbox/102. ✅ Daily_Note",
-  inbox_software: "100. Inbox/110. Software",
-  inbox_software_git: "100. Inbox/110. Software/111. Git",
-  inbox_software_linux: "100. Inbox/110. Software/112. Linux",
-  inbox_engineering: "100. Inbox/120. Engineering",
-  inbox_philosophy: "100. Inbox/130. Philosophy",
-  inbox_phil_uni: "100. Inbox/130. Philosophy/131. University_Lecture",
-  inbox_phil_thesis: "100. Inbox/130. Philosophy/132. Philosophy_Thesis",
-  inbox_phil_book: "100. Inbox/130. Philosophy/133. Book",
-  inbox_phil_internet: "100. Inbox/130. Philosophy/134. Internet&Others",
-  inbox_phil_theory: "100. Inbox/130. Philosophy/135. Theory",
-  inbox_webclipper: "100. Inbox/140. Web_Clipper",
+  inbox_any: "CMDS/100. Inbox/101. 🚨Anything",
+  inbox_daily: "CMDS/100. Inbox/102. 📝Daily_Note",
+  inbox_excalidraw: "CMDS/100. Inbox/103. 🖌️Excalidraw",
+  inbox_software: "CMDS/100. Inbox/110. Software",
+  inbox_software_git: "CMDS/100. Inbox/110. Software/111. Git",
+  inbox_software_linux: "CMDS/100. Inbox/110. Software/112. Linux",
+  inbox_engineering: "CMDS/100. Inbox/120. Engineering",
+  inbox_philosophy: "CMDS/100. Inbox/130. Philosophy",
+  inbox_phil_book: "CMDS/100. Inbox/130. Philosophy/133. Book",
+  inbox_phil_internet: "CMDS/100. Inbox/130. Philosophy/134. Internet&Others",
+  inbox_phil_theory: "CMDS/100. Inbox/130. Philosophy/135. Theory",
+  inbox_webclipper: "CMDS/100. Inbox/140. Web_Clipper",
 
   // CMDS
-  connect: "200. CMDS/201. Connect",
-  merge: "200. CMDS/220. Merge",
-  develop: "200. CMDS/240. Develop",
-  share: "200. CMDS/260. Share",
-  project: "200. CMDS/280. Project",        // ✅ your decision
+  connect: "CMDS/200. CMDS/201. Connect",
+  merge: "CMDS/200. CMDS/220. Merge",
+  merge_journal: "CMDS/200. CMDS/220. Merge/221. Journaling",
+  merge_fc: "CMDS/200. CMDS/220. Merge/222. FlashCard",
+  merge_concept: "CMDS/200. CMDS/220. Merge/223. Concept",
+  merge_problem: "CMDS/200. CMDS/220. Merge/224. Problem",
+  develop: "CMDS/200. CMDS/240. Develop",
+  share: "CMDS/200. CMDS/260. Share",
+  project: "CMDS/200. CMDS/280. Project",
+
+  // Thinking
+  thinking: "CMDS/300. Thinking",
 
   // Reference
-  ref_any: "400. Reference/400. Anything_Reference",
-  ref_software: "400. Reference/410. Software_Reference",
-  ref_engineering: "400. Reference/420. Engineering_Reference",
-  ref_philosophy: "400. Reference/430. Philosophy_Reference",
+  ref_any: "CMDS/400. Reference/401. Anything_Reference",
+  ref_software: "CMDS/400. Reference/410. Software_Reference",
+  ref_engineering: "CMDS/400. Reference/420. Engineering_Reference",
+  ref_philosophy: "CMDS/400. Reference/430. Philosophy_Reference",
+  ref_meeting: "CMDS/400. Reference/450. Meeting/26-1",
 
-  // People (✅ your decision: split)
-  people_acq: "400. Reference/490. People_Reference/491. Acquaintance",
-  people_eng: "400. Reference/490. People_Reference/492. Engineering",
-  people_phil:"400. Reference/490. People_Reference/493. Philosophy",
-  people_unk: "400. Reference/490. People_Reference/494. Unknown",
+  // People
+  people_acq: "CMDS/400. Reference/490. People_Reference/491. Acquaintance",
+  people_eng: "CMDS/400. Reference/490. People_Reference/492. Engineering",
+  people_phil:"CMDS/400. Reference/490. People_Reference/493. Philosophy",
+  people_unk: "CMDS/400. Reference/490. People_Reference/494. Unknown",
 };
 
-// ===== Index links (edit if your vault names differ) =====
+// ===== Index links =====
 const INDEX = {
   daily: '[[🏷 Daily Notes]]',
   lecture: '[[🏷 Lecture Notes]]',
@@ -99,9 +103,68 @@ const INDEX = {
   waypoint: '[[🏷 Waypoint]]',
   review: '[[🏷 Review Notes]]',
   software: '[[🏷️Software]]',
+  thinking: '[[🏷 Thinking]]',
 };
 
-// ===== Tagging mode (your #2) =====
+// ===== Choose kind (NEW MENU) =====
+const kind = await tp.system.suggester(
+  [
+    "━━━ 📅 일상 ━━━",
+    "📅 DAILY: 하루 계획/마무리",
+    "📝 MEMO: 빠른 메모",
+    "━━━ 📚 학습 ━━━",
+    "📚 LECTURE: 수업 노트",
+    "💡 CONCEPT: 개념 정리",
+    "📐 PROBLEM: 문제 풀이",
+    "━━━ 📖 정리 ━━━",
+    "📖 REFERENCE: 논문/책/자료",
+    "🌐 WEB CLIP: 웹 저장",
+    "📊 DEVELOP: 치트시트",
+    "━━━ 🔧 협업 ━━━",
+    "🔧 PROJECT: 프로젝트",
+    "📋 MEETING: 회의록",
+    "━━━ ❓ 기타 ━━━",
+    "❓ QUESTION: 미해결 질문",
+    "👤 PEOPLE: 인물 노트",
+    "📤 SHARE: 외부 공유",
+    "━━━ 🔄 복습 ━━━",
+    "🌅 FC MORNING: 아침 복습",
+    "🌙 FC EVENING: 저녁 복습",
+    "📆 WEEKLY: 주간 복습"
+  ],
+  [
+    null, "daily", "inbox",
+    null, "connect_lecture", "concept", "problem",
+    null, "reference", "webclip", "develop",
+    null, "project", "meeting",
+    null, "question", "people", "share",
+    null, "fc_morning", "fc_evening", "weekly"
+  ]
+);
+
+// ===== Redirect to specific templates =====
+if (kind === "daily") {
+  tR += await tp.file.include("[[Daily_Template]]");
+} else if (kind === "concept") {
+  tR += await tp.file.include("[[Concept_Template]]");
+} else if (kind === "problem") {
+  tR += await tp.file.include("[[Problem_Template]]");
+} else if (kind === "meeting") {
+  tR += await tp.file.include("[[Meeting_Template]]");
+} else if (kind === "question") {
+  tR += await tp.file.include("[[Thinking_Template]]");
+} else if (kind === "weekly") {
+  tR += await tp.file.include("[[Weekly_Review_Template]]");
+} else if (kind === "fc_morning") {
+  tR += await tp.file.include("[[FC_Morning_Template]]");
+} else if (kind === "fc_evening") {
+  tR += await tp.file.include("[[FC_Evening_Template]]");
+} else if (kind === null) {
+  // 구분선 선택시 아무것도 안함
+  tR += "";
+} else {
+
+// ===== Tagging mode =====
 const taggingMode = await tp.system.suggester(
   ["기본 태그만(나중에 태깅)", "지금 추가 태그 입력"],
   ["later","now"]
@@ -112,23 +175,6 @@ if (taggingMode === "now") {
   extraTags = (raw ?? "").split(",").map(s => cleanTag(s).trim()).filter(Boolean);
 }
 
-// ===== Choose kind =====
-const kind = await tp.system.suggester(
-  [
-    "INBOX: 아무거나 빠른 메모(내 글)",
-    "DAILY: 데일리 노트(내 글)",
-    "CONNECT: 강의 필기(받아쓰기/내 의견 없음)",
-    "WEB CLIP: 웹 클립(임시 or 레퍼런스 분기)",
-    "REFERENCE: 논문/책/문서(레퍼런스 저장)",
-    "PEOPLE: 인물 노트(내 정리)",
-    "PROJECT: 로봇/대회/제작 프로젝트(내 글)",
-    "MERGE: 내 지식(파인만)",
-    "DEVELOP: 이론 정리/치트시트",
-    "SHARE: 산출물"
-  ],
-  ["inbox","daily","connect_lecture","webclip","reference","people","project","merge","develop","share"]
-);
-
 // ===== Title =====
 let title = (await tp.system.prompt("제목(title):", tp.file.title))?.trim() || tp.file.title;
 
@@ -136,8 +182,8 @@ let title = (await tp.system.prompt("제목(title):", tp.file.title))?.trim() ||
 let tags = [];
 let aliases = [];
 let indexArr = [];
-let typeArr = [];       // single role (1-item array)
-let authors = [];       // only when my writing
+let typeArr = [];
+let authors = [];
 let cmdsArr = [];
 let groupOne = await pickGroup();
 let statusOne = await pickStatus();
@@ -171,19 +217,17 @@ if (kind === "inbox") {
     const sub = await tp.system.suggester(["General", "Git", "Linux"], ["general","git","linux"]);
     folder = sub === "git" ? PATH.inbox_software_git : sub === "linux" ? PATH.inbox_software_linux : PATH.inbox_software;
     indexArr = [INDEX.software];
-    groupOne = "SE";
+    groupOne = "CS";
   } else if (area === "engineering") {
     folder = PATH.inbox_engineering;
     indexArr = [INDEX.waypoint];
     groupOne = "EE";
   } else if (area === "philosophy") {
     const sub = await tp.system.suggester(
-      ["General", "University_Lecture", "Thesis", "Book", "Internet&Others", "Theory"],
-      ["general","uni","thesis","book","internet","theory"]
+      ["General", "Book", "Internet&Others", "Theory"],
+      ["general","book","internet","theory"]
     );
     folder =
-      sub === "uni" ? PATH.inbox_phil_uni :
-      sub === "thesis" ? PATH.inbox_phil_thesis :
       sub === "book" ? PATH.inbox_phil_book :
       sub === "internet" ? PATH.inbox_phil_internet :
       sub === "theory" ? PATH.inbox_phil_theory :
@@ -200,49 +244,69 @@ if (kind === "inbox") {
   cmdsArr = [];
   authors = [q(ME)];
   title = withPrefix("N - ", title);
-
   tags = ["inbox", "note", ...extraTags];
   applyTaggingNeeded();
 
-} else if (kind === "daily") {
-  folder = PATH.inbox_daily;
-  indexArr = [INDEX.daily];
-  typeArr = ["daily"];
-  cmdsArr = [];
-  authors = [q(ME)];
-  title = withPrefix("D - ", title);
-
-  tags = ["daily", ...extraTags];
-  applyTaggingNeeded();
-
 } else if (kind === "connect_lecture") {
-  folder = PATH.connect;
+  // 26-1학기 과목 선택
+  const course = await tp.system.suggester(
+    [
+      "🏛️ 언어철학",
+      "🏛️ 존재론과형이상학", 
+      "🏛️ 서양현대철학사",
+      "🔢 공업수학1",
+      "🔢 일반수학2",
+      "⚡ 전자기학1",
+      "📚 기타 (직접입력)"
+    ],
+    [
+      "26-1-Phil-언어철학",
+      "26-1-Phil-존재론과형이상학",
+      "26-1-Phil-서양현대철학사",
+      "26-1-Math-공업수학1",
+      "26-1-Math-일반수학2",
+      "26-1-EE-전자기학1",
+      "other"
+    ]
+  ) || "other";
+
+  let courseName = "";
+  let courseFolder = PATH.connect;
+  
+  if (course === "other") {
+    courseName = await tp.system.prompt("과목명:", "");
+    const domain = await tp.system.suggester(
+      ["CS", "EE", "Phil", "Math", "Robotics", "General"],
+      ["CS","EE","Phil","Math","Robotics","General"]
+    );
+    groupOne = domain;
+  } else {
+    courseFolder = `CMDS/200. CMDS/201. Connect/26-1/${course}`;
+    courseName = course.split("-").pop();
+    // 자동 group 결정
+    if (course.includes("Phil")) groupOne = "Phil";
+    else if (course.includes("Math")) groupOne = "Math";
+    else if (course.includes("EE")) groupOne = "EE";
+  }
+
+  folder = courseFolder;
   indexArr = [INDEX.lecture];
   typeArr = ["lecture"];
   cmdsArr = ["Connect"];
-  authors = []; // 받아쓰기
+  authors = [];
 
-  const domain = await tp.system.suggester(
-    ["Software", "Engineering", "Philosophy", "General"],
-    ["SE","EE","Phil","General"]
-  );
-  groupOne = domain;
-
-  const course = await tp.system.prompt("과목/강의명(없으면 Enter):", "");
-  const session = await tp.system.prompt("회차/주차/날짜:", NOW_DATE);
-  const instructor = await tp.system.prompt("교수/강사(없으면 Enter):", "");
-  const source_url = await tp.system.prompt("강의 URL(없으면 Enter):", "");
+  const session = await tp.system.prompt("주차/회차:", NOW_DATE);
+  const instructor = await tp.system.prompt("교수(없으면 Enter):", "");
 
   title = withPrefix("L - ", title);
-
-  tags = ["lecture", `lecture/${domain}`, ...extraTags];
+  tags = ["lecture", `lecture/${groupOne}`, `course/${courseName}`, ...extraTags];
   applyTaggingNeeded();
 
-  var META_LECTURE = { course, session, instructor, source_url };
+  var META_LECTURE = { course: courseName, session, instructor, source_url: "" };
 
 } else if (kind === "webclip") {
   const keep = await tp.system.suggester(
-    ["임시 클립(나중에 정리/삭제) → Inbox/Web_Clipper", "보관할 가치 있음 → Reference"],
+    ["임시 클립 → Inbox", "보관할 가치 있음 → Reference"],
     ["inbox","reference"]
   );
   const url = await tp.system.prompt("URL:", "");
@@ -258,7 +322,6 @@ if (kind === "inbox") {
     cmdsArr = ["Connect"];
     authors = [];
     title = withPrefix("W - ", title);
-
     tags = ["webclip", "inbox", ...extraTags];
     applyTaggingNeeded();
   } else {
@@ -273,13 +336,12 @@ if (kind === "inbox") {
     cmdsArr = ["Connect"];
     authors = [];
     title = withPrefix("R - ", title);
-
     tags = ["reference", "webclip", ...extraTags];
     applyTaggingNeeded();
   }
 
   groupOne =
-    area === "software" ? "SE" :
+    area === "software" ? "CS" :
     area === "engineering" ? "EE" :
     area === "philosophy" ? "Phil" : "General";
 
@@ -307,12 +369,11 @@ if (kind === "inbox") {
   cmdsArr = ["Connect"];
   authors = [];
   title = withPrefix("R - ", title);
-
   tags = ["reference", refKind, ...extraTags];
   applyTaggingNeeded();
 
   groupOne =
-    area === "software" ? "SE" :
+    area === "software" ? "CS" :
     area === "engineering" ? "EE" :
     area === "philosophy" ? "Phil" : "General";
 
@@ -360,7 +421,7 @@ if (kind === "inbox") {
 
   const domain = await tp.system.suggester(
     ["Robotics", "Engineering", "Software", "General"],
-    ["Robotics","EE","SE","General"]
+    ["Robotics","EE","CS","General"]
   );
   groupOne = domain;
 
@@ -372,18 +433,6 @@ if (kind === "inbox") {
     deadline: await tp.system.prompt("대회/마감일(없으면 Enter):", ""),
     repo: await tp.system.prompt("Repo/Drive 링크(없으면 Enter):", "")
   };
-
-} else if (kind === "merge") {
-  folder = PATH.merge;
-  indexArr = [INDEX.waypoint];
-  typeArr = ["merge"];
-  cmdsArr = ["Merge"];
-  authors = [q(ME)];
-  title = withPrefix("M - ", title);
-  statusOne = "[[🌿Sapling]]";
-
-  tags = ["merge","feynman","zettel", ...extraTags];
-  applyTaggingNeeded();
 
 } else if (kind === "develop") {
   folder = PATH.develop;
@@ -436,22 +485,18 @@ fm.push("---");
 // ===== Body =====
 let body = `\n# ${title}\n`;
 
-if (kind === "daily") {
-  body += `\n## Top 3\n- [ ] \n- [ ] \n- [ ] \n`;
-  body += `\n## Log\n- \n\n## Study\n- \n\n## Review\n- \n`;
-
-} else if (kind === "connect_lecture") {
-  body += `\n## Meta\n- Course: ${META_LECTURE.course}\n- Session: ${META_LECTURE.session}\n- Instructor: ${META_LECTURE.instructor}\n- URL: ${META_LECTURE.source_url}\n`;
-  body += `\n## Outline\n- \n\n## Raw Notes\n- \n\n## Questions\n- \n\n## Merge Candidates\n- [[ ]] \n`;
+if (kind === "connect_lecture") {
+  body += `\n## Meta\n- Course: ${META_LECTURE.course}\n- Session: ${META_LECTURE.session}\n- Instructor: ${META_LECTURE.instructor}\n`;
+  body += `\n## Outline\n- \n\n## Notes\n- \n\n## Questions\n- \n\n## 개념 정리 필요\n- [[ ]] \n`;
 
 } else if (kind === "webclip") {
   body += `\n## Source\n- URL: ${META_WEB.url}\n- Keep: ${META_WEB.keep}\n- Area: ${META_WEB.area}\n`;
   body += `\n## Snapshot\n- What it is:\n- Why clipped:\n`;
-  body += `\n## Excerpts\n> \n\n## Next\n- [ ] 필요하면 Merge로 발전\n`;
+  body += `\n## Excerpts\n> \n\n## Next\n- [ ] 필요하면 Concept으로 발전\n`;
 
 } else if (kind === "reference") {
   body += `\n## Source\n- URL: ${META_REF.url}\n- Kind: ${META_REF.refKind}\n- Area: ${META_REF.area}\n`;
-  body += `\n## Summary (원문 기반)\n- \n\n## Quotes\n> \n\n## Next\n- [ ] Merge로 발전\n`;
+  body += `\n## Summary (원문 기반)\n- \n\n## Quotes\n> \n\n## Next\n- [ ] Concept으로 발전\n`;
 
 } else if (kind === "people") {
   body += `\n## Snapshot\n- Role: ${META_PPL.role}\n- Organization: ${META_PPL.organization}\n\n`;
@@ -464,15 +509,7 @@ if (kind === "daily") {
   body += `\n## Requirements\n- \n\n## Constraints\n- \n\n## Plan\n- Milestone 1:\n- Milestone 2:\n- Milestone 3:\n`;
   body += `\n## Log\n- ${NOW_DATE} - \n`;
   body += `\n## Decisions\n- \n`;
-  body += `\n## References (link)\n- [[ ]] \n`;
-  body += `\n## Merge notes used\n- [[ ]] \n`;
-
-} else if (kind === "merge") {
-  body += `\n## Feynman Step 1) Explain (12살에게)\n- \n`;
-  body += `\n## Step 2) Gaps\n- \n`;
-  body += `\n## Step 3) Repair (근거 링크)\n- Source: [[ ]] \n`;
-  body += `\n## Step 4) Teach-back\n- 3문장:\n- 1문장:\n`;
-  body += `\n## Examples\n- \n\n## Flashcards\n- Q:: A\n`;
+  body += `\n## References\n- [[ ]] \n`;
 
 } else if (kind === "develop") {
   body += `\n## Definitions\n- \n\n## Key results / Rules\n- \n\n## Examples\n- \n\n## Pitfalls\n- \n\n## References\n- [[ ]] \n`;
@@ -485,4 +522,6 @@ if (kind === "daily") {
 }
 
 tR += fm.join("\n") + body;
+}
 %>
+

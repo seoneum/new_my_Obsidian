@@ -12,13 +12,10 @@
   "obsidian-outliner",
   "omnisearch",
   "note-refactor-obsidian",
-  "kr-book-info-plugin",
   "obsidian-kanban",
   "highlightr-plugin",
-  "editing-toolbar",
   "dataview",
   "calendar",
-  "obsidian-book-search-plugin",
   "obsidian-excalidraw-plugin",
   "execute-code",
   "obsidian-zotero-desktop-connector",
@@ -30,8 +27,8 @@
   "obsidian-importer",
   "metadata-menu",
   "templater-obsidian",
-  "copilot",
   "graph-analysis",
   "make-md",
-  "workspaces-plus"
+  "workspaces-plus",
+  "terminal"
 ]
