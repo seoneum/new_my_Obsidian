@@ -1,7 +1,0 @@
-{
-  "openExternalURLs": true,
-  "enableAdblocking": true,
-  "markdownPath": "CMDS/100. Inbox",
-  "customSearchEngine": "https://duckduckgo.com/?q=%s",
-  "searchEngine": "google"
-}
