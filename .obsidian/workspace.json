@@ -44,7 +44,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: OC | 데일리 노트 파인만·저널링 자동생성과 독서 즉시 기록"
+              "title": "Terminal: sh"
             }
           },
           {
@@ -175,7 +175,7 @@
             }
           },
           {
-            "id": "1eed09e1c9eebda9",
+            "id": "9eedf7384e5cdd98",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -206,7 +206,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CMDS/200. CMDS/280. Project/PRJ - 동민이와 수업.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,7 +215,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for PRJ - 동민이와 수업"
+              "title": "Backlinks"
             }
           },
           {
@@ -512,13 +511,24 @@
             "id": "209b9be03b739c93",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "aa95b7ee5751bd5e",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
               "title": "Graph Analysis"
             }
           }
-        ]
+        ],
+        "currentTab": 27
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -595,8 +605,8 @@
       "audio-recorder:Start/stop recording": false,
       "workspaces:Manage workspace layouts": false,
       "terminal:Open terminal": false,
-      "periodic-notes:Open today": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "periodic-notes:Open today": false
     }
   },
   "floating": {
@@ -638,10 +648,13 @@
       }
     ]
   },
-  "active": "dd54ac46ac600526",
+  "active": "aa95b7ee5751bd5e",
   "lastOpenFiles": [
-    "CMDS/400. Reference/490. People_Reference/491. Acquaintance/김선음.md",
     "CMDS/200. CMDS/280. Project/PRJ - 동민이와 수업.md",
+    "CMDS/200. CMDS/220. Merge/224. Problem/Math/P - MIT 18.01 PS1.md",
+    "CMDS/200. CMDS/220. Merge/223. Concept/CS/C - Modern C++ Day 1.md",
+    "CMDS/200. CMDS/220. Merge/223. Concept/CS/C - Modern C++ Array.md",
+    "CMDS/400. Reference/490. People_Reference/491. Acquaintance/김선음.md",
     "CMDS/500. setting/502. CMDS setting/n8n_setup_guide.md",
     "CMDS/200. CMDS/201. Connect/203. Philosophy/Books/B - B - 사랑의 단상 (재독) (재독).md",
     "B - B - 사랑의 단상 (재독) (초독).md",
@@ -673,10 +686,7 @@
     "CMDS/400. Reference/450. Meeting/26-1/회장단/MTG - 2026-01-06 회장단 1회.md",
     "CMDS/400. Reference/450. Meeting/26-1/Hexapod/MTG - 2026-01-06 Hexapod 1회.md",
     "CMDS/200. CMDS/220. Merge/224. Problem/Math/P - MIT 18.01 PS1B.md",
-    "CMDS/200. CMDS/220. Merge/224. Problem/Math/P - MIT 18.01 PS1.md",
     "CMDS/200. CMDS/220. Merge/224. Problem/Math/P - Exam Practice 1a.md",
-    "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 while part.md",
-    "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 Array part.md",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221181950.png",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180732.png",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180648.png",
