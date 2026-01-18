@@ -125,7 +125,10 @@
     "//📖 Books",
     "//📥 Inbox",
     "//📝 Problems",
-    "//📓 Feynman"
+    "//📓 Feynman",
+    "//🎯 Projects",
+    "//🗃️ Archive",
+    "//🎯 Projects/🎯 Projects/PRJ - 동민이와 수업"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
@@ -140,7 +143,7 @@
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,
-  "inlineContextExpanded": false,
+  "inlineContextExpanded": true,
   "inlineContextProperties": true,
   "inlineContextSectionsExpanded": true,
   "banners": true,
