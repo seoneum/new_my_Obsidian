@@ -8,76 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7a7530ae7f598ed9",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "terminal:terminal",
-              "state": {
-                "terminal:terminal": {
-                  "cwd": "/home/seoneum/new_my",
-                  "focus": false,
-                  "profile": {
-                    "args": [],
-                    "executable": "/bin/sh",
-                    "followTheme": true,
-                    "name": "",
-                    "platforms": {
-                      "linux": true
-                    },
-                    "pythonExecutable": "python3",
-                    "restoreHistory": false,
-                    "rightClickAction": "copyPaste",
-                    "successExitCodes": [
-                      "0",
-                      "SIGINT",
-                      "SIGTERM"
-                    ],
-                    "terminalOptions": {
-                      "documentOverride": null
-                    },
-                    "type": "integrated",
-                    "useWin32Conhost": true
-                  },
-                  "serial": null
-                }
-              },
-              "pinned": true,
-              "icon": "terminal",
-              "title": "Terminal: sh"
-            }
-          },
-          {
-            "id": "eb5f68343344c48c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CMDS/100. Inbox/N - 수학 독학 실천 가이드.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "N - 수학 독학 실천 가이드"
-            }
-          },
-          {
             "id": "16eed5651cff634d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CMDS/500. setting/502. CMDS setting/n8n_setup_guide.md",
+                "file": "CMDS/100. Inbox/101. 🚨Anything/N - 2026_1학기_시간표 짜기~.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -92,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "n8n_setup_guide"
-            }
-          },
-          {
-            "id": "dd54ac46ac600526",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CMDS/200. CMDS/280. Project/PRJ - 동민이와 수업.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "PRJ - 동민이와 수업"
+              "title": "N - 2026_1학기_시간표 짜기~"
             }
           }
         ],
-        "currentTab": 3,
         "stacked": true
       }
     ],
@@ -648,45 +559,45 @@
       }
     ]
   },
-  "active": "aa95b7ee5751bd5e",
+  "active": "82c737fe6be308c8",
   "lastOpenFiles": [
-    "CMDS/200. CMDS/280. Project/PRJ - 동민이와 수업.md",
-    "CMDS/200. CMDS/220. Merge/224. Problem/Math/P - MIT 18.01 PS1.md",
-    "CMDS/200. CMDS/220. Merge/223. Concept/CS/C - Modern C++ Day 1.md",
-    "CMDS/200. CMDS/220. Merge/223. Concept/CS/C - Modern C++ Array.md",
+    "CMDS/100. Inbox/110. Software/111. Git/Git 브랜치 작업 가이드.md",
     "CMDS/400. Reference/490. People_Reference/491. Acquaintance/김선음.md",
-    "CMDS/500. setting/502. CMDS setting/n8n_setup_guide.md",
-    "CMDS/200. CMDS/201. Connect/203. Philosophy/Books/B - B - 사랑의 단상 (재독) (재독).md",
-    "B - B - 사랑의 단상 (재독) (초독).md",
-    "CMDS/100. Inbox/N - 수학 독학 실천 가이드.md",
-    "CMDS/100. Inbox/102. 📝Daily_Note/D - 2026-01-18.md",
-    "D - 2026-01-18.md",
-    "CMDS/100. Inbox/102. 📝Daily_Note/2026-01-18.md",
-    "CMDS/500. setting/501. Template/2026-01-18.md",
-    "attachments/Pasted image 20260118090609.png",
-    "attachments",
-    "CMDS/400. Reference/490. People_Reference/492. Engineering",
-    ".md",
-    "CMDS/100. Inbox/140. Web_Clipper/W - 수학 독학 능동적 연습법.md",
-    "CMDS/400. Reference/430. Philosophy_Reference/R - 사랑의 단상.md",
-    "CMDS/100. Inbox/140. Web_Clipper/W - 수학 독학 5단계 프로세스.md",
-    "CMDS/100. Inbox/140. Web_Clipper/W - 수학 독학 4단계 프레임워크.md",
-    "CMDS/400. Reference/430. Philosophy_Reference/R - 정신현상학.md",
-    "CMDS/400. Reference/450. Meeting/26-1/Bipedal/MTG - 2026-01-13 Bipedal 1회.md",
-    "CMDS/400. Reference/450. Meeting/26-1/Bipedal",
-    "CMDS/200. CMDS/201. Connect/204. Literature/Books",
-    "CMDS/200. CMDS/201. Connect/204. Literature",
-    "CMDS/200. CMDS/201. Connect/203. Philosophy/Books",
-    "CMDS/200. CMDS/201. Connect/203. Philosophy",
-    "CMDS/500. setting/501. Template/Book_Template.md",
     "📌Guidline.md",
     "oh-my-opencode",
+    "attachments/Pasted image 20260118090609.png",
+    "attachments",
     "Vault.md",
     "Tags/#flashcards",
-    "CMDS/400. Reference/450. Meeting/26-1/회장단/MTG - 2026-01-06 회장단 1회.md",
-    "CMDS/400. Reference/450. Meeting/26-1/Hexapod/MTG - 2026-01-06 Hexapod 1회.md",
-    "CMDS/200. CMDS/220. Merge/224. Problem/Math/P - MIT 18.01 PS1B.md",
-    "CMDS/200. CMDS/220. Merge/224. Problem/Math/P - Exam Practice 1a.md",
+    "Tags",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Translate to Chinese.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Summarize.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Simplify.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Remove URLs.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Make shorter.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Make longer.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Generate table of contents.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Generate glossary.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Fix grammar and spelling.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Explain like I am 5.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts/Emojify.md",
+    "CMDS/500. setting/copilot/copilot-custom-prompts",
+    "CMDS/500. setting/copilot",
+    "CMDS/500. setting/505. Tags/#flashcards",
+    "CMDS/500. setting/505. Tags",
+    "CMDS/500. setting/504. Prompt/setting에서 smart composer의 Chat 시스템프롬프트.md",
+    "CMDS/500. setting/504. Prompt/Socrates Prompt.md",
+    "CMDS/500. setting/504. Prompt/Feynman Prompt.md",
+    "CMDS/500. setting/504. Prompt",
+    "CMDS/500. setting/503. Properties/Properties.md",
+    "CMDS/500. setting/503. Properties",
+    "CMDS/500. setting/502. CMDS setting/rclone_gdrive_backup_guide.md",
+    "CMDS/500. setting/502. CMDS setting/n8n_setup_guide.md",
+    "CMDS/500. setting/502. CMDS setting/Template Syntax.md",
+    "CMDS/500. setting/502. CMDS setting/Tags.md",
+    "CMDS/500. setting/502. CMDS setting/Plugins.md",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221181950.png",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180732.png",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180648.png",
