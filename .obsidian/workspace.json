@@ -44,7 +44,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: OC | 파일 구조에 맞춘 재배치 및 천재 두뇌~~.md 3개 템플릿 적용"
+              "title": "Terminal: OC | Template merged into master branch"
             }
           },
           {
@@ -70,9 +70,33 @@
               "icon": "lucide-file",
               "title": "N - 수학 독학 실천 가이드"
             }
+          },
+          {
+            "id": "16eed5651cff634d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CMDS/500. setting/501. Template/2026-01-18.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-01-18"
+            }
           }
         ],
-        "currentTab": 1,
+        "currentTab": 2,
         "stacked": true
       }
     ],
@@ -127,7 +151,7 @@
             }
           },
           {
-            "id": "05fdd6fd97a4dd51",
+            "id": "464cdb8d133cffee",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -461,7 +485,7 @@
             }
           }
         ],
-        "currentTab": 25
+        "currentTab": 5
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -531,23 +555,24 @@
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Smart Lookup: Open lookup view": false,
       "omnisearch:Omnisearch": false,
-      "kr-book-info-plugin:Add Book Info": false,
       "obsidian-kanban:Create new board": false,
-      "obsidian-book-search-plugin:Create new book note": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-importer:Open Importer": false,
-      "copilot:Open Copilot Chat": false,
       "graph:Open graph view": false,
       "audio-recorder:Start/stop recording": false,
       "workspaces:Manage workspace layouts": false,
-      "periodic-notes:Open today": false,
-      "terminal:Open terminal": false
+      "terminal:Open terminal": false,
+      "periodic-notes:Open today": false
     }
   },
-  "active": "eb5f68343344c48c",
+  "active": "16eed5651cff634d",
   "lastOpenFiles": [
-    "CMDS/100. Inbox/140. Web_Clipper/W - 수학 독학 능동적 연습법.md",
+    "CMDS/500. setting/501. Template/2026-01-18.md",
+    "CMDS/400. Reference/490. People_Reference/492. Engineering/Untitled.md",
+    "CMDS/400. Reference/490. People_Reference/492. Engineering",
     "CMDS/100. Inbox/N - 수학 독학 실천 가이드.md",
+    ".md",
+    "CMDS/100. Inbox/140. Web_Clipper/W - 수학 독학 능동적 연습법.md",
     "CMDS/400. Reference/430. Philosophy_Reference/R - 사랑의 단상.md",
     "CMDS/100. Inbox/140. Web_Clipper/W - 수학 독학 5단계 프로세스.md",
     "CMDS/100. Inbox/140. Web_Clipper/W - 수학 독학 4단계 프레임워크.md",
@@ -578,9 +603,6 @@
     "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 14681.md",
     "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 11382.md",
     "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 10950, 2739.md",
-    "CMDS/200. CMDS/220. Merge/223. Concept/CS/C - Modern C++ 궁금증 모음.md",
-    "CMDS/200. CMDS/220. Merge/223. Concept/CS/C - Modern C++ Day 1.md",
-    "CMDS/400. Reference/401. Anything_Reference/attachments/Recording 20251218144330.m4a",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221181950.png",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180732.png",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180648.png",
@@ -590,7 +612,6 @@
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221144414.png",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251217193033.png",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251215235003.png",
-    "CMDS/400. Reference/450. Meeting/26-1/회장단",
     "CMDS/100. Inbox/101. 🚨Anything/Canvas_Test.canvas",
     "CMDS/400. Reference/400. Anything_Reference/attachments/Pasted image 20251217193033.png",
     "🏛️CMDS/100. 📦️Inbox/100. 📥️Anything/Canvas_Test.canvas",
