@@ -98,6 +98,11 @@ auto main() -> int {
 }
 ```
 
+
+## Link
+- [[C - Modern C++ Array]]
+- [[C - Modern C++ 궁금증 모음]]
+
 ## Next
 - [ ] 
 # Clang을 쓰되, GCC 13의 라이브러리 경로를 힌트로 줌

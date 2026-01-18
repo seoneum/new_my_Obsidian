@@ -37,5 +37,10 @@ finish_read_date: ""
 	   `cin>>n; if (cin.fail() == false)` 로 실패여부 확인 후 ㄱㄱ.
 - 
 
+
+## Link
+- [[C - Modern C++ Day 1]]
+- [[C - Modern C++ Array]]
+
 ## Next
 - [ ] 

@@ -479,3 +479,5 @@ std::cin.tie(nullptr)->sync_with_stdio(false);
 
 - 원본 노트: [[N - Modern C++ baekjoon Array_part]]
 - 관련 노트: [[N - Modern C++ baekjoon while_part]]
+- [[C - Modern C++ Day 1]]
+- [[C - Modern C++ 궁금증 모음]]

@@ -52,3 +52,6 @@ goal: coding은 최소화. 리뷰, 리팩토링은 최대화.
 ## Log
 - 2026-01-09 - 
 
+## Reference
+- [[Open Code 리뷰(1)  OpenCode 설치(oh-my-opencode 사전 학습) 및 설정, 기본 명령어 살펴보기]]
+- [[Open Code 리뷰(2)  oh-my-opencode 설치 및 설정 방법(기본 명령어, 슬래시 명령어, 연동 방법 등) with Claude,OpenAI,Gemini]]

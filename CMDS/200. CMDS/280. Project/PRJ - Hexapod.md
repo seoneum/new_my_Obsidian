@@ -55,3 +55,5 @@ deadline: 2026/10/30
 ## Log
 - 2025-12-23 - 
 
+## Related Project
+- [[PRJ - Bipedal]]

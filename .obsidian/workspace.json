@@ -77,7 +77,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CMDS/200. CMDS/201. Connect/203. Philosophy/Books/B - B - 사랑의 단상 (재독) (재독).md",
+                "file": "CMDS/500. setting/502. CMDS setting/n8n_setup_guide.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -92,10 +92,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "B - B - 사랑의 단상 (재독) (재독)"
+              "title": "n8n_setup_guide"
             }
           }
         ],
+        "currentTab": 2,
         "stacked": true
       }
     ],
@@ -181,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CMDS/100. Inbox/101. Excalidraw/Drawing 2025-12-17 15.29.34.excalidraw.md",
+                "file": "CMDS/500. setting/502. CMDS setting/n8n_setup_guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +192,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Drawing 2025-12-17 15.29.34.excalidraw"
+              "title": "Backlinks for n8n_setup_guide"
             }
           },
           {
@@ -493,8 +494,7 @@
               "title": "Graph Analysis"
             }
           }
-        ],
-        "currentTab": 26
+        ]
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -571,16 +571,57 @@
       "audio-recorder:Start/stop recording": false,
       "workspaces:Manage workspace layouts": false,
       "terminal:Open terminal": false,
-      "periodic-notes:Open today": false
+      "periodic-notes:Open today": false,
+      "remotely-save:Remotely Save": false
     }
   },
-  "active": "7a7530ae7f598ed9",
+  "floating": {
+    "id": "92c2f88520aee2d2",
+    "type": "floating",
+    "children": [
+      {
+        "id": "828620cc571de25e",
+        "type": "window",
+        "children": [
+          {
+            "id": "8fa4cf375db6aa91",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "ccea25461e92b547",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://remotelysave.com/user/profile",
+                    "title": "User Management",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "User Management"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 448,
+        "y": 153,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "16eed5651cff634d",
   "lastOpenFiles": [
     "CMDS/200. CMDS/201. Connect/203. Philosophy/Books/B - B - 사랑의 단상 (재독) (재독).md",
+    "B - B - 사랑의 단상 (재독) (초독).md",
+    "CMDS/100. Inbox/N - 수학 독학 실천 가이드.md",
     "CMDS/100. Inbox/102. 📝Daily_Note/D - 2026-01-18.md",
     "D - 2026-01-18.md",
     "CMDS/100. Inbox/102. 📝Daily_Note/2026-01-18.md",
-    "CMDS/100. Inbox/N - 수학 독학 실천 가이드.md",
     "CMDS/500. setting/501. Template/2026-01-18.md",
     "attachments/Pasted image 20260118090609.png",
     "attachments",
@@ -612,7 +653,6 @@
     "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 2884.md",
     "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 2753.md",
     "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 2480.md",
-    "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 2438.md",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221181950.png",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180732.png",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180648.png",

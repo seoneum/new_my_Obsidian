@@ -71,6 +71,11 @@ tags:
 ---
 
 > "수학은 눈으로 하는 게 아니라 손으로 하는 노동입니다. **불편함**을 느낄 때 뇌가 성장하고 있습니다."
+
+## Reference
+- [[W - 수학 독학 능동적 연습법]]
+- [[W - 수학 독학 5단계 프로세스]]
+- [[W - 수학 독학 4단계 프레임워크]]
 ![[Pasted image 20260118090609.png]]
 plugin:graph-analysis:14464 Uncaught (in promise) NotFoundGraphError: Graph.forEachInNeighbor: could not find the "CMDS/500. setting/501. Template/2026-01-18.md" node in the graph. at Wt.t.<computed> [as forEachInNeighbor] (plugin:graph-analysis:14464:33893) at MyGraph.eval (plugin:graph-analysis:35173:22) at Generator.next (<anonymous>) at eval (plugin:graph-analysis:31:71) at new Promise (<anonymous>) at __awaiter (plugin:graph-analysis:27:12) at Co-Citations (plugin:graph-analysis:35166:36) at $$self.$$.update (plugin:graph-analysis:9733:35) at update (plugin:graph-analysis:2930:12) at flush (plugin:graph-analysis:2902:13)
 plugin:terminal:150 Templater Error: Template parsing error, aborting. 

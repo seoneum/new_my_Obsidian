@@ -30,5 +30,6 @@
   "graph-analysis",
   "make-md",
   "workspaces-plus",
-  "terminal"
+  "terminal",
+  "remotely-save"
 ]

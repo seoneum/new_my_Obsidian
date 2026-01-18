@@ -72,4 +72,6 @@ share_updated: 2025-12-29T16:28:37+09:00
 - [[20260113_Bipedal_01]]
 - 
 
-[^1]: 1V일 때 분당 회전 수
+
+## Related Project
+- [[PRJ - Hexapod]]
