@@ -1,9 +1,1 @@
-{
-  "vimMode": true,
-  "newFileLocation": "folder",
-  "attachmentFolderPath": "attachments",
-  "alwaysUpdateLinks": true,
-  "newFileFolderPath": "CMDS/100. Inbox/100. anything",
-  "trashOption": "local",
-  "promptDelete": false
-}
+{}

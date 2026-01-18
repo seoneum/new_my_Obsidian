@@ -118,7 +118,18 @@
     "//CMDS/CMDS/200. CMDS/CMDS/200. CMDS/220. Merge/CMDS/200. CMDS/220. Merge/222. FlashCard",
     "//CMDS/CMDS/100. Inbox/CMDS/100. Inbox/110. Software/CMDS/100. Inbox/110. Software/112. Linux",
     "//CMDS/CMDS/100. Inbox/CMDS/100. Inbox/110. Software/CMDS/100. Inbox/110. Software/111. Git",
-    "//templates"
+    "//templates",
+    "//CMDS/CMDS/200. CMDS/CMDS/200. CMDS/201. Connect/CMDS/200. CMDS/201. Connect/203. Philosophy",
+    "//CMDS/CMDS/200. CMDS/CMDS/200. CMDS/201. Connect/CMDS/200. CMDS/201. Connect/203. Philosophy/CMDS/200. CMDS/201. Connect/203. Philosophy/Books",
+    "//📥 Inbox",
+    "//🎯 Projects",
+    "//🔄 Areas",
+    "//🔄 Areas/🔄 Areas/Daily",
+    "//📚 Resources",
+    "//📚 Resources/📚 Resources/225. Feynman",
+    "//🗃️ Archive",
+    "//💎 Zettel",
+    "//⚙️ Meta"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
@@ -130,8 +141,6 @@
     "_assets",
     "_blocks"
   ],
-  "newFileLocation": "folder",
-  "newFileFolderPath": "CMDS/100. Inbox/100. anything",
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,

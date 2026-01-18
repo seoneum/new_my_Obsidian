@@ -1,0 +1,46 @@
+author: "[[김선음]]"
+
+folders:
+  inbox: "📥 Inbox"
+  quick: "📥 Inbox/_quick"
+  webclip: "📥 Inbox/_webclip"
+  projects: "🎯 Projects"
+  areas: "🔄 Areas"
+  resources: "📚 Resources"
+  archive: "🗃️ Archive"
+  zettel: "💎 Zettel"
+  meta: "⚙️ Meta"
+  templates: "⚙️ Meta/Templates"
+  daily: "🔄 Areas/Daily"
+
+cmds_stages:
+  - inbox
+  - connect
+  - merge
+  - develop
+  - share
+
+status_levels:
+  - seed
+  - sapling
+  - evergreen
+  - archive
+
+domains:
+  - cs
+  - ee
+  - phil
+  - math
+  - robotics
+  - general
+
+prefixes:
+  daily: "D"
+  lecture: "L"
+  concept: "C"
+  problem: "P"
+  reference: "R"
+  meeting: "MTG"
+  project: "PRJ"
+  zettel: "Z"
+  question: "Q"
