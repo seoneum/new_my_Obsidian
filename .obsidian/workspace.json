@@ -94,9 +94,33 @@
               "icon": "lucide-file",
               "title": "n8n_setup_guide"
             }
+          },
+          {
+            "id": "dd54ac46ac600526",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CMDS/200. CMDS/280. Project/PRJ - 동민이와 수업.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "PRJ - 동민이와 수업"
+            }
           }
         ],
-        "currentTab": 2,
+        "currentTab": 3,
         "stacked": true
       }
     ],
@@ -182,7 +206,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CMDS/500. setting/502. CMDS setting/n8n_setup_guide.md",
+                "file": "CMDS/200. CMDS/280. Project/PRJ - 동민이와 수업.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +216,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for n8n_setup_guide"
+              "title": "Backlinks for PRJ - 동민이와 수업"
             }
           },
           {
@@ -614,8 +638,11 @@
       }
     ]
   },
-  "active": "16eed5651cff634d",
+  "active": "dd54ac46ac600526",
   "lastOpenFiles": [
+    "CMDS/400. Reference/490. People_Reference/491. Acquaintance/김선음.md",
+    "CMDS/200. CMDS/280. Project/PRJ - 동민이와 수업.md",
+    "CMDS/500. setting/502. CMDS setting/n8n_setup_guide.md",
     "CMDS/200. CMDS/201. Connect/203. Philosophy/Books/B - B - 사랑의 단상 (재독) (재독).md",
     "B - B - 사랑의 단상 (재독) (초독).md",
     "CMDS/100. Inbox/N - 수학 독학 실천 가이드.md",
@@ -650,9 +677,6 @@
     "CMDS/200. CMDS/220. Merge/224. Problem/Math/P - Exam Practice 1a.md",
     "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 while part.md",
     "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 Array part.md",
-    "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 2884.md",
-    "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 2753.md",
-    "CMDS/200. CMDS/220. Merge/224. Problem/Coding/P - 백준 2480.md",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221181950.png",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180732.png",
     "CMDS/400. Reference/401. Anything_Reference/attachments/Pasted image 20251221180648.png",
