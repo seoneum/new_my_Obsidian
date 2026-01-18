@@ -3,7 +3,7 @@ const ME = '[[김선음]]';
 const NOW_DATE = tp.date.now("YYYY-MM-DD");
 const NOW_DT = tp.date.now("YYYY-MM-DDTHH:mm:ss");
 
-const q = (s) => `"${String(s ?? "").replaceAll(`"`, `\\"`)}"`;
+const q = (s) => `"${String(s ?? "").replaceAll(`"`, `\\"`)}"`; 
 const cleanTag = (s) => String(s ?? "").trim().replace(/^#/, "");
 const wikilink = (s) => {
   const t = String(s ?? "").trim();
@@ -36,6 +36,10 @@ const translator = (await tp.system.prompt("🌐 역자 (없으면 Enter):", "")
 const publisher = (await tp.system.prompt("🏢 출판사 (없으면 Enter):", ""))?.trim() || "";
 const publishYear = (await tp.system.prompt("📅 출판연도 (없으면 Enter):", ""))?.trim() || "";
 const totalPages = (await tp.system.prompt("📄 총 페이지 (없으면 Enter):", ""))?.trim() || "";
+
+// 챕터 수 입력
+const chapterCountRaw = await tp.system.prompt("📖 챕터 수 (기본: 5):", "5");
+const chapterCount = parseInt(chapterCountRaw) || 5;
 
 // 태깅 모드
 const taggingMode = await tp.system.suggester(
@@ -82,6 +86,49 @@ if (parseInt(reading) > 1) {
   prevReadingLink = `[[B - ${bookTitle} (${prevLabel})]]`;
 }
 
+// 목표 텍스트 결정
+let goalText = "";
+if (reading === "1") {
+  goalText = "전체 흐름 파악, 인상적인 구절 표시, 모르는 단어/개념 체크";
+} else if (reading === "2") {
+  goalText = "구조 분석, 핵심 논증 정리, 초독 때 놓친 부분 보완";
+} else if (reading === "3") {
+  goalText = "비판적 읽기, 다른 책/개념과 연결, 나만의 해석 발전";
+} else {
+  goalText = "심화 분석, 특정 주제 집중 탐구, 글쓰기/발표 준비";
+}
+
+// 다음 독서 계획 텍스트
+let nextReadingPlan = "";
+if (parseInt(reading) < 5) {
+  const nextNum = parseInt(reading) + 1;
+  const nextLabel = nextNum === 2 ? "재독" : `${nextNum}독`;
+  nextReadingPlan = `- [ ] ${nextLabel} 예정일: \n- ${nextLabel} 때 집중할 점: `;
+} else {
+  nextReadingPlan = "- 5독 완료! 🎉\n- [ ] Merge 노트로 최종 정리: [[ ]]";
+}
+
+// 이전 독서 링크 줄
+let prevReadingLine = prevReadingLink ? `> - **이전 독서**: ${prevReadingLink}` : "";
+
+// 챕터 섹션 동적 생성
+let chapterSections = "";
+for (let i = 1; i <= chapterCount; i++) {
+  chapterSections += `### Chapter ${i}: 
+**핵심 내용**
+- 
+
+**인상적인 구절**
+> p. 
+
+**의문/생각**
+- 
+
+---
+
+`;
+}
+
 // ===== 파일 이동 =====
 try { await tp.file.rename(title); } catch(e) {}
 try { await tp.file.move(`${folder}/${title}`); } catch(e) {}
@@ -90,58 +137,48 @@ try { await tp.file.move(`${folder}/${title}`); } catch(e) {}
 ---
 tags:<% tags.map(t => `\n  - ${t}`).join("") %>
 aliases:
-  - "<%= bookTitle %>"
+  - "<% bookTitle %>"
 index:
   - "[[🏷 Books]]"
 type:
   - book
-title: "<%= title %>"
-created: <%= NOW_DATE %>
-updated: <%= NOW_DT %>
-author: "<%= author %>"
-translator: "<%= translator %>"
-publisher: "<%= publisher %>"
-publish_year: "<%= publishYear %>"
-total_pages: <%= totalPages || '""' %>
+title: "<% title %>"
+created: <% NOW_DATE %>
+updated: <% NOW_DT %>
+author: "<% author %>"
+translator: "<% translator %>"
+publisher: "<% publisher %>"
+publish_year: "<% publishYear %>"
+total_pages: <% totalPages || '""' %>
 CMDS:
   - Connect
 status:
   - "[[🚜In Progress]]"
 group:
-  - <%= groupOne %>
-reading_count: <%= reading %>
-start_date: <%= NOW_DATE %>
+  - <% groupOne %>
+reading_count: <% reading %>
+start_date: <% NOW_DATE %>
 finish_date: ""
-prev_reading: "<%= prevReadingLink %>"
+prev_reading: "<% prevReadingLink %>"
 ---
 
-# <%= bookTitle %> (<%= readingLabel %>)
+# <% bookTitle %> (<% readingLabel %>)
 
 > [!info] 책 정보
-> - **저자**: <%= author %>
-> - **역자**: <%= translator || "-" %>
-> - **출판사**: <%= publisher || "-" %>
-> - **출판연도**: <%= publishYear || "-" %>
-> - **총 페이지**: <%= totalPages || "-" %>
-> - **독서 회차**: <%= readingLabel %>
-<% if (prevReadingLink) { %>
-> - **이전 독서**: <%= prevReadingLink %>
-<% } %>
+> - **저자**: <% author %>
+> - **역자**: <% translator || "-" %>
+> - **출판사**: <% publisher || "-" %>
+> - **출판연도**: <% publishYear || "-" %>
+> - **총 페이지**: <% totalPages || "-" %>
+> - **독서 회차**: <% readingLabel %>
+<% prevReadingLine %>
 
 ---
 
 ## 🎯 이번 독서 목표
 
-> [!abstract] <%= readingLabel %> 목표
-> <% if (reading === "1") { -%>
-> 전체 흐름 파악, 인상적인 구절 표시, 모르는 단어/개념 체크
-> <% } else if (reading === "2") { -%>
-> 구조 분석, 핵심 논증 정리, 초독 때 놓친 부분 보완
-> <% } else if (reading === "3") { -%>
-> 비판적 읽기, 다른 책/개념과 연결, 나만의 해석 발전
-> <% } else { -%>
-> 심화 분석, 특정 주제 집중 탐구, 글쓰기/발표 준비
-> <% } -%>
+> [!abstract] <% readingLabel %> 목표
+> <% goalText %>
 
 - [ ] 목표 1: 
 - [ ] 목표 2: 
@@ -154,40 +191,18 @@ prev_reading: "<%= prevReadingLink %>"
 ### 진행 기록
 | 날짜 | 페이지 | 소요 시간 | 메모 |
 |------|--------|-----------|------|
-| <%= NOW_DATE %> | p.1 - p. | | |
+| <% NOW_DATE %> | p.1 - p. | | |
 | | | | |
 
 ### 현재 진행률
-- 현재: p. / <%= totalPages || "?" %>
+- 현재: p. / <% totalPages || "?" %>
 - 진행률: %
 
 ---
 
-## 📝 챕터별 노트
+## 📝 챕터별 노트 (<% chapterCount %>개)
 
-### Chapter 1: 
-**핵심 내용**
-- 
-
-**인상적인 구절**
-> p. 
-
-**의문/생각**
-- 
-
----
-
-### Chapter 2: 
-**핵심 내용**
-- 
-
-**인상적인 구절**
-> p. 
-
-**의문/생각**
-- 
-
----
+<% chapterSections %>
 
 ## ⭐ 핵심 구절 모음
 
@@ -236,16 +251,7 @@ prev_reading: "<%= prevReadingLink %>"
 - 
 
 ### 다음 독서 계획
-<% if (parseInt(reading) < 5) { 
-  const nextNum = parseInt(reading) + 1;
-  const nextLabel = nextNum === 2 ? "재독" : `${nextNum}독`;
--%>
-- [ ] <%= nextLabel %> 예정일: 
-- <%= nextLabel %> 때 집중할 점: 
-<% } else { -%>
-- 5독 완료! 🎉
-- [ ] Merge 노트로 최종 정리: [[ ]]
-<% } -%>
+<% nextReadingPlan %>
 
 ---
 
@@ -264,11 +270,11 @@ prev_reading: "<%= prevReadingLink %>"
 
 ## 📝 Flashcards
 
-#flashcards/<%= genre.toLowerCase() %>
+#flashcards/<% genre.toLowerCase() %>
 
-<%= bookTitle %>의 핵심 주제:: 
+<% bookTitle %>의 핵심 주제:: 
 
-<%= bookTitle %>에서 가장 인상적인 구절:: 
+<% bookTitle %>에서 가장 인상적인 구절:: 
 
-<%= author %>의 핵심 사상:: 
+<% author %>의 핵심 사상:: 
 

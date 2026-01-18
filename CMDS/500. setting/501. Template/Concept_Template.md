@@ -56,6 +56,81 @@ let tags = ["concept", `concept/${domain.toLowerCase()}`];
 if (subDomain && subDomain !== "other") tags.push(`topic/${subDomain}`);
 tags.push(`level/${level}`);
 
+// topic 라인
+let topicLine = (subDomain && subDomain !== "other") ? `topic: ${subDomain}` : "";
+
+// 정의 섹션 결정
+let definitionSection = "";
+if (domain === "CS") {
+  definitionSection = "```cpp\n// 기본 형태\n\n```";
+} else if (domain === "Math" || domain === "EE") {
+  definitionSection = "$$\n\n$$";
+} else {
+  definitionSection = "> ";
+}
+
+// 핵심 섹션 결정
+let coreSection = "";
+if (domain === "CS") {
+  coreSection = `### 문법
+\`\`\`cpp
+
+\`\`\`
+
+### 예시
+\`\`\`cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    return 0;
+}
+\`\`\`
+
+### 주의
+- `;
+} else if (domain === "Math") {
+  coreSection = `### 공식
+$$
+
+$$
+
+### 증명 (간략)
+1. 
+2. 
+
+### 언제 사용?
+- `;
+} else if (domain === "EE") {
+  coreSection = `### 원리
+- 
+
+### 수식
+$$
+
+$$
+
+### 적용
+- `;
+} else if (domain === "Phil") {
+  coreSection = `### 핵심 논증
+1. 전제: 
+2. 전제: 
+3. 결론: 
+
+### 주요 철학자
+- 
+
+### 비판
+- `;
+} else {
+  coreSection = `### 핵심 포인트
+1. 
+2. 
+3. `;
+}
+
 // 파일명 및 이동
 const fileName = `C - ${title}`;
 await tp.file.rename(fileName);
@@ -63,15 +138,13 @@ await tp.file.move(`CMDS/200. CMDS/220. Merge/223. Concept/${domain}/${fileName}
 -%>
 ---
 type: concept
-title: "<%= title %>"
+title: "<% title %>"
 created: <% d %>
 updated: <% dt %>
 author:
   - "<% ME %>"
 domain: <% domain %>
-<% if (subDomain && subDomain !== "other") { -%>
-topic: <% subDomain %>
-<% } -%>
+<% topicLine %>
 level: <% level %>
 CMDS: Merge
 status:
@@ -89,18 +162,7 @@ confidence: 0
 
 ## 📖 정의
 
-<% if (domain === "CS") { -%>
-```cpp
-// 기본 형태
-
-```
-<% } else if (domain === "Math" || domain === "EE") { -%>
-$$
-
-$$
-<% } else { -%>
-> 
-<% } -%>
+<% definitionSection %>
 
 ---
 
@@ -113,65 +175,7 @@ $$
 
 ## 📐 핵심
 
-<% if (domain === "CS") { -%>
-### 문법
-```cpp
-
-```
-
-### 예시
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-
-int main() {
-    
-    return 0;
-}
-```
-
-### 주의
-- 
-<% } else if (domain === "Math") { -%>
-### 공식
-$$
-
-$$
-
-### 증명 (간략)
-1. 
-2. 
-
-### 언제 사용?
-- 
-<% } else if (domain === "EE") { -%>
-### 원리
-- 
-
-### 수식
-$$
-
-$$
-
-### 적용
-- 
-<% } else if (domain === "Phil") { -%>
-### 핵심 논증
-1. 전제: 
-2. 전제: 
-3. 결론: 
-
-### 주요 철학자
-- 
-
-### 비판
-- 
-<% } else { -%>
-### 핵심 포인트
-1. 
-2. 
-3. 
-<% } -%>
+<% coreSection %>
 
 ---
 

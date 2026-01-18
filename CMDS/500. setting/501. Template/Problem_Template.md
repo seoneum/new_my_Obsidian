@@ -58,6 +58,93 @@ if (problemType === "coding") {
 let tags = ["problem", `problem/${problemType}`, `difficulty/${difficulty}`];
 if (source && source !== "other") tags.push(`source/${source}`);
 
+// language 라인
+let languageLine = codeLang ? `language: ${codeLang}` : "";
+
+// 문제 섹션 결정
+let problemSection = "";
+if (problemType === "coding") {
+  problemSection = `### 입력
+\`\`\`
+
+\`\`\`
+
+### 출력
+\`\`\`
+
+\`\`\`
+
+### 제한
+- 시간: 
+- 메모리: `;
+} else if (problemType === "math" || problemType === "engineering") {
+  problemSection = `### Given (주어진 것)
+- 
+
+### Find (구할 것)
+- `;
+} else {
+  problemSection = `### 문제/논제
+- `;
+}
+
+// 풀이 섹션 결정
+let solutionSection = "";
+
+if (problemType === "coding") {
+  if (codeLang === "cpp" || codeLang === "both") {
+    solutionSection += `### C++
+\`\`\`cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    
+    return 0;
+}
+\`\`\`
+`;
+  }
+  if (codeLang === "python" || codeLang === "both") {
+    solutionSection += `
+### Python
+\`\`\`python
+
+\`\`\`
+`;
+  }
+  solutionSection += `
+### 복잡도
+- 시간: O()
+- 공간: O()`;
+} else if (problemType === "math" || problemType === "engineering") {
+  solutionSection = `### Step 1
+$$
+
+$$
+
+### Step 2
+$$
+
+$$
+
+### 답
+$$
+\\boxed{}
+$$`;
+} else {
+  solutionSection = `### 논증
+1. 
+2. 
+3. 
+
+### 결론
+- `;
+}
+
 // 파일명 및 이동
 const fileName = `P - ${title}`;
 await tp.file.rename(fileName);
@@ -69,7 +156,7 @@ await tp.file.move(`${folder}/${fileName}`);
 -%>
 ---
 type: problem
-title: "<%= title %>"
+title: "<% title %>"
 created: <% d %>
 updated: <% dt %>
 author:
@@ -77,9 +164,7 @@ author:
 problem_type: <% problemType %>
 source: <% source %>
 difficulty: <% difficulty %>
-<% if (codeLang) { -%>
-language: <% codeLang %>
-<% } -%>
+<% languageLine %>
 status:
   - "[[🚜In Progress]]"
 tags:
@@ -96,30 +181,7 @@ time_spent: 0
 
 ## 📋 문제
 
-<% if (problemType === "coding") { -%>
-### 입력
-```
-
-```
-
-### 출력
-```
-
-```
-
-### 제한
-- 시간: 
-- 메모리: 
-<% } else if (problemType === "math" || problemType === "engineering") { -%>
-### Given (주어진 것)
-- 
-
-### Find (구할 것)
-- 
-<% } else { -%>
-### 문제/논제
-- 
-<% } -%>
+<% problemSection %>
 
 ---
 
@@ -138,56 +200,7 @@ time_spent: 0
 
 ## ✏️ 풀이
 
-<% if (problemType === "coding" && (codeLang === "cpp" || codeLang === "both")) { -%>
-### C++
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    
-    
-    return 0;
-}
-```
-<% } -%>
-<% if (problemType === "coding" && (codeLang === "python" || codeLang === "both")) { -%>
-### Python
-```python
-
-```
-<% } -%>
-<% if (problemType === "coding") { -%>
-
-### 복잡도
-- 시간: O()
-- 공간: O()
-<% } else if (problemType === "math" || problemType === "engineering") { -%>
-### Step 1
-$$
-
-$$
-
-### Step 2
-$$
-
-$$
-
-### 답
-$$
-\boxed{}
-$$
-<% } else { -%>
-### 논증
-1. 
-2. 
-3. 
-
-### 결론
-- 
-<% } -%>
+<% solutionSection %>
 
 ---
 

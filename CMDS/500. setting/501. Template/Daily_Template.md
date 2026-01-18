@@ -36,7 +36,7 @@ tags:
 3. [ ] 
 
 ---
-<% if (dayKind === "study" || dayKind === "mixed") { -%>
+<%* if (dayKind === "study" || dayKind === "mixed") { -%>
 
 ## 📚 공부
 
@@ -50,8 +50,8 @@ tags:
 
 ### 모르는 것
 - 
-<% } -%>
-<% if (dayKind === "project" || dayKind === "mixed") { -%>
+<%* } -%>
+<%* if (dayKind === "project" || dayKind === "mixed") { -%>
 
 ## 🔧 프로젝트
 
@@ -63,14 +63,14 @@ tags:
 
 ### 막힌 것 → 내일
 - 
-<% } -%>
-<% if (dayKind === "off") { -%>
+<%* } -%>
+<%* if (dayKind === "off") { -%>
 
 ## 🌴 휴식
 
 - [ ] 하고 싶은 것:
 - 한 것:
-<% } -%>
+<%* } -%>
 
 ---
 

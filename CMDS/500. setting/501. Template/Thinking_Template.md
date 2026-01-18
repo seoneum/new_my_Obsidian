@@ -25,41 +25,22 @@ if (taggingMode === "now") {
 let tags = ["thinking", `thinking/${thinkingType}`, ...extraTags];
 if (taggingMode === "later") tags.push("tagging/needed");
 
-const fileName = `Q - ${title}`;
-await tp.file.rename(fileName);
-await tp.file.move(`CMDS/300. Thinking/${fileName}`);
--%>
----
-type: thinking
-title: "<%= title %>"
-created: <% NOW_DATE %>
-updated: <% NOW_DT %>
-author:
-  - "<% ME %>"
-group: <% domain %>
-status:
-  - "[[🌱Seed]]"
-thinking_type: <% thinkingType %>
-tags:
-<% tags.map(t => `  - ${t}`).join("\n") %>
-aliases: []
-resolved: false
----
+// 타입 라벨
+let typeLabel = "";
+if (thinkingType === "question") {
+  typeLabel = "❓ 미해결 질문";
+} else if (thinkingType === "idea") {
+  typeLabel = "💡 아이디어/가설";
+} else if (thinkingType === "dilemma") {
+  typeLabel = "🤔 고민/딜레마";
+} else {
+  typeLabel = "🔗 연결점";
+}
 
-# <% title %>
-
-> [!abstract] 사유 유형
-> **<% thinkingType === "question" ? "❓ 미해결 질문" : thinkingType === "idea" ? "💡 아이디어/가설" : thinkingType === "dilemma" ? "🤔 고민/딜레마" : "🔗 연결점" %>** | 분야: **<% domain %>**
-
----
-
-## 📝 핵심 질문/아이디어
-
-> 한 문장으로 정리
-
-<% if (thinkingType === "question") { -%>
-
----
+// 세부 섹션 결정
+let detailSection = "";
+if (thinkingType === "question") {
+  detailSection = `---
 
 ## ❓ Question Details
 
@@ -78,11 +59,9 @@ resolved: false
 - [ ] 
 
 ### 관련 개념/키워드
-- 
-
-<% } else if (thinkingType === "idea") { -%>
-
----
+- `;
+} else if (thinkingType === "idea") {
+  detailSection = `---
 
 ## 💡 Idea Details
 
@@ -103,11 +82,9 @@ resolved: false
 - [ ] 
 
 ### 관련 프로젝트/연구
-- [[ ]]
-
-<% } else if (thinkingType === "dilemma") { -%>
-
----
+- [[ ]]`;
+} else if (thinkingType === "dilemma") {
+  detailSection = `---
 
 ## 🤔 Dilemma Details
 
@@ -132,11 +109,9 @@ resolved: false
 
 ### 결정을 위해 더 필요한 정보
 - [ ] 
-- [ ] 
-
-<% } else { -%>
-
----
+- [ ] `;
+} else {
+  detailSection = `---
 
 ## 🔗 Connection Details
 
@@ -155,9 +130,42 @@ resolved: false
 
 ### 관련 노트
 - [[ ]]
-- [[ ]]
+- [[ ]]`;
+}
 
-<% } -%>
+const fileName = `Q - ${title}`;
+await tp.file.rename(fileName);
+await tp.file.move(`CMDS/300. Thinking/${fileName}`);
+-%>
+---
+type: thinking
+title: "<% title %>"
+created: <% NOW_DATE %>
+updated: <% NOW_DT %>
+author:
+  - "<% ME %>"
+group: <% domain %>
+status:
+  - "[[🌱Seed]]"
+thinking_type: <% thinkingType %>
+tags:
+<% tags.map(t => `  - ${t}`).join("\n") %>
+aliases: []
+resolved: false
+---
+
+# <% title %>
+
+> [!abstract] 사유 유형
+> **<% typeLabel %>** | 분야: **<% domain %>**
+
+---
+
+## 📝 핵심 질문/아이디어
+
+> 한 문장으로 정리
+
+<% detailSection %>
 
 ---
 

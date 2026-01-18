@@ -31,7 +31,7 @@ try { await tp.file.move(`CMDS/200. CMDS/220. Merge/${fynTitle}`); } catch(e) {}
 -%>
 ---
 type: merge
-title: "<%= title %>"
+title: "<% title %>"
 created: <% NOW_DATE %>
 updated: <% NOW_DT %>
 author:

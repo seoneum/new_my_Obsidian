@@ -30,7 +30,7 @@ await tp.file.move(`${folder}/${fileName}`);
 -%>
 ---
 type: meeting
-title: "<%= meetingType %> <%= num %>회"
+title: "<% meetingType %> <% num %>회"
 created: <% d %>
 updated: <% dt %>
 author:
@@ -44,7 +44,7 @@ tags:
 <% tags.map(t => `  - ${t}`).join("\n") %>
 ---
 
-# <% meetingType %> <%= num %>회 회의록
+# <% meetingType %> <% num %>회 회의록
 
 > 📅 **<% d %> <% time %>** | 참석: <% attendees %>
 
