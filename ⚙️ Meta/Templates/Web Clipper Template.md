@@ -29,9 +29,9 @@ const indexLink =
   '[[🏷 Web Clips]]';
 
 const targetFolder =
-  refKind === "paper" ? `CMDS/400. Reference/401. Anything_Reference` :
-  refKind === "book" ? `CMDS/400. Reference/401. Anything_Reference` :
-  `CMDS/100. Inbox/140. Web_Clipper`;
+  refKind === "paper" ? `📖 Books` :
+  refKind === "book" ? `📖 Books` :
+  `📥 Inbox/_webclip`;
 
 try { await tp.file.rename(title); } catch(e) {}
 try { await tp.file.move(`${targetFolder}/${title}`); } catch(e) {}

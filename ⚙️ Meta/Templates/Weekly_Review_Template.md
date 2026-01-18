@@ -18,7 +18,7 @@ const weekEnd = d;
 
 const fileName = `FC - ${year}-W${weekNum} (Weekly)`;
 await tp.file.rename(fileName);
-await tp.file.move(`CMDS/200. CMDS/220. Merge/222. FlashCard/${fileName}`);
+await tp.file.move(`💡 Notes/Flashcards/${fileName}`);
 -%>
 ---
 type: weekly-review

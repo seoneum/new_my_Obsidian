@@ -4,8 +4,8 @@
   "hasMigratedWeeklyNoteSettings": false,
   "daily": {
     "format": "",
-    "template": "CMDS/500. setting/501. Template/Master Template.md",
-    "folder": "CMDS/500. setting/501. Template",
+    "template": "⚙️ Meta/Templates/Daily_Template.md",
+    "folder": "⚙️ Meta/Templates",
     "enabled": true
   },
   "weekly": {

@@ -9,7 +9,7 @@ cmds: connect
 const ME = '[[김선음]]';
 const NOW_DATE = tp.date.now("YYYY-MM-DD");
 const NOW_DT = tp.date.now("YYYY-MM-DDTHH:mm:ss");
-const TARGET_FOLDER = "CMDS/400. Reference/490. People_Reference/492. Engineering";
+const TARGET_FOLDER = "⚙️ Meta/People/Engineering";
 
 const cleanTag = (s) => String(s ?? "").trim().replace(/^#/, "");
 const slugNoSpace = (s) => String(s ?? "").trim().replace(/\s+/g,"");

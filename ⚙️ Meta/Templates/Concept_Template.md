@@ -145,7 +145,7 @@ $$
 // 파일명 및 이동
 const fileName = `C - ${title}`;
 await tp.file.rename(fileName);
-await tp.file.move(`CMDS/200. CMDS/220. Merge/223. Concept/${domain}/${fileName}`);
+await tp.file.move(`💡 Notes/Concepts/${fileName}`);
 -%>
 ---
 type: concept

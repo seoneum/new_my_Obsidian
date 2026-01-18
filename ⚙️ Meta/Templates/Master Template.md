@@ -58,45 +58,45 @@ async function renameAndMove(newTitle, folder) {
 // ===== Paths =====
 const PATH = {
   // Inbox
-  inbox_any: "CMDS/100. Inbox/101. 🚨Anything",
-  inbox_daily: "CMDS/100. Inbox/102. 📝Daily_Note",
-  inbox_excalidraw: "CMDS/100. Inbox/103. 🖌️Excalidraw",
-  inbox_software: "CMDS/100. Inbox/110. Software",
-  inbox_software_git: "CMDS/100. Inbox/110. Software/111. Git",
-  inbox_software_linux: "CMDS/100. Inbox/110. Software/112. Linux",
-  inbox_engineering: "CMDS/100. Inbox/120. Engineering",
-  inbox_philosophy: "CMDS/100. Inbox/130. Philosophy",
-  inbox_phil_book: "CMDS/100. Inbox/130. Philosophy/133. Book",
-  inbox_phil_internet: "CMDS/100. Inbox/130. Philosophy/134. Internet&Others",
-  inbox_phil_theory: "CMDS/100. Inbox/130. Philosophy/135. Theory",
-  inbox_webclipper: "CMDS/100. Inbox/140. Web_Clipper",
+  inbox: "📥 Inbox",
+  inbox_quick: "📥 Inbox/_quick",
+  inbox_webclip: "📥 Inbox/_webclip",
 
-  // CMDS
-  connect: "CMDS/200. CMDS/201. Connect",
-  merge: "CMDS/200. CMDS/220. Merge",
-  merge_journal: "CMDS/200. CMDS/220. Merge/221. Journaling",
-  merge_fc: "CMDS/200. CMDS/220. Merge/222. FlashCard",
-  merge_concept: "CMDS/200. CMDS/220. Merge/223. Concept",
-  merge_problem: "CMDS/200. CMDS/220. Merge/224. Problem",
-  develop: "CMDS/200. CMDS/240. Develop",
-  share: "CMDS/200. CMDS/260. Share",
-  project: "CMDS/200. CMDS/280. Project",
+  // Daily
+  daily: "📅 Daily",
 
-  // Thinking
-  thinking: "CMDS/300. Thinking",
+  // Lectures (by semester)
+  lectures: "📚 Lectures",
+  lectures_26_1: "📚 Lectures/26-1",
 
-  // Reference
-  ref_any: "CMDS/400. Reference/401. Anything_Reference",
-  ref_software: "CMDS/400. Reference/410. Software_Reference",
-  ref_engineering: "CMDS/400. Reference/420. Engineering_Reference",
-  ref_philosophy: "CMDS/400. Reference/430. Philosophy_Reference",
-  ref_meeting: "CMDS/400. Reference/450. Meeting/26-1",
+  // Books
+  books: "📖 Books",
+  books_phil: "📖 Books/Philosophy",
+  books_lit: "📖 Books/Literature",
+  books_sci: "📖 Books/Science",
 
-  // People
-  people_acq: "CMDS/400. Reference/490. People_Reference/491. Acquaintance",
-  people_eng: "CMDS/400. Reference/490. People_Reference/492. Engineering",
-  people_phil:"CMDS/400. Reference/490. People_Reference/493. Philosophy",
-  people_unk: "CMDS/400. Reference/490. People_Reference/494. Unknown",
+  // Notes
+  notes: "💡 Notes",
+  notes_concepts: "💡 Notes/Concepts",
+  notes_problems: "💡 Notes/Problems",
+  notes_flashcards: "💡 Notes/Flashcards",
+  notes_feynman: "💡 Notes/Feynman",
+
+  // Projects
+  projects: "🎯 Projects",
+  projects_active: "🎯 Projects/Active",
+
+  // Archive
+  archive: "🗃️ Archive",
+  archive_meetings: "🗃️ Archive/Meetings",
+
+  // Meta
+  meta: "⚙️ Meta",
+  templates: "⚙️ Meta/Templates",
+  people_acq: "⚙️ Meta/People/Acquaintance",
+  people_eng: "⚙️ Meta/People/Engineering",
+  people_phil: "⚙️ Meta/People/Philosophy",
+  people_unk: "⚙️ Meta/People/Unknown",
 };
 
 // ===== Index links =====
@@ -204,7 +204,7 @@ let publishDate = "";
 let started = NOW_DATE;
 let start_read_date = "";
 let finish_read_date = "";
-let folder = PATH.inbox_any;
+let folder = PATH.inbox;
 
 function applyTaggingNeeded() {
   if (taggingMode === "later") tags.push("tagging/needed");
@@ -218,37 +218,9 @@ function withPrefix(prefix, t) {
 
 // ===== Branches =====
 if (kind === "inbox") {
-  const area = await tp.system.suggester(
-    ["Anything", "Software", "Engineering", "Philosophy"],
-    ["any","software","engineering","philosophy"]
-  );
-
-  if (area === "software") {
-    const sub = await tp.system.suggester(["General", "Git", "Linux"], ["general","git","linux"]);
-    folder = sub === "git" ? PATH.inbox_software_git : sub === "linux" ? PATH.inbox_software_linux : PATH.inbox_software;
-    indexArr = [INDEX.software];
-    groupOne = "CS";
-  } else if (area === "engineering") {
-    folder = PATH.inbox_engineering;
-    indexArr = [INDEX.waypoint];
-    groupOne = "EE";
-  } else if (area === "philosophy") {
-    const sub = await tp.system.suggester(
-      ["General", "Book", "Internet&Others", "Theory"],
-      ["general","book","internet","theory"]
-    );
-    folder =
-      sub === "book" ? PATH.inbox_phil_book :
-      sub === "internet" ? PATH.inbox_phil_internet :
-      sub === "theory" ? PATH.inbox_phil_theory :
-      PATH.inbox_philosophy;
-    indexArr = [INDEX.waypoint];
-    groupOne = "Phil";
-  } else {
-    folder = PATH.inbox_any;
-    indexArr = [INDEX.waypoint];
-    groupOne = "General";
-  }
+  folder = PATH.inbox_quick;
+  indexArr = [INDEX.waypoint];
+  groupOne = "General";
 
   typeArr = ["basic"];
   cmdsArr = [];
@@ -270,18 +242,18 @@ if (kind === "inbox") {
       "📚 기타 (직접입력)"
     ],
     [
-      "26-1-Phil-언어철학",
-      "26-1-Phil-존재론과형이상학",
-      "26-1-Phil-서양현대철학사",
-      "26-1-Math-공업수학1",
-      "26-1-Math-일반수학2",
-      "26-1-EE-전자기학1",
+      "언어철학",
+      "존재론과형이상학",
+      "서양현대철학사",
+      "공업수학1",
+      "일반수학2",
+      "전자기학1",
       "other"
     ]
   ) || "other";
 
   let courseName = "";
-  let courseFolder = PATH.connect;
+  let courseFolder = PATH.lectures_26_1;
   
   if (course === "other") {
     courseName = await tp.system.prompt("과목명:", "");
@@ -290,19 +262,20 @@ if (kind === "inbox") {
       ["CS","EE","Phil","Math","Robotics","General"]
     );
     groupOne = domain;
+    courseFolder = `${PATH.lectures_26_1}/${courseName}`;
   } else {
-    courseFolder = `CMDS/200. CMDS/201. Connect/26-1/${course}`;
-    courseName = course.split("-").pop();
+    courseFolder = `${PATH.lectures_26_1}/${course}`;
+    courseName = course;
     // 자동 group 결정
-    if (course.includes("Phil")) groupOne = "Phil";
-    else if (course.includes("Math")) groupOne = "Math";
-    else if (course.includes("EE")) groupOne = "EE";
+    if (["언어철학", "존재론과형이상학", "서양현대철학사"].includes(course)) groupOne = "Phil";
+    else if (["공업수학1", "일반수학2"].includes(course)) groupOne = "Math";
+    else if (course === "전자기학1") groupOne = "EE";
   }
 
   folder = courseFolder;
   indexArr = [INDEX.lecture];
   typeArr = ["lecture"];
-  cmdsArr = ["Connect"];
+  cmdsArr = [];
   authors = [];
 
   const session = await tp.system.prompt("주차/회차:", NOW_DATE);
@@ -315,59 +288,27 @@ if (kind === "inbox") {
   var META_LECTURE = { course: courseName, session, instructor, source_url: "" };
 
 } else if (kind === "webclip") {
-  const keep = await tp.system.suggester(
-    ["임시 클립 → Inbox", "보관할 가치 있음 → Reference"],
-    ["inbox","reference"]
-  );
   const url = await tp.system.prompt("URL:", "");
-  const area = await tp.system.suggester(
-    ["Anything", "Software", "Engineering", "Philosophy"],
-    ["any","software","engineering","philosophy"]
-  );
 
-  if (keep === "inbox") {
-    folder = PATH.inbox_webclipper;
-    indexArr = [INDEX.webclips];
-    typeArr = ["reference"];
-    cmdsArr = ["Connect"];
-    authors = [];
-    title = withPrefix("W - ", title);
-    tags = ["webclip", "inbox", ...extraTags];
-    applyTaggingNeeded();
-  } else {
-    folder =
-      area === "software" ? PATH.ref_software :
-      area === "engineering" ? PATH.ref_engineering :
-      area === "philosophy" ? PATH.ref_philosophy :
-      PATH.ref_any;
+  folder = PATH.inbox_webclip;
+  indexArr = [INDEX.webclips];
+  typeArr = ["reference"];
+  cmdsArr = [];
+  authors = [];
+  title = withPrefix("W - ", title);
+  tags = ["webclip", "inbox", ...extraTags];
+  applyTaggingNeeded();
 
-    indexArr = [INDEX.webclips];
-    typeArr = ["reference"];
-    cmdsArr = ["Connect"];
-    authors = [];
-    title = withPrefix("R - ", title);
-    tags = ["reference", "webclip", ...extraTags];
-    applyTaggingNeeded();
-  }
+  groupOne = "General";
 
-  groupOne =
-    area === "software" ? "CS" :
-    area === "engineering" ? "EE" :
-    area === "philosophy" ? "Phil" : "General";
-
-  var META_WEB = { url, keep, area };
+  var META_WEB = { url, keep: "inbox", area: "any" };
 
 } else if (kind === "reference") {
   const refKind = await tp.system.suggester(["Paper(논문)","Book(책)","Doc/Other(문서/기타)"], ["paper","book","doc"]);
-  const area = await tp.system.suggester(["Anything","Software","Engineering","Philosophy"], ["any","software","engineering","philosophy"]);
   const url = await tp.system.prompt("URL(없으면 Enter):", "");
   publishDate = await tp.system.prompt("publishDate(없으면 Enter):", "");
 
-  folder =
-    area === "software" ? PATH.ref_software :
-    area === "engineering" ? PATH.ref_engineering :
-    area === "philosophy" ? PATH.ref_philosophy :
-    PATH.ref_any;
+  folder = PATH.books;
 
   indexArr = [
     refKind === "paper" ? INDEX.research :
@@ -376,18 +317,15 @@ if (kind === "inbox") {
   ];
 
   typeArr = ["reference"];
-  cmdsArr = ["Connect"];
+  cmdsArr = [];
   authors = [];
   title = withPrefix("R - ", title);
   tags = ["reference", refKind, ...extraTags];
   applyTaggingNeeded();
 
-  groupOne =
-    area === "software" ? "CS" :
-    area === "engineering" ? "EE" :
-    area === "philosophy" ? "Phil" : "General";
+  groupOne = "General";
 
-  var META_REF = { refKind, area, url };
+  var META_REF = { refKind, area: "any", url };
 
 } else if (kind === "people") {
   const pType = await tp.system.suggester(
@@ -422,10 +360,10 @@ if (kind === "inbox") {
   statusOne = pType === "unk" ? "[[🌱Seed]]" : "[[🌿Sapling]]";
 
 } else if (kind === "project") {
-  folder = PATH.project;
+  folder = PATH.projects;
   indexArr = [INDEX.waypoint];
   typeArr = ["project"];
-  cmdsArr = ["Develop"];
+  cmdsArr = [];
   authors = [q(ME)];
   title = withPrefix("PRJ - ", title);
 
@@ -445,10 +383,10 @@ if (kind === "inbox") {
   };
 
 } else if (kind === "develop") {
-  folder = PATH.develop;
+  folder = PATH.notes;
   indexArr = [INDEX.review];
   typeArr = ["develop"];
-  cmdsArr = ["Develop"];
+  cmdsArr = [];
   authors = [q(ME)];
   title = withPrefix("DEV - ", title);
 
@@ -456,10 +394,10 @@ if (kind === "inbox") {
   applyTaggingNeeded();
 
 } else if (kind === "share") {
-  folder = PATH.share;
+  folder = PATH.archive;
   indexArr = [INDEX.waypoint];
   typeArr = ["basic"];
-  cmdsArr = ["Share"];
+  cmdsArr = [];
   authors = [q(ME)];
   title = withPrefix("SHARE - ", title);
 

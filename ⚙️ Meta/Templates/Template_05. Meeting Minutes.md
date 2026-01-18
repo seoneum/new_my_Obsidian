@@ -24,8 +24,8 @@ let group = await tp.system.suggester(
 
 // 저장 위치 선택
 let folderChoice = await tp.system.suggester(
-  ["현재 위치 유지", "CMDS/200. CMDS/201. Connect"],
-  ["", "CMDS/200. CMDS/201. Connect"]
+  ["현재 위치 유지", "🗃️ Archive/Meetings"],
+  ["", "🗃️ Archive/Meetings"]
 );
 
 let fileName = tp.date.now("YYYYMMDD") + "_" + meetingTitle;

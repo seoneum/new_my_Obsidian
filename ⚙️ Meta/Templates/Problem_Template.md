@@ -160,9 +160,7 @@ $$`;
 const fileName = `P - ${title}`;
 await tp.file.rename(fileName);
 
-const folder = problemType === "coding" 
-  ? "CMDS/200. CMDS/220. Merge/224. Problem/Coding"
-  : "CMDS/200. CMDS/220. Merge/224. Problem/Math";
+const folder = "💡 Notes/Problems";
 await tp.file.move(`${folder}/${fileName}`);
 -%>
 ---

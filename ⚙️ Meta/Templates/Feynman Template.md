@@ -40,9 +40,9 @@ if (taggingMode === "now") {
 let tags = ["merge", "feynman", "zettel", `difficulty/${difficulty}`, ...extraTags];
 if (taggingMode === "later") tags.push("tagging/needed");
 
-const fynTitle = `M - ${title}`;
+const fynTitle = `FYN - ${title}`;
 try { await tp.file.rename(fynTitle); } catch(e) {}
-try { await tp.file.move(`CMDS/200. CMDS/220. Merge/${fynTitle}`); } catch(e) {}
+try { await tp.file.move(`💡 Notes/Feynman/${fynTitle}`); } catch(e) {}
 -%>
 ---
 type: merge

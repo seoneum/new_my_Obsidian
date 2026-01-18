@@ -68,17 +68,17 @@ if (taggingMode === "now") {
 }
 
 // ===== 폴더 결정 =====
-let folder = "CMDS/200. CMDS/201. Connect";
+let folder = "📖 Books";
 let groupOne = genre;
 
 if (genre === "Phil") {
-  folder = "CMDS/200. CMDS/201. Connect/203. Philosophy/Books";
+  folder = "📖 Books/Philosophy";
   groupOne = "Phil";
 } else if (genre === "Lit") {
-  folder = "CMDS/200. CMDS/201. Connect/204. Literature/Books";
+  folder = "📖 Books/Literature";
   groupOne = "Lit";
 } else {
-  folder = `CMDS/200. CMDS/201. Connect/205. ${genre}/Books`;
+  folder = `📖 Books/${genre}`;
 }
 
 // ===== 파일명 및 태그 =====

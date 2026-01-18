@@ -14,7 +14,7 @@ const ME = '[[김선음]]';
 
 const fileName = `FC - ${d} (Morning)`;
 await tp.file.rename(fileName);
-await tp.file.move(`CMDS/200. CMDS/220. Merge/222. FlashCard/${fileName}`);
+await tp.file.move(`💡 Notes/Flashcards/${fileName}`);
 -%>
 ---
 type: flashcards

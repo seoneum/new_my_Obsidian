@@ -32,9 +32,7 @@ let tags = ["meeting", `meeting/${meetingType}`];
 const fileName = `MTG - ${d} ${meetingType} ${num}회`;
 await tp.file.rename(fileName);
 
-const folder = meetingType === "other" 
-  ? "CMDS/400. Reference/450. Meeting/26-1"
-  : `CMDS/400. Reference/450. Meeting/26-1/${meetingType}`;
+const folder = "🗃️ Archive/Meetings";
 await tp.file.move(`${folder}/${fileName}`);
 -%>
 ---

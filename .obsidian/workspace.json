@@ -11,26 +11,27 @@
             "id": "16eed5651cff634d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "08e52f5d5a39f330",
-            "type": "leaf",
-            "state": {
-              "type": "mk-space",
+              "type": "markdown",
               "state": {
-                "path": "📓 Feynman"
+                "file": "📥 Inbox/_quick/N - Tmux 간단 정리.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "📓 Feynman"
+              "title": "N - Tmux 간단 정리"
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -94,8 +95,7 @@
               "title": "Navigator"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -489,7 +489,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5
+    "width": 336.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -558,44 +559,44 @@
       }
     ]
   },
-  "active": "08e52f5d5a39f330",
+  "active": "16eed5651cff634d",
   "lastOpenFiles": [
+    "⚙️ Meta/Guides/Git 브랜치 작업 가이드.md",
+    "📥 Inbox/_quick/N - Tmux 간단 정리.md",
+    "🗃️ Archive/Linux",
+    "🗃️ Archive/Linux/Git 기초.md",
+    "🗃️ Archive/Philosophy/실재론.md",
+    "🎯 Projects/PRJ - 동민이와 수업.md",
+    "🗃️ Archive/Philosophy",
+    "💡 Notes/Quick/Slamslam.md",
+    "💡 Notes/Quick/공부를 어떻게 하면 좋을까요?.md",
+    "💡 Notes/Quick/Ubuntu 22.04  20.04  18.04에서 한글 입력 환경(한영키) 설정하기.md",
+    "💡 Notes/Quick/Obsidian connection to Git.md",
+    "💡 Notes/Quick/Linux Syntax.md",
+    "💡 Notes/Quick/Copilot cli.md",
+    "💡 Notes/Quick/Clip web pages.md",
+    "💡 Notes/Quick/N - 수학 독학 실천 가이드.md",
+    "💡 Notes/Quick/N - Deepcode 설치 가이드.md",
+    "💡 Notes/Quick",
+    "🗃️ Archive/References_paper/R - 보행 상태 추정.md",
+    "🗃️ Archive/References_paper/R - 경로 생성.md",
+    "🗃️ Archive/References_paper",
+    "💡 Notes/Concepts/C - Modern C++ 궁금증 모음.md",
+    "💡 Notes/Concepts/C - Modern C++ Day 1.md",
+    "💡 Notes/Concepts/C - Modern C++ Array.md",
     "🏠 Dashboard.md",
-    "CMDS/500. setting/501. Template/D - 2026-01-18.md",
-    "CMDS/500. setting/501. Template",
-    "CMDS/500. setting",
-    "CMDS",
-    "📅 Daily/.md",
-    "📅 Daily/102. 📝Daily_Note.md",
-    "📖 Books/R - 사랑의 단상.md",
-    "📌Guidline.md",
-    "📅 Daily/D - 2026-01-02.md",
-    "📅 Daily/D - 2026-01-02 draft.md",
-    "📅 Daily/D - 2025-12-21.md",
-    "📅 Daily/D - 2025-12-20.md",
-    "📅 Daily/D - 2025-12-18.md",
-    "📅 Daily/D - 2025-12-16.md",
-    "⚙️ Meta/Guides/UNIFIED_METHODOLOGY.md",
-    "⚙️ Meta/Guides/CMDS Process.md",
-    "⚙️ Meta/Guides/CMDS Guide.md",
-    "⚙️ Meta/Guides/rclone_gdrive_backup_guide.md",
-    "⚙️ Meta/Guides/n8n_setup_guide.md",
-    "⚙️ Meta/Guides/Tags.md",
-    "⚙️ Meta/Guides/Properties.md",
-    "⚙️ Meta/Guides/Plugins.md",
-    "⚙️ Meta/Guides/Markdown Syntax.md",
-    "⚙️ Meta/Guides/Hot key.md",
-    "⚙️ Meta/Prompts/Translate to Chinese.md",
-    "⚙️ Meta/Prompts/Summarize.md",
-    "⚙️ Meta/Prompts/Socrates Prompt.md",
-    "⚙️ Meta/Prompts/Simplify.md",
-    "📚 Lectures/Philosophy",
-    "⚙️ Meta/Guides",
-    "⚙️ Meta/Prompts",
-    "📓 Feynman",
-    "🧠 Flashcards",
-    "📝 Problems",
-    "🗃️ Archive/Tests",
+    "⚙️ Meta/People/Archive/Hegel - Klaus Vieweg.md",
+    "⚙️ Meta/People/Archive",
+    "🗃️ Archive/Drawings/Drawing 2025-12-17 15.29.34.excalidraw.md",
+    "🗃️ Archive/Old_Lectures",
+    "🗃️ Archive/Old_Projects",
+    "🗃️ Archive/Drawings",
+    "Vault.md",
+    "📅 Daily/D - 2026-01-18.md",
+    "📖 Books/Philosophy/R - 서양 철학사.md",
+    "🗃️ Archive/people",
+    "CMDS/200. CMDS/201. Connect/203. Philosophy/Books/B - 서양철학사 (초독).md",
+    "📚 Lectures/26-1/존재론과형이상학",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",

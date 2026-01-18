@@ -23,7 +23,7 @@ status:
 group:
   - CS
 publishDate: {}
-start_read_date: {}
+start_read_date: 2026-01-18T13:41:00
 finish_read_date: {}
 migrated_from: CMDS/200. CMDS/280. Project/PRJ - 동민이와 수업.md
 domain:

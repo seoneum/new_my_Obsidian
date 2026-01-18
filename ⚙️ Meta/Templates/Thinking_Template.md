@@ -150,7 +150,7 @@ if (thinkingType === "question") {
 
 const fileName = `Q - ${title}`;
 await tp.file.rename(fileName);
-await tp.file.move(`CMDS/300. Thinking/${fileName}`);
+await tp.file.move(`💡 Notes/${fileName}`);
 -%>
 ---
 type: thinking
