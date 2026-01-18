@@ -10,7 +10,7 @@ const ME = '[[김선음]]';
 const NOW_DATE = tp.date.now("YYYY-MM-DD");
 const NOW_DT = tp.date.now("YYYY-MM-DDTHH:mm:ss");
 
-const q = (s) => `"${String(s ?? "").replaceAll(`"`, `\\"`)}"`; 
+const q = (s) => `"${String(s ?? "").replaceAll(`"`, `\\"`)}"`;
 const cleanTag = (s) => String(s ?? "").trim().replace(/^#/, "");
 const wikilink = (s) => {
   const t = String(s ?? "").trim();
@@ -31,12 +31,20 @@ const bookTitle = (await tp.system.prompt("📚 책 제목:", tp.file.title))?.t
 const reading = await tp.system.suggester(
   ["1독 (초독)", "2독 (재독)", "3독", "4독", "5독"],
   ["1", "2", "3", "4", "5"]
-) || "1";
+);
+if (!reading) {
+  new Notice("❌ Book 노트 생성이 취소되었습니다.");
+  return;
+}
 
 const genre = await tp.system.suggester(
   ["🏛️ 철학 (Philosophy)", "📖 문학 (Literature)", "📚 인문학 (Humanities)", "🔬 과학 (Science)", "💼 자기계발 (Self-help)", "📜 기타 (Other)"],
   ["Phil", "Lit", "Hum", "Sci", "Self", "Other"]
-) || "Phil";
+);
+if (!genre) {
+  new Notice("❌ Book 노트 생성이 취소되었습니다.");
+  return;
+}
 
 const author = (await tp.system.prompt("✍️ 저자:", ""))?.trim() || "";
 const translator = (await tp.system.prompt("🌐 역자 (없으면 Enter):", ""))?.trim() || "";

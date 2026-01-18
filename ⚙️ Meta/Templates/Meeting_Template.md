@@ -13,7 +13,11 @@ const time = tp.date.now("HH:mm");
 const meetingType = await tp.system.suggester(
   ["🏛️ 회장단", "🦿 Hexapod", "🚶 Bipedal", "📚 기타"],
   ["회장단", "Hexapod", "Bipedal", "other"]
-) || "other";
+);
+if (!meetingType) {
+  new Notice("❌ Meeting 노트 생성이 취소되었습니다.");
+  return;
+}
 
 // 회차
 const num = await tp.system.prompt("회차:", "1");

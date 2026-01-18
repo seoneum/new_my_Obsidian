@@ -13,14 +13,22 @@ const NOW_DT = tp.date.now("YYYY-MM-DDTHH:mm:ss");
 const group = await tp.system.suggester(
   ["EE (전기전자)", "Phil (철학)", "SE (소프트웨어)", "Math (수학)", "Robotics (로보틱스)", "SLAM", "AI", "General"],
   ["EE", "Phil", "SE", "Math", "Robotics", "SLAM", "AI", "General"]
-) || "General";
+);
+if (!group) {
+  new Notice("❌ Feynman 노트 생성이 취소되었습니다.");
+  return;
+}
 
 const title = (await tp.system.prompt("학습 주제 (개념/원리/문제):", tp.file.title))?.trim() || tp.file.title;
 
 const difficulty = await tp.system.suggester(
   ["🟢 Easy (기초)", "🟡 Medium (중급)", "🔴 Hard (심화)"],
   ["easy", "medium", "hard"]
-) || "medium";
+);
+if (!difficulty) {
+  new Notice("❌ Feynman 노트 생성이 취소되었습니다.");
+  return;
+}
 
 const taggingMode = await tp.system.suggester(["기본 태그만(나중에 태깅)", "지금 추가 태그 입력"], ["later","now"]);
 let extraTags = [];

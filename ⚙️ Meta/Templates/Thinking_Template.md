@@ -13,12 +13,20 @@ const NOW_DT = tp.date.now("YYYY-MM-DDTHH:mm:ss");
 const thinkingType = await tp.system.suggester(
   ["❓ 미해결 질문 (Question)", "💡 아이디어/가설 (Idea)", "🤔 고민/딜레마 (Dilemma)", "🔗 연결점 (Connection)"],
   ["question", "idea", "dilemma", "connection"]
-) || "question";
+);
+if (!thinkingType) {
+  new Notice("❌ Thinking 노트 생성이 취소되었습니다.");
+  return;
+}
 
 const domain = await tp.system.suggester(
   ["🔧 Engineering", "🏛️ Philosophy", "🔧+🏛️ 교차점", "📐 Math", "💻 Software", "🤖 Robotics", "🌐 General"],
   ["EE", "Phil", "Cross", "Math", "SE", "Robotics", "General"]
-) || "General";
+);
+if (!domain) {
+  new Notice("❌ Thinking 노트 생성이 취소되었습니다.");
+  return;
+}
 
 const title = (await tp.system.prompt("질문/아이디어 제목:", tp.file.title))?.trim() || tp.file.title;
 

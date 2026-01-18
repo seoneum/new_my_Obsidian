@@ -14,11 +14,17 @@ const weekNum = tp.date.now("WW");
 const dayKind = await tp.system.suggester(
   ["📚 공부", "🔧 프로젝트", "📚🔧 혼합", "🌴 휴식"],
   ["study", "project", "mixed", "off"]
-) || "study";
+);
+
+// 취소 시 노트 생성 중단
+if (!dayKind) {
+  new Notice("❌ Daily 노트 생성이 취소되었습니다.");
+  return;
+}
 
 const fileName = `D - ${d}`;
 await tp.file.rename(fileName);
-await tp.file.move(`CMDS/100. Inbox/102. 📝Daily_Note/${fileName}`);
+await tp.file.move(`📅 Daily/${fileName}`);
 -%>
 ---
 type: daily

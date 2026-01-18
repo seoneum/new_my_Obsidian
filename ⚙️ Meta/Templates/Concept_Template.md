@@ -14,7 +14,11 @@ const dt = tp.date.now("YYYY-MM-DDTHH:mm:ss");
 const domain = await tp.system.suggester(
   ["💻 CS (C++/Python)", "🔢 Math", "⚡ EE", "🏛️ Phil", "🤖 Robotics"],
   ["CS", "Math", "EE", "Phil", "Robotics"]
-) || "CS";
+);
+if (!domain) {
+  new Notice("❌ Concept 노트 생성이 취소되었습니다.");
+  return;
+}
 
 // CS 세부
 let subDomain = "";

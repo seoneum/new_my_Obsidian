@@ -14,7 +14,11 @@ const dt = tp.date.now("YYYY-MM-DDTHH:mm:ss");
 const problemType = await tp.system.suggester(
   ["🔢 수학 문제", "💻 코딩 문제", "⚡ 공학 문제", "🏛️ 철학 문제"],
   ["math", "coding", "engineering", "philosophy"]
-) || "math";
+);
+if (!problemType) {
+  new Notice("❌ Problem 노트 생성이 취소되었습니다.");
+  return;
+}
 
 // 출처/플랫폼
 let source = "";

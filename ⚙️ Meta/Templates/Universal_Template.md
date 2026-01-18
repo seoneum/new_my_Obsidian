@@ -48,7 +48,6 @@ let fm = {
   created: NOW,
   updated: NOW_DT,
   type: noteType,
-  cmds: "inbox",
   status: "seed",
   domain: [],
   tags: [],
@@ -57,11 +56,10 @@ let body = "";
 
 if (noteType === "daily") {
   title = `D - ${NOW}`;
-  folder = "🔄 Areas/Daily";
+  folder = "📅 Daily";
   const weekday = ["일","월","화","수","목","금","토"][new Date().getDay()];
   
   fm.type = "daily";
-  fm.cmds = "merge";
   fm.status = "sapling";
   fm.author = ME;
   fm.tags = ["daily"];
@@ -107,7 +105,6 @@ if (noteType === "daily") {
   title = await tp.system.prompt("제목:", "N - ");
   if (!title.startsWith("N - ")) title = `N - ${title}`;
   
-  fm.cmds = "inbox";
   fm.tags = ["inbox", "tagging/needed"];
   
   body = `
@@ -133,10 +130,9 @@ if (noteType === "daily") {
   
   const week = await tp.system.prompt("주차:", "");
   title = `L - ${courseName} ${week}주차`;
-  folder = `🎯 Projects/26-1-학기/${courseName}`;
+  folder = `📚 Lectures/${courseName}`;
   
   fm.type = "lecture";
-  fm.cmds = "connect";
   fm.status = "sapling";
   fm.course = courseName;
   fm.week = week;
@@ -177,15 +173,14 @@ if (noteType === "daily") {
   const conceptName = title.replace("C - ", "");
   
   const domain = await pickDomain();
-  folder = "💎 Zettel/Concepts";
+  folder = "💡 Notes";
   
   fm.type = "concept";
-  fm.cmds = "merge";
   fm.status = "sapling";
   fm.author = ME;
   fm.domain = [domain];
   fm.confidence = 0;
-  fm.tags = ["zettel", "concept", `domain/${domain}`];
+  fm.tags = ["concept", `domain/${domain}`];
   
   body = `
 # ${conceptName}
@@ -249,10 +244,9 @@ ${conceptName} 예시::
   title = await tp.system.prompt("문제:", "P - ");
   if (!title.startsWith("P - ")) title = `P - ${title}`;
   
-  folder = "💎 Zettel/Concepts";
+  folder = "💡 Notes";
   
   fm.type = "problem";
-  fm.cmds = "merge";
   fm.status = "seed";
   fm.author = ME;
   fm.problem_type = problemType;
@@ -324,10 +318,9 @@ ${solutionTemplate}
   if (!title.startsWith("R - ")) title = `R - ${title}`;
   
   const domain = await pickDomain();
-  folder = "📚 Resources/Papers";
+  folder = "📖 Books";
   
   fm.type = "reference";
-  fm.cmds = "connect";
   fm.status = "seed";
   fm.domain = [domain];
   fm.source_url = "";
@@ -374,7 +367,6 @@ ${solutionTemplate}
   folder = "📥 Inbox/_webclip";
   
   fm.type = "webclip";
-  fm.cmds = "inbox";
   fm.status = "seed";
   fm.source_url = await tp.system.prompt("URL:", "");
   fm.tags = ["webclip", "tagging/needed"];
@@ -407,7 +399,6 @@ ${solutionTemplate}
   folder = "🎯 Projects";
   
   fm.type = "project";
-  fm.cmds = "develop";
   fm.status = "sapling";
   fm.author = ME;
   fm.domain = [domain];
@@ -460,10 +451,9 @@ ${solutionTemplate}
   }
   
   title = `MTG - ${NOW} ${meetingName}`;
-  folder = "🎯 Projects";
+  folder = "🗃️ Archive/Meetings";
   
   fm.type = "meeting";
-  fm.cmds = "connect";
   fm.status = "sapling";
   fm.meeting_type = meetingName;
   fm.attendees = [];
@@ -505,15 +495,14 @@ ${solutionTemplate}
   if (!title.startsWith("Q - ")) title = `Q - ${title}`;
   
   const domain = await pickDomain();
-  folder = "💎 Zettel/Questions";
+  folder = "💡 Notes";
   
   fm.type = "question";
-  fm.cmds = "merge";
   fm.status = "seed";
   fm.author = ME;
   fm.domain = [domain];
   fm.resolved = false;
-  fm.tags = ["thinking", "question", `domain/${domain}`];
+  fm.tags = ["question", `domain/${domain}`];
   
   body = `
 # ${title.replace("Q - ", "")}
@@ -567,15 +556,14 @@ ${solutionTemplate}
   title = await tp.system.prompt("아이디어:", "💡 ");
   
   const domain = await pickDomain();
-  folder = "💎 Zettel/Claims";
+  folder = "💡 Notes";
   
   fm.type = "idea";
-  fm.cmds = "merge";
   fm.status = "seed";
   fm.author = ME;
   fm.domain = [domain];
   fm.validated = false;
-  fm.tags = ["thinking", "idea", `domain/${domain}`];
+  fm.tags = ["idea", `domain/${domain}`];
   
   body = `
 # ${title.replace("💡 ", "")}
