@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🗃️ Archive/Meetings/MTG - 2026-01-18 Bipedal 1.5회.md",
+                "file": "🏠 Dashboard.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MTG - 2026-01-18 Bipedal 1.5회"
+              "title": "🏠 Dashboard"
             }
           }
         ],
@@ -111,7 +111,7 @@
             }
           },
           {
-            "id": "00555e016236e2bf",
+            "id": "a09ac064228ea8c4",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -120,7 +120,8 @@
               "title": "Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -456,6 +457,26 @@
             "id": "aa95b7ee5751bd5e",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "59e8eca948bfacff",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "9b3d88656ce533c1",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -463,7 +484,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 29
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -545,55 +566,27 @@
       "periodic-notes:Open today": false
     }
   },
-  "floating": {
-    "id": "92c2f88520aee2d2",
-    "type": "floating",
-    "children": [
-      {
-        "id": "828620cc571de25e",
-        "type": "window",
-        "children": [
-          {
-            "id": "8fa4cf375db6aa91",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "ccea25461e92b547",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://remotelysave.com/user/profile",
-                    "title": "User Management",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "User Management"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 448,
-        "y": 153,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "fb64b799c9114082",
+  "active": "9b3d88656ce533c1",
   "lastOpenFiles": [
-    "📥 Inbox/_quick/N - Tmux 간단 정리.md",
+    "Tags",
+    "📌Guidline.md",
+    "Vault.md",
     "🗃️ Archive/Meetings/MTG - 2026-01-18 Bipedal 1.5회.md",
+    "⚙️ Meta/Tags 1/#philosophy",
+    "⚙️ Meta/Tags 1/#📚독서국내도서인문철학+사상쉽게읽는철학+대중철학it모바일컴퓨터공학자료구조+알고리즘",
+    "⚙️ Meta/Tags 1/#변증법",
+    "⚙️ Meta/Tags 1/#정신현상학",
+    "⚙️ Meta/Tags 1/#헤겔",
+    "⚙️ Meta/Tags 1/#📚book",
+    "⚙️ Meta/Tags 1/#reading+2독",
+    "⚙️ Meta/Tags 1/#book+phil",
+    "⚙️ Meta/Tags 1/#flashcards+phil",
+    "⚙️ Meta/Tags 1/#tagging+needed",
+    "📥 Inbox/_quick/N - Tmux 간단 정리.md",
     "⚙️ Meta/Guides/Git 브랜치 작업 가이드.md",
-    "🗃️ Archive/Linux",
     "🗃️ Archive/Linux/Git 기초.md",
     "🗃️ Archive/Philosophy/실재론.md",
     "🎯 Projects/PRJ - 동민이와 수업.md",
-    "🗃️ Archive/Philosophy",
     "💡 Notes/Quick/Slamslam.md",
     "💡 Notes/Quick/공부를 어떻게 하면 좋을까요?.md",
     "💡 Notes/Quick/Ubuntu 22.04  20.04  18.04에서 한글 입력 환경(한영키) 설정하기.md",
@@ -603,25 +596,14 @@
     "💡 Notes/Quick/Clip web pages.md",
     "💡 Notes/Quick/N - 수학 독학 실천 가이드.md",
     "💡 Notes/Quick/N - Deepcode 설치 가이드.md",
-    "💡 Notes/Quick",
     "🗃️ Archive/References_paper/R - 보행 상태 추정.md",
     "🗃️ Archive/References_paper/R - 경로 생성.md",
-    "🗃️ Archive/References_paper",
     "💡 Notes/Concepts/C - Modern C++ 궁금증 모음.md",
     "💡 Notes/Concepts/C - Modern C++ Day 1.md",
     "💡 Notes/Concepts/C - Modern C++ Array.md",
     "🏠 Dashboard.md",
     "⚙️ Meta/People/Archive/Hegel - Klaus Vieweg.md",
-    "⚙️ Meta/People/Archive",
     "🗃️ Archive/Drawings/Drawing 2025-12-17 15.29.34.excalidraw.md",
-    "🗃️ Archive/Old_Lectures",
-    "🗃️ Archive/Old_Projects",
-    "🗃️ Archive/Drawings",
-    "Vault.md",
-    "📅 Daily/D - 2026-01-18.md",
-    "📖 Books/Philosophy/R - 서양 철학사.md",
-    "🗃️ Archive/people",
-    "📚 Lectures/26-1/존재론과형이상학",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",
