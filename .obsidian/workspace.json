@@ -1,0 +1,651 @@
+{
+  "main": {
+    "id": "b138eb4180933e96",
+    "type": "split",
+    "children": [
+      {
+        "id": "69e2bda715f00852",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "23bc43a4b45000d8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "B - 끝없는 이야기 (초독)"
+            }
+          },
+          {
+            "id": "59daf262d5e2452c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "⚙️ Meta/People/Philosophy/Giles Deleze.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Giles Deleze"
+            }
+          }
+        ],
+        "currentTab": 1,
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7bc75ce3470e1c13",
+    "type": "split",
+    "children": [
+      {
+        "id": "9483c02cb73d1f59",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8bf1503193d062dd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d753aae557248bed",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#Philosophy",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "bf914f64274bc76b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "ef858e546a80cd90",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {},
+              "icon": "layout-grid",
+              "title": "Navigator"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 287.5
+  },
+  "right": {
+    "id": "5dca81cd9c53a861",
+    "type": "split",
+    "children": [
+      {
+        "id": "7164024d1a715217",
+        "type": "tabs",
+        "dimension": 38.6119257086999,
+        "children": [
+          {
+            "id": "f11602c37004ce5a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "84b5ed2bad69374f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7644a7568433cb0f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "368ec97aa034bafc",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CMDS/100. Inbox/100. anything/Dataview Test.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "pinned": true,
+              "icon": "lucide-list",
+              "title": "Outline of Dataview Test"
+            }
+          },
+          {
+            "id": "80322be74f9668bf",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CMDS/100. Inbox/100. anything/Dataview Test.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "pinned": true,
+              "icon": "lucide-list",
+              "title": "Outline of Dataview Test"
+            }
+          },
+          {
+            "id": "4aa30d0656a0a0d1",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "pinned": true,
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "a1fc455e594614f7",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "Strange New Worlds",
+              "state": {},
+              "pinned": true,
+              "icon": "file-digit",
+              "title": "Strange New Worlds"
+            }
+          },
+          {
+            "id": "12671bd9f4a039ae",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "pinned": true,
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
+            }
+          },
+          {
+            "id": "2c674e9ac60f6f44",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CMDS/100. Inbox/100. anything/Dataview Test.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": true
+              },
+              "pinned": true,
+              "icon": "links-going-out",
+              "title": "Outgoing links from Dataview Test"
+            }
+          },
+          {
+            "id": "6812a9d94a57c602",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "empty",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "b6da2064e47f2fcd",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "smtcmp-chat-view",
+              "state": {},
+              "pinned": true,
+              "icon": "wand-sparkles",
+              "title": "Smart composer chat"
+            }
+          },
+          {
+            "id": "219c21a15df6a993",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "47821e815a0df249",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "bf570b4dcbe59e8b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "f09c966125dbf9ce",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "fdd7c4620b1fe0ca",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "b000d779b0b23210",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "fd83c48ad5da9cd6",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "2bd97e838d131a41",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "db82250a43aef7de",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "04f78e176c2699c3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "a7246a18b32433f0",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "2af05a40c6b82920",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "6f96861d59684185",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "10e89cd5569305ad",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "3d8ca2985b8f52b2",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "209b9be03b739c93",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "aa95b7ee5751bd5e",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "59e8eca948bfacff",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "9b3d88656ce533c1",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "1e38b733d487e7e3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "3dfc32acb5004e51",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "6025a9b4fdc27bdb",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "GA-ICON",
+              "title": "Graph Analysis"
+            }
+          }
+        ],
+        "currentTab": 32
+      },
+      {
+        "id": "fd0bf750fffcaa0b",
+        "type": "tabs",
+        "dimension": 30.889540566959923,
+        "children": [
+          {
+            "id": "82c737fe6be308c8",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Connections"
+            }
+          }
+        ]
+      },
+      {
+        "id": "f09c08892ff399f1",
+        "type": "tabs",
+        "dimension": 30.498533724340177,
+        "children": [
+          {
+            "id": "436dd9dd230f7509",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Connections"
+            }
+          },
+          {
+            "id": "9354298678aff1cc",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 336.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
+      "smart-composer:Open smart composer": false,
+      "switcher:Open quick switcher": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "zk-prefixer:Create new unique note": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-spaced-repetition:Review flashcards": false,
+      "smart-connections:Smart Connections: Open random connection": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Smart Lookup: Open lookup view": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-kanban:Create new board": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-importer:Open Importer": false,
+      "graph:Open graph view": false,
+      "audio-recorder:Start/stop recording": false,
+      "workspaces:Manage workspace layouts": false,
+      "terminal:Open terminal": false,
+      "periodic-notes:Open today": false
+    }
+  },
+  "active": "6025a9b4fdc27bdb",
+  "lastOpenFiles": [
+    "⚙️ Meta/People/Philosophy",
+    "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
+    "⚙️ Meta/People/Philosophy/Giles Deleze.md",
+    "💡 Notes/Concepts/.md",
+    "💡 Notes/Problems/P - 백준 Array part.md",
+    "💡 Notes/Problems/P - 10811.md",
+    "💡 Notes/Problems/P - 나머지.md",
+    "🎯 Projects/PRJ - 동민이와 수업/2026-01-19 - 1회차.md",
+    "📥 Inbox/_quick/N - Tmux 간단 정리.md",
+    "🎯 Projects/PRJ - 동민이와 수업 계획/PRJ - 동민이와 수업 계획.md",
+    "🎯 Projects/PRJ - 동민이와 수업",
+    "🎯 Projects/🎯 Projects.md",
+    "🎯 Projects/PRJ - 동민이와 수업 계획",
+    "⚙️ Meta/Templates/Tutoring_Template.md",
+    "🏠 Dashboard.md",
+    "Tags",
+    "📌Guidline.md",
+    "Vault.md",
+    "🗃️ Archive/Meetings/MTG - 2026-01-18 Bipedal 1.5회.md",
+    "⚙️ Meta/Tags 1/#philosophy",
+    "⚙️ Meta/Tags 1/#📚독서국내도서인문철학+사상쉽게읽는철학+대중철학it모바일컴퓨터공학자료구조+알고리즘",
+    "⚙️ Meta/Tags 1/#변증법",
+    "⚙️ Meta/Tags 1/#정신현상학",
+    "⚙️ Meta/Tags 1/#헤겔",
+    "⚙️ Meta/Tags 1/#📚book",
+    "⚙️ Meta/Tags 1/#reading+2독",
+    "⚙️ Meta/Guides/Git 브랜치 작업 가이드.md",
+    "🗃️ Archive/Linux/Git 기초.md",
+    "🗃️ Archive/Philosophy/실재론.md",
+    "💡 Notes/Quick/Slamslam.md",
+    "💡 Notes/Quick/공부를 어떻게 하면 좋을까요?.md",
+    "💡 Notes/Quick/Ubuntu 22.04  20.04  18.04에서 한글 입력 환경(한영키) 설정하기.md",
+    "💡 Notes/Quick/Obsidian connection to Git.md",
+    "💡 Notes/Quick/Linux Syntax.md",
+    "💡 Notes/Quick/Copilot cli.md",
+    "💡 Notes/Quick/Clip web pages.md",
+    "⚙️ Meta/attachments/Pasted image 20251221181950.png",
+    "⚙️ Meta/attachments/Pasted image 20251221180732.png",
+    "⚙️ Meta/attachments/Pasted image 20251221180648.png",
+    "⚙️ Meta/attachments/Pasted image 20251221180523.png",
+    "⚙️ Meta/attachments/Pasted image 20251221180301.png",
+    "⚙️ Meta/attachments/Pasted image 20251221145306.png",
+    "⚙️ Meta/attachments/Pasted image 20251221144414.png",
+    "⚙️ Meta/attachments/Pasted image 20251217193033.png",
+    "⚙️ Meta/attachments/Pasted image 20251215235003.png",
+    "⚙️ Meta/attachments/Pasted image 20260118090609.png",
+    "CMDS/100. Inbox/101. 🚨Anything/Canvas_Test.canvas",
+    "🏛️CMDS/100. 📦️Inbox/100. 📥️Anything/Canvas_Test.canvas",
+    "CMDS/400. Reference/Untitled.canvas",
+    "CMDS/400/Untitled.canvas"
+  ]
+}
