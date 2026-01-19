@@ -35,12 +35,24 @@
             "id": "fb64b799c9114082",
             "type": "leaf",
             "state": {
-              "type": "mk-space",
+              "type": "markdown",
               "state": {
-                "path": "🎯 Projects/PRJ - 동민이와 수업 계획"
+                "file": "🎯 Projects/PRJ - 동민이와 수업/2026-01-19 - 1회차.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "PRJ - 동민이와 수업 계획"
+              "title": "2026-01-19 - 1회차"
             }
           },
           {
@@ -68,7 +80,7 @@
             }
           }
         ],
-        "currentTab": 2,
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -578,7 +590,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "83d485fc55523325",
+  "active": "fb64b799c9114082",
   "lastOpenFiles": [
     "🎯 Projects/PRJ - 동민이와 수업 계획/PRJ - 동민이와 수업 계획.md",
     "💡 Notes/Problems/P - 나머지.md",
