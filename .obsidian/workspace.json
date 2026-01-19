@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "875676748780fd27",
+        "id": "69e2bda715f00852",
         "type": "tabs",
         "children": [
           {
-            "id": "16eed5651cff634d",
+            "id": "9c0575e02d611438",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📥 Inbox/_quick/N - Tmux 간단 정리.md",
+                "file": "Untitled.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "N - Tmux 간단 정리"
+              "title": "Untitled"
             }
           },
           {
-            "id": "fb64b799c9114082",
+            "id": "23bc43a4b45000d8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🎯 Projects/PRJ - 동민이와 수업/2026-01-19 - 1회차.md",
+                "file": "Untitled.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,31 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-01-19 - 1회차"
-            }
-          },
-          {
-            "id": "83d485fc55523325",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "💡 Notes/Problems/P - 나머지.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "P - 나머지"
+              "title": "Untitled"
             }
           }
         ],
@@ -135,7 +111,7 @@
             }
           },
           {
-            "id": "a09ac064228ea8c4",
+            "id": "2391236244b8dbc9",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -501,6 +477,16 @@
             "id": "9b3d88656ce533c1",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "1e38b733d487e7e3",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -508,7 +494,7 @@
             }
           }
         ],
-        "currentTab": 29
+        "currentTab": 30
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -586,16 +572,18 @@
       "audio-recorder:Start/stop recording": false,
       "workspaces:Manage workspace layouts": false,
       "terminal:Open terminal": false,
-      "remotely-save:Remotely Save": false,
       "periodic-notes:Open today": false
     }
   },
-  "active": "fb64b799c9114082",
+  "active": "23bc43a4b45000d8",
   "lastOpenFiles": [
-    "🎯 Projects/PRJ - 동민이와 수업 계획/PRJ - 동민이와 수업 계획.md",
+    "Untitled.md",
+    "💡 Notes/Problems/P - 백준 Array part.md",
+    "💡 Notes/Problems/P - 10811.md",
     "💡 Notes/Problems/P - 나머지.md",
-    "📥 Inbox/_quick/N - Tmux 간단 정리.md",
     "🎯 Projects/PRJ - 동민이와 수업/2026-01-19 - 1회차.md",
+    "📥 Inbox/_quick/N - Tmux 간단 정리.md",
+    "🎯 Projects/PRJ - 동민이와 수업 계획/PRJ - 동민이와 수업 계획.md",
     "🎯 Projects/PRJ - 동민이와 수업",
     "🎯 Projects/🎯 Projects.md",
     "🎯 Projects/PRJ - 동민이와 수업 계획",
@@ -625,9 +613,6 @@
     "💡 Notes/Quick/N - 수학 독학 실천 가이드.md",
     "💡 Notes/Quick/N - Deepcode 설치 가이드.md",
     "🗃️ Archive/References_paper/R - 보행 상태 추정.md",
-    "🗃️ Archive/References_paper/R - 경로 생성.md",
-    "💡 Notes/Concepts/C - Modern C++ 궁금증 모음.md",
-    "💡 Notes/Concepts/C - Modern C++ Day 1.md",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",
