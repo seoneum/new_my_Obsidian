@@ -219,6 +219,45 @@ public:
 };
 ```
 
+### 대입 연산자 오버로딩 ⭐⭐⭐
+
+> [!IMPORTANT]
+> **교수님 강조**: "대입 연산자 오버로딩 할 때 assignment의 첫 번째는 무조건 if문이 나와요!"
+
+```cpp
+class Shape {
+    char* owner;
+public:
+    // ⭐ Self-copy 방지가 핵심!
+    Shape& operator=(const Shape& other) {
+        if (this != &other) {  // ⭐ 자기 자신과의 대입 방지
+            // 1. 기존 메모리 해제
+            delete[] owner;
+            
+            // 2. 새로운 메모리 할당 및 복사 (Deep Copy)
+            owner = new char[strlen(other.owner) + 1];
+            strcpy(owner, other.owner);
+        }
+        return *this;
+    }
+};
+```
+
+**왜 Self-copy 방지가 필요한가?**
+```cpp
+Shape s1("John");
+s1 = s1;  // 자기 자신에게 대입하면?
+```
+- `if` 문 없이 `delete[] owner`를 먼저 실행하면
+- 이미 해제된 메모리에서 `strcpy`를 시도 → **오류 발생!**
+
+**this vs &other**
+| 표현 | 의미 |
+|------|------|
+| `this` | 자기 자신의 **주소** (포인터) |
+| `&other` | 매개변수 other의 **주소** |
+| `this != &other` | 두 주소가 다르면 = 다른 객체 |
+
 ---
 
 ## 9. const와 클래스
@@ -332,13 +371,52 @@ public:
 // Shape s;  // ❌ 에러! 추상 클래스는 객체 생성 불가
 ```
 
-### 가상 소멸자
+### 가상 소멸자 ⭐⭐⭐
+
+> [!IMPORTANT]
+> **교수님 강조**: 상속 계층에서 동적 할당 시 가상 소멸자는 **메모리 누수 방지**에 필수!
+
+#### 왜 가상 소멸자가 필요한가?
+
+**문제 상황** (virtual 없을 때):
 ```cpp
 class Shape {
 public:
-    virtual ~Shape() { }  // 반드시 virtual!
+    ~Shape() { cout << "Shape 소멸" << endl; }  // virtual 없음!
+};
+
+class Circle : public Shape {
+    char* data;
+public:
+    Circle() { data = new char[100]; }
+    ~Circle() { 
+        delete[] data;  // 이게 호출 안 됨!
+        cout << "Circle 소멸" << endl; 
+    }
+};
+
+Shape *shp = new Circle();
+delete shp;  // ❌ Shape 소멸자만 호출! → 메모리 누수!
+```
+
+**해결책** (virtual 사용):
+```cpp
+class Shape {
+public:
+    virtual ~Shape() { }  // ⭐ virtual 추가!
 };
 
 Shape *shp = new Circle();
 delete shp;  // ✅ Circle → Shape 순서로 소멸자 호출
 ```
+
+#### 핵심 원리
+
+| 구분 | virtual 없을 때 | virtual 있을 때 |
+|------|----------------|-----------------|
+| **바인딩** | 정적 바인딩 (컴파일 시점) | 동적 바인딩 (런타임) |
+| **호출** | 포인터 타입(Shape)의 소멸자만 | 실제 객체(Circle)의 소멸자 먼저 |
+| **결과** | 자식 클래스 리소스 누수 | 안전한 메모리 해제 |
+
+**규칙**: 상속을 사용하고 동적 할당을 한다면, **부모 클래스의 소멸자는 반드시 virtual**로 선언!
+

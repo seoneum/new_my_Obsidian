@@ -11,12 +11,24 @@
             "id": "23bc43a4b45000d8",
             "type": "leaf",
             "state": {
-              "type": "mk-space",
+              "type": "markdown",
               "state": {
-                "path": "📚 Lectures/2025-2/자료구조"
+                "file": "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "자료구조"
+              "title": "B - 끝없는 이야기 (초독)"
             }
           },
           {
@@ -584,7 +596,13 @@
   },
   "active": "23bc43a4b45000d8",
   "lastOpenFiles": [
+    "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_06_기본 소득.md",
+    "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_05_도덕 향상 비판적 검토.md",
     "📚 Lectures/2025-2/철학적논리학/L - PHIL_07_수학철학 (Philosophy of Mathematics).md",
+    "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_04_도덕적 지위와 관계론.md",
+    "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_03_인공적 도덕행위자와 책임.md",
+    "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_02_신뢰할만한 인공지능.md",
+    "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_01_약인공지능 시대의 윤리적 위기.md",
     "📚 Lectures/2025-2/철학적논리학/L - PHIL_06_존재와 보편자 (Existence & Universals).md",
     "📚 Lectures/2025-2/철학적논리학/L - PHIL_05_형식적 도출 (Formal Derivation).md",
     "📚 Lectures/2025-2/철학적논리학/L - PHIL_04_관계술어와 다중양화 (Relations & Multiple Quantifiers).md",
@@ -604,12 +622,6 @@
     "📚 Lectures/2025-2/확률변수/L - PRB_02_확률의 공리 (Axioms of Probability).md",
     "📚 Lectures/2025-2/확률변수/L - PRB_01_조합론 (Combinatorial Analysis).md",
     "📚 Lectures/2025-2/자료구조/L - DS_02_알고리즘 분석과 Big-O.md",
-    "📚 Lectures/2025-2/자료구조/L - DS_07_정렬 알고리즘.md",
-    "📚 Lectures/2025-2/자료구조/L - DS_01_기초_포인터와 클래스.md",
-    "📚 Lectures/2025-2/자료구조/L - DS_06_힙과 우선순위 큐.md",
-    "📚 Lectures/2025-2/자료구조/L - DS_05_트리와 BST.md",
-    "📚 Lectures/2025-2/자료구조/L - DS_04_연결 리스트.md",
-    "📚 Lectures/2025-2/자료구조/L - DS_03_스택과 큐.md",
     "📚 Lectures/2025-2/확률변수",
     "📚 Lectures/2025-2/철학적논리학",
     "📚 Lectures/2025-2/자료구조",
