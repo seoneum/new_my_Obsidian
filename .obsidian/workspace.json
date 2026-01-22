@@ -32,6 +32,18 @@
             }
           },
           {
+            "id": "45bcee3efdb56bd8",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.5"
+            }
+          },
+          {
             "id": "59daf262d5e2452c",
             "type": "leaf",
             "state": {
@@ -56,6 +68,7 @@
             }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -113,10 +126,13 @@
             "id": "ef858e546a80cd90",
             "type": "leaf",
             "state": {
-              "type": "mk-path-view",
-              "state": {},
-              "icon": "layout-grid",
-              "title": "Navigator"
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           }
         ],
@@ -513,7 +529,7 @@
             }
           }
         ],
-        "currentTab": 32
+        "currentTab": 7
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -594,7 +610,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "23bc43a4b45000d8",
+  "active": "12671bd9f4a039ae",
   "lastOpenFiles": [
     "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_06_기본 소득.md",
     "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_05_도덕 향상 비판적 검토.md",
