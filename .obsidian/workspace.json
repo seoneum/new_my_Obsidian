@@ -32,24 +32,12 @@
             }
           },
           {
-            "id": "45bcee3efdb56bd8",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.5"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.5"
-            }
-          },
-          {
             "id": "59daf262d5e2452c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "⚙️ Meta/People/Philosophy/Giles Deleze.md",
+                "file": "💡 Notes/Problems/P - 백준 Array part.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -64,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Giles Deleze"
+              "title": "P - 백준 Array part"
             }
           }
         ],
@@ -123,16 +111,13 @@
             }
           },
           {
-            "id": "ef858e546a80cd90",
+            "id": "2decff9b7b2ce800",
             "type": "leaf",
             "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
+              "type": "mk-path-view",
+              "state": {},
+              "icon": "layout-grid",
+              "title": "Navigator"
             }
           }
         ],
@@ -140,7 +125,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -522,6 +508,16 @@
             "id": "6025a9b4fdc27bdb",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "52cd745ce12dc41b",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -529,7 +525,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 33
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -610,8 +606,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "12671bd9f4a039ae",
+  "active": "59daf262d5e2452c",
   "lastOpenFiles": [
+    "💡 Notes/Concepts/C - Modern C++ Array.md",
+    "N - Modern C++ baekjoon Array_part.md",
+    "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
+    "⚙️ Meta/People/Philosophy/Giles Deleze.md",
+    "Tags",
     "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_06_기본 소득.md",
     "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_05_도덕 향상 비판적 검토.md",
     "📚 Lectures/2025-2/철학적논리학/L - PHIL_07_수학철학 (Philosophy of Mathematics).md",
@@ -634,10 +635,6 @@
     "📚 Lectures/2025-2/확률변수/L - PRB_05_이산확률분포 (Discrete Distributions).md",
     "📚 Lectures/2025-2/확률변수/L - PRB_04_확률변수 (Random Variables).md",
     "📚 Lectures/2025-2/자료구조/L - DS_08_B-Tree와 B+Tree.md",
-    "📚 Lectures/2025-2/확률변수/L - PRB_03_조건부 확률과 독립 (Conditional Probability).md",
-    "📚 Lectures/2025-2/확률변수/L - PRB_02_확률의 공리 (Axioms of Probability).md",
-    "📚 Lectures/2025-2/확률변수/L - PRB_01_조합론 (Combinatorial Analysis).md",
-    "📚 Lectures/2025-2/자료구조/L - DS_02_알고리즘 분석과 Big-O.md",
     "📚 Lectures/2025-2/확률변수",
     "📚 Lectures/2025-2/철학적논리학",
     "📚 Lectures/2025-2/자료구조",
@@ -647,7 +644,6 @@
     "📚 Lectures/2025-2",
     "🎯 Projects/PRJ - 동민이 과외",
     "⚙️ Meta/People/Philosophy",
-    "🎯 Projects/PRJ - 동민이와 수업",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",

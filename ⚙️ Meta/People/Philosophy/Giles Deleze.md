@@ -10,7 +10,7 @@ cmds: connect
 
 ## Snapshot
 - School/Area: 형이상학
-- Core thesis: 아직 몰라
+- Core thesis: 
 
 ## 간단 노트
 - 플라톤의 이데아
