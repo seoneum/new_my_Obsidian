@@ -80,6 +80,30 @@
             }
           },
           {
+            "id": "0d91a64ed8ebe9f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📝 Problems/P - 1546.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "P - 1546"
+            }
+          },
+          {
             "id": "b1bb5fa1bb7e7ad6",
             "type": "leaf",
             "state": {
@@ -104,7 +128,7 @@
             }
           }
         ],
-        "currentTab": 2,
+        "currentTab": 3,
         "stacked": true
       }
     ],
@@ -173,8 +197,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -664,10 +687,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "23a25da579dbb238",
+  "active": "0d91a64ed8ebe9f9",
   "lastOpenFiles": [
-    "💡 Notes/Concepts/C - Modern C++ Array.md",
     "📝 Problems/P - 10811.md",
+    "📝 Problems/P - 1546.md",
+    "💡 Notes/Concepts/C - Modern C++ Array.md",
+    "💡 Notes/Concepts/C - Modern C++ Day 1.md",
     "💡 Notes/Problems/P - 백준 Array part.md",
     "🗃️ Archive/Meetings/MTG - 2026-01-06 회장단 1회.md",
     "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
@@ -695,8 +720,6 @@
     "📚 Lectures/2025-2/공업수학/L - ENG_04_파동방정식 (Wave Equation).md",
     "📚 Lectures/2025-2/공업수학/L - ENG_03_편미분방정식 개요 (PDE Introduction).md",
     "📚 Lectures/2025-2/공업수학/L - ENG_02_푸리에 변환 (Fourier Transform).md",
-    "📚 Lectures/2025-2/공업수학/L - ENG_01_푸리에 급수 (Fourier Series).md",
-    "📚 Lectures/2025-2/확률변수/L - PRB_06_연속확률변수 (Continuous Random Variables).md",
     "📚 Lectures/2025-2/확률변수",
     "📚 Lectures/2025-2/철학적논리학",
     "📚 Lectures/2025-2/자료구조",
