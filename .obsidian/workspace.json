@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
+                "file": "🗃️ Archive/Meetings/MTG - 2026-01-06 회장단 1회.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "B - 끝없는 이야기 (초독)"
+              "title": "MTG - 2026-01-06 회장단 1회"
             }
           },
           {
@@ -54,9 +54,57 @@
               "icon": "lucide-file",
               "title": "P - 백준 Array part"
             }
+          },
+          {
+            "id": "23a25da579dbb238",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📝 Problems/P - 10811.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "P - 10811"
+            }
+          },
+          {
+            "id": "b1bb5fa1bb7e7ad6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "💡 Notes/Concepts/C - Modern C++ Array.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "C - Modern C++ Array"
+            }
           }
         ],
-        "currentTab": 1,
+        "currentTab": 2,
         "stacked": true
       }
     ],
@@ -111,7 +159,7 @@
             }
           },
           {
-            "id": "2decff9b7b2ce800",
+            "id": "aaac03539d4b7d31",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -518,6 +566,16 @@
             "id": "52cd745ce12dc41b",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "b8be2ace843fc990",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -525,7 +583,7 @@
             }
           }
         ],
-        "currentTab": 33
+        "currentTab": 34
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -606,11 +664,18 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "59daf262d5e2452c",
+  "active": "23a25da579dbb238",
   "lastOpenFiles": [
     "💡 Notes/Concepts/C - Modern C++ Array.md",
-    "N - Modern C++ baekjoon Array_part.md",
+    "📝 Problems/P - 10811.md",
+    "💡 Notes/Problems/P - 백준 Array part.md",
+    "🗃️ Archive/Meetings/MTG - 2026-01-06 회장단 1회.md",
     "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
+    "📝 Problems",
+    "Tags/#logic",
+    "Tags/#philosophy",
+    "Tags/#flashcards",
+    "N - Modern C++ baekjoon Array_part.md",
     "⚙️ Meta/People/Philosophy/Giles Deleze.md",
     "Tags",
     "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_06_기본 소득.md",
@@ -632,18 +697,11 @@
     "📚 Lectures/2025-2/공업수학/L - ENG_02_푸리에 변환 (Fourier Transform).md",
     "📚 Lectures/2025-2/공업수학/L - ENG_01_푸리에 급수 (Fourier Series).md",
     "📚 Lectures/2025-2/확률변수/L - PRB_06_연속확률변수 (Continuous Random Variables).md",
-    "📚 Lectures/2025-2/확률변수/L - PRB_05_이산확률분포 (Discrete Distributions).md",
-    "📚 Lectures/2025-2/확률변수/L - PRB_04_확률변수 (Random Variables).md",
-    "📚 Lectures/2025-2/자료구조/L - DS_08_B-Tree와 B+Tree.md",
     "📚 Lectures/2025-2/확률변수",
     "📚 Lectures/2025-2/철학적논리학",
     "📚 Lectures/2025-2/자료구조",
     "📚 Lectures/2025-2/인공지능의윤리",
     "📚 Lectures/2025-2/공업수학",
-    "📚 Lectures/2025-2/객체지향프로그래밍",
-    "📚 Lectures/2025-2",
-    "🎯 Projects/PRJ - 동민이 과외",
-    "⚙️ Meta/People/Philosophy",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",

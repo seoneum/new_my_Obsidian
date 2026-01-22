@@ -1,53 +1,19 @@
----
-migrated_from: CMDS/500. setting/501. Template/Master Template.md
-updated: 2026-01-18T16:42:53
-domain:
-  - robotics
-cmds: connect
----
 <%*
 /**
- * MASTER ROUTER - CMDS Vault v3.1
- * 
- * 노트 타입:
- * - 일상: DAILY, MEMO
- * - 학습: LECTURE, BOOK, CONCEPT, PROBLEM
- * - 정리: REFERENCE, WEB CLIP, DEVELOP
- * - 협업: PROJECT, MEETING
- * - 기타: QUESTION, PEOPLE, SHARE
- * - 복습: FC MORNING, FC EVENING, WEEKLY
+ * MASTER TEMPLATE v4.0 - All-in-One
+ * 모든 노트 타입을 내부에서 직접 처리
  */
 
 const ME = '[[김선음]]';
 const NOW_DATE = tp.date.now("YYYY-MM-DD");
 const NOW_DT = tp.date.now("YYYY-MM-DDTHH:mm:ss");
+const WEEKDAY = tp.date.now("ddd");
+const WEEK_NUM = tp.date.now("WW");
 
+// ===== Helper Functions =====
 const q = (s) => `"${String(s ?? "").replaceAll(`"`, `\\"`)}"`;
 const cleanTag = (s) => String(s ?? "").trim().replace(/^#/, "");
-const wikilink = (s) => {
-  const t = String(s ?? "").trim();
-  if (!t) return "";
-  if (t.startsWith("[[") && t.endsWith("]]")) return t;
-  return `[[${t}]]`;
-};
-const yamlList = (items, indent=2) => {
-  const arr = (items ?? []).filter(Boolean);
-  if (arr.length === 0) return " []";
-  const pad = " ".repeat(indent);
-  return "\n" + arr.map(x => `${pad}- ${x}`).join("\n");
-};
-const slugNoSpace = (s) => String(s ?? "").trim().replace(/\s+/g,"");
 
-async function pickStatus(def='[[🚜In Progress]]') {
-  const labels = ["🌱Seed","🌿Sapling","🌲Evergreen","🍂Archive","🚜In Progress"];
-  const values = ["[[🌱Seed]]","[[🌿Sapling]]","[[🌲Evergreen]]","[[🍂Archive]]","[[🚜In Progress]]"];
-  return (await tp.system.suggester(labels, values)) ?? def;
-}
-async function pickGroup(def="General") {
-  const labels = ["CS","EE","Phil","Math","General","Robotics","SLAM","AI"];
-  const values = ["CS","EE","Phil","Math","General","Robotics","SLAM","AI"];
-  return (await tp.system.suggester(labels, values)) ?? def;
-}
 async function renameAndMove(newTitle, folder) {
   try { await tp.file.rename(newTitle); } catch(e) {}
   if (folder) {
@@ -55,65 +21,7 @@ async function renameAndMove(newTitle, folder) {
   }
 }
 
-// ===== Paths =====
-const PATH = {
-  // Inbox
-  inbox: "📥 Inbox",
-  inbox_quick: "📥 Inbox/_quick",
-  inbox_webclip: "📥 Inbox/_webclip",
-
-  // Daily
-  daily: "📅 Daily",
-
-  // Lectures (by semester)
-  lectures: "📚 Lectures",
-  lectures_26_1: "📚 Lectures/26-1",
-
-  // Books
-  books: "📖 Books",
-  books_phil: "📖 Books/Philosophy",
-  books_lit: "📖 Books/Literature",
-  books_sci: "📖 Books/Science",
-
-  // Notes
-  notes: "💡 Notes",
-  notes_concepts: "💡 Notes/Concepts",
-  notes_problems: "💡 Notes/Problems",
-  notes_flashcards: "💡 Notes/Flashcards",
-  notes_feynman: "💡 Notes/Feynman",
-
-  // Projects
-  projects: "🎯 Projects",
-  projects_active: "🎯 Projects/Active",
-
-  // Archive
-  archive: "🗃️ Archive",
-  archive_meetings: "🗃️ Archive/Meetings",
-
-  // Meta
-  meta: "⚙️ Meta",
-  templates: "⚙️ Meta/Templates",
-  people_acq: "⚙️ Meta/People/Acquaintance",
-  people_eng: "⚙️ Meta/People/Engineering",
-  people_phil: "⚙️ Meta/People/Philosophy",
-  people_unk: "⚙️ Meta/People/Unknown",
-};
-
-// ===== Index links =====
-const INDEX = {
-  daily: '[[🏷 Daily Notes]]',
-  lecture: '[[🏷 Lecture Notes]]',
-  webclips: '[[🏷 Web Clips]]',
-  research: '[[🏷 Research Notes]]',
-  books: '[[🏷 Books]]',
-  people: '[[🏷 People]]',
-  waypoint: '[[🏷 Waypoint]]',
-  review: '[[🏷 Review Notes]]',
-  software: '[[🏷️Software]]',
-  thinking: '[[🏷 Thinking]]',
-};
-
-// ===== Choose kind (NEW MENU) =====
+// ===== Choose Note Type =====
 const kind = await tp.system.suggester(
   [
     "━━━ 📅 일상 ━━━",
@@ -121,355 +29,983 @@ const kind = await tp.system.suggester(
     "📝 MEMO: 빠른 메모",
     "━━━ 📚 학습 ━━━",
     "📚 LECTURE: 수업 노트",
-    "📕 BOOK: 독서 노트 (다회독)",
+    "📕 BOOK: 독서 노트",
     "💡 CONCEPT: 개념 정리",
     "📐 PROBLEM: 문제 풀이",
     "━━━ 📖 정리 ━━━",
     "📖 REFERENCE: 논문/책/자료",
     "🌐 WEB CLIP: 웹 저장",
-    "📊 DEVELOP: 치트시트",
     "━━━ 🔧 협업 ━━━",
     "🔧 PROJECT: 프로젝트",
     "📋 MEETING: 회의록",
     "━━━ ❓ 기타 ━━━",
     "❓ QUESTION: 미해결 질문",
     "👤 PEOPLE: 인물 노트",
-    "📤 SHARE: 외부 공유",
-    "━━━ 🔄 복습 ━━━",
-    "🌅 FC MORNING: 아침 복습",
-    "🌙 FC EVENING: 저녁 복습",
-    "📆 WEEKLY: 주간 복습"
   ],
   [
-    null, "daily", "inbox",
-    null, "connect_lecture", "book", "concept", "problem",
-    null, "reference", "webclip", "develop",
+    null, "daily", "memo",
+    null, "lecture", "book", "concept", "problem",
+    null, "reference", "webclip",
     null, "project", "meeting",
-    null, "question", "people", "share",
-    null, "fc_morning", "fc_evening", "weekly"
+    null, "question", "people"
   ]
 );
 
-// ===== Redirect to specific templates =====
-if (kind === "daily") {
-  tR += await tp.file.include("[[Daily_Template]]");
-} else if (kind === "book") {
-  tR += await tp.file.include("[[Book_Template]]");
-} else if (kind === "concept") {
-  tR += await tp.file.include("[[Concept_Template]]");
-} else if (kind === "problem") {
-  tR += await tp.file.include("[[Problem_Template]]");
-} else if (kind === "meeting") {
-  tR += await tp.file.include("[[Meeting_Template]]");
-} else if (kind === "question") {
-  tR += await tp.file.include("[[Thinking_Template]]");
-} else if (kind === "weekly") {
-  tR += await tp.file.include("[[Weekly_Review_Template]]");
-} else if (kind === "fc_morning") {
-  tR += await tp.file.include("[[FC_Morning_Template]]");
-} else if (kind === "fc_evening") {
-  tR += await tp.file.include("[[FC_Evening_Template]]");
-} else if (kind === null) {
-  // 구분선 선택시 아무것도 안함
+// 취소 또는 구분선 선택시 종료
+if (!kind) {
   tR += "";
 } else {
 
-// ===== Tagging mode =====
-const taggingMode = await tp.system.suggester(
-  ["기본 태그만(나중에 태깅)", "지금 추가 태그 입력"],
-  ["later","now"]
-);
-let extraTags = [];
-if (taggingMode === "now") {
-  const raw = await tp.system.prompt("추가 tags (쉼표):", "");
-  extraTags = (raw ?? "").split(",").map(s => cleanTag(s).trim()).filter(Boolean);
-}
+let title = "";
+let folder = "";
+let fm = "";
+let body = "";
 
-// ===== Title =====
-let title = (await tp.system.prompt("제목(title):", tp.file.title))?.trim() || tp.file.title;
+// ==================== DAILY ====================
+if (kind === "daily") {
+  const dayKind = await tp.system.suggester(
+    ["📚 공부", "🔧 프로젝트", "📚🔧 혼합", "🌴 휴식"],
+    ["study", "project", "mixed", "off"]
+  );
+  if (!dayKind) { tR += ""; }
+  else {
+    title = `D - ${NOW_DATE}`;
+    folder = "📅 Daily";
+    await renameAndMove(title, folder);
 
-// ===== Common fields =====
-let tags = [];
-let aliases = [];
-let indexArr = [];
-let typeArr = [];
-let authors = [];
-let cmdsArr = [];
-let groupOne = await pickGroup();
-let statusOne = await pickStatus();
+    fm = `---
+type: daily
+title: "${NOW_DATE}"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+author: "${ME}"
+day_kind: ${dayKind}
+week: W${WEEK_NUM}
+tags:
+  - daily
+  - day/${dayKind}
+---`;
 
-let cover_url = "";
-let my_rate = "";
-let publishDate = "";
-let started = NOW_DATE;
-let start_read_date = "";
-let finish_read_date = "";
-let folder = PATH.inbox;
+    body = `
+# ${NOW_DATE} (${WEEKDAY})
 
-function applyTaggingNeeded() {
-  if (taggingMode === "later") tags.push("tagging/needed");
-}
-function withPrefix(prefix, t) {
-  const s = String(t ?? "").trim();
-  if (!s) return s;
-  if (s.startsWith(prefix)) return s;
-  return `${prefix}${s}`;
-}
+## 🎯 Top 3
+1. [ ] 
+2. [ ] 
+3. [ ] 
 
-// ===== Branches =====
-if (kind === "inbox") {
-  folder = PATH.inbox_quick;
-  indexArr = [INDEX.waypoint];
-  groupOne = "General";
+---
+`;
+    if (dayKind === "study" || dayKind === "mixed") {
+      body += `
+## 📚 공부
 
-  typeArr = ["basic"];
-  cmdsArr = [];
-  authors = [q(ME)];
-  title = withPrefix("N - ", title);
-  tags = ["inbox", "note", ...extraTags];
-  applyTaggingNeeded();
+| 시간 | 과목 | 내용 |
+|-----|-----|-----|
+| 오전 | | |
+| 오후 | | |
 
-} else if (kind === "connect_lecture") {
-  // 26-1학기 과목 선택
-  const course = await tp.system.suggester(
-    [
-      "🏛️ 언어철학",
-      "🏛️ 존재론과형이상학", 
-      "🏛️ 서양현대철학사",
-      "🔢 공업수학1",
-      "🔢 일반수학2",
-      "⚡ 전자기학1",
-      "📚 기타 (직접입력)"
-    ],
-    [
-      "언어철학",
-      "존재론과형이상학",
-      "서양현대철학사",
-      "공업수학1",
-      "일반수학2",
-      "전자기학1",
-      "other"
-    ]
-  ) || "other";
+### 오늘 배운 것
+- 
 
-  let courseName = "";
-  let courseFolder = PATH.lectures_26_1;
-  
-  if (course === "other") {
-    courseName = await tp.system.prompt("과목명:", "");
-    const domain = await tp.system.suggester(
-      ["CS", "EE", "Phil", "Math", "Robotics", "General"],
-      ["CS","EE","Phil","Math","Robotics","General"]
-    );
-    groupOne = domain;
-    courseFolder = `${PATH.lectures_26_1}/${courseName}`;
-  } else {
-    courseFolder = `${PATH.lectures_26_1}/${course}`;
-    courseName = course;
-    // 자동 group 결정
-    if (["언어철학", "존재론과형이상학", "서양현대철학사"].includes(course)) groupOne = "Phil";
-    else if (["공업수학1", "일반수학2"].includes(course)) groupOne = "Math";
-    else if (course === "전자기학1") groupOne = "EE";
+### 모르는 것
+- 
+`;
+    }
+    if (dayKind === "project" || dayKind === "mixed") {
+      body += `
+## 🔧 프로젝트
+
+### 작업
+- [ ] 
+
+### 진행
+- 
+
+### 막힌 것 → 내일
+- 
+`;
+    }
+    if (dayKind === "off") {
+      body += `
+## 🌴 휴식
+
+- [ ] 하고 싶은 것:
+- 한 것:
+`;
+    }
+    body += `
+---
+
+## 🌙 마무리
+
+### 오늘 핵심 3줄
+1. 
+2. 
+3. 
+
+### 내일 우선
+1. 
+2. 
+
+---
+
+## 📎 메모
+
+`;
+    tR += fm + body;
   }
 
-  folder = courseFolder;
-  indexArr = [INDEX.lecture];
-  typeArr = ["lecture"];
-  cmdsArr = [];
-  authors = [];
+// ==================== MEMO ====================
+} else if (kind === "memo") {
+  title = await tp.system.prompt("메모 제목:", "N - ");
+  if (!title) { tR += ""; }
+  else {
+    if (!title.startsWith("N - ")) title = `N - ${title}`;
+    folder = "📥 Inbox/_quick";
+    await renameAndMove(title, folder);
 
-  const session = await tp.system.prompt("주차/회차:", NOW_DATE);
-  const instructor = await tp.system.prompt("교수(없으면 Enter):", "");
+    fm = `---
+type: memo
+title: "${title}"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+author: "${ME}"
+tags:
+  - inbox
+  - memo
+  - tagging/needed
+---`;
 
-  title = withPrefix("L - ", title);
-  tags = ["lecture", `lecture/${groupOne}`, `course/${courseName}`, ...extraTags];
-  applyTaggingNeeded();
+    body = `
+# ${title.replace("N - ", "")}
 
-  var META_LECTURE = { course: courseName, session, instructor, source_url: "" };
+## Notes
+- 
 
-} else if (kind === "webclip") {
-  const url = await tp.system.prompt("URL:", "");
+## Next
+- [ ] 
+`;
+    tR += fm + body;
+  }
 
-  folder = PATH.inbox_webclip;
-  indexArr = [INDEX.webclips];
-  typeArr = ["reference"];
-  cmdsArr = [];
-  authors = [];
-  title = withPrefix("W - ", title);
-  tags = ["webclip", "inbox", ...extraTags];
-  applyTaggingNeeded();
+// ==================== LECTURE ====================
+} else if (kind === "lecture") {
+  const course = await tp.system.suggester(
+    ["🏛️ 언어철학", "🏛️ 존재론과형이상학", "🏛️ 서양현대철학사", "🔢 공업수학1", "🔢 일반수학2", "⚡ 전자기학1", "📚 기타"],
+    ["언어철학", "존재론과형이상학", "서양현대철학사", "공업수학1", "일반수학2", "전자기학1", "other"]
+  );
+  if (!course) { tR += ""; }
+  else {
+    let courseName = course;
+    let group = "General";
+    
+    if (course === "other") {
+      courseName = await tp.system.prompt("과목명:", "") || "기타";
+    }
+    
+    if (["언어철학", "존재론과형이상학", "서양현대철학사"].includes(course)) group = "Phil";
+    else if (["공업수학1", "일반수학2"].includes(course)) group = "Math";
+    else if (course === "전자기학1") group = "EE";
+    
+    const session = await tp.system.prompt("주차/회차:", "1");
+    title = await tp.system.prompt("강의 제목:", `${courseName} ${session}주차`);
+    if (!title.startsWith("L - ")) title = `L - ${title}`;
+    
+    folder = `📚 Lectures/26-1/${courseName}`;
+    await renameAndMove(title, folder);
 
-  groupOne = "General";
+    fm = `---
+type: lecture
+title: "${title}"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+course: ${courseName}
+session: ${session}
+group: ${group}
+tags:
+  - lecture
+  - course/${courseName}
+---`;
 
-  var META_WEB = { url, keep: "inbox", area: "any" };
+    body = `
+# ${title.replace("L - ", "")}
 
+> **${courseName}** | ${session}주차
+
+---
+
+## 📋 Outline
+- 
+
+## 📝 Notes
+
+### 핵심 1
+- 
+
+### 핵심 2
+- 
+
+---
+
+## ❓ Questions
+- [ ] 
+
+## 🔗 Related
+- [[ ]]
+
+---
+
+## 📝 FC
+#flashcards/${group.toLowerCase()}
+
+핵심 개념:: 
+`;
+    tR += fm + body;
+  }
+
+// ==================== BOOK ====================
+} else if (kind === "book") {
+  const bookTitle = await tp.system.prompt("📚 책 제목:", tp.file.title);
+  if (!bookTitle) { tR += ""; }
+  else {
+    const reading = await tp.system.suggester(
+      ["1독 (초독)", "2독 (재독)", "3독", "4독", "5독"],
+      ["1", "2", "3", "4", "5"]
+    ) || "1";
+    
+    const author = await tp.system.prompt("✍️ 저자:", "") || "";
+    const readingLabel = reading === "1" ? "초독" : reading === "2" ? "재독" : `${reading}독`;
+    
+    title = `B - ${bookTitle} (${readingLabel})`;
+    folder = "📖 Books";
+    await renameAndMove(title, folder);
+
+    fm = `---
+type: book
+title: "${bookTitle}"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+author: "${author}"
+reading_count: ${reading}
+status: "[[🚜In Progress]]"
+tags:
+  - book
+  - reading/${reading}독
+---`;
+
+    body = `
+# ${bookTitle} (${readingLabel})
+
+> **저자**: ${author} | **독서 회차**: ${readingLabel}
+
+---
+
+## 🎯 이번 독서 목표
+- [ ] 
+
+---
+
+## 📖 독서 진행
+
+| 날짜 | 페이지 | 메모 |
+|------|--------|------|
+| ${NOW_DATE} | p.1 - p. | |
+
+---
+
+## 📝 챕터별 노트
+
+### Chapter 1
+- 
+
+---
+
+## ⭐ 핵심 구절
+
+> p.
+
+---
+
+## 💡 떠오른 생각
+- 
+
+---
+
+## 📝 FC
+#flashcards/book
+
+${bookTitle} 핵심:: 
+`;
+    tR += fm + body;
+  }
+
+// ==================== CONCEPT ====================
+} else if (kind === "concept") {
+  const domain = await tp.system.suggester(
+    ["💻 CS", "🔢 Math", "⚡ EE", "🏛️ Phil", "🤖 Robotics"],
+    ["CS", "Math", "EE", "Phil", "Robotics"]
+  );
+  if (!domain) { tR += ""; }
+  else {
+    title = await tp.system.prompt("개념 이름:", tp.file.title);
+    if (!title) { tR += ""; }
+    else {
+      if (!title.startsWith("C - ")) title = `C - ${title}`;
+      const conceptName = title.replace("C - ", "");
+      folder = "💡 Notes";
+      await renameAndMove(title, folder);
+
+      fm = `---
+type: concept
+title: "${conceptName}"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+domain: ${domain}
+status: "[[🌿Sapling]]"
+tags:
+  - concept
+  - domain/${domain.toLowerCase()}
+---`;
+
+      let coreSection = "";
+      if (domain === "CS") {
+        coreSection = "```cpp\n// 기본 형태\n\n```";
+      } else if (domain === "Math" || domain === "EE") {
+        coreSection = "$$\n\n$$";
+      } else {
+        coreSection = "> ";
+      }
+
+      body = `
+# ${conceptName}
+
+> **한 줄 요약**: 
+
+---
+
+## 📖 정의
+
+${coreSection}
+
+---
+
+## 💡 직관적 이해
+
+- 이건 마치 _______ 같다
+- 왜냐하면 _______
+
+---
+
+## 📐 핵심
+
+### 핵심 포인트
+1. 
+2. 
+3. 
+
+### 예시
+- 
+
+---
+
+## ⚠️ 흔한 실수
+- ❌ 
+- ✅ 
+
+---
+
+## 🔗 연결
+- 선행: [[ ]]
+- 후행: [[ ]]
+
+---
+
+## 📝 FC
+#flashcards/${domain.toLowerCase()}
+
+${conceptName} 정의:: 
+
+${conceptName} 예시:: 
+`;
+      tR += fm + body;
+    }
+  }
+
+// ==================== PROBLEM ====================
+} else if (kind === "problem") {
+  const problemType = await tp.system.suggester(
+    ["🔢 수학 문제", "💻 코딩 문제", "⚡ 공학 문제", "🏛️ 철학 문제"],
+    ["math", "coding", "engineering", "philosophy"]
+  );
+  if (!problemType) { tR += ""; }
+  else {
+    let source = "";
+    let problemId = "";
+    
+    if (problemType === "coding") {
+      source = await tp.system.suggester(
+        ["백준", "LeetCode", "프로그래머스", "기타"],
+        ["baekjoon", "leetcode", "programmers", "other"]
+      ) || "baekjoon";
+      problemId = await tp.system.prompt("문제 번호:", "") || "";
+    } else if (problemType === "math") {
+      source = await tp.system.suggester(
+        ["공업수학1", "일반수학2", "기출문제", "기타"],
+        ["공업수학1", "일반수학2", "exam", "other"]
+      ) || "other";
+      problemId = await tp.system.prompt("챕터/문제번호:", "") || "";
+    } else if (problemType === "engineering") {
+      source = await tp.system.suggester(
+        ["전자기학1", "기타"],
+        ["전자기학1", "other"]
+      ) || "other";
+      problemId = await tp.system.prompt("문제 번호:", "") || "";
+    } else {
+      source = await tp.system.prompt("출처:", "") || "";
+      problemId = await tp.system.prompt("문제:", "") || "";
+    }
+
+    const difficulty = await tp.system.suggester(
+      ["🟢 Easy", "🟡 Medium", "🔴 Hard"],
+      ["easy", "medium", "hard"]
+    ) || "medium";
+
+    title = await tp.system.prompt("문제 제목:", problemId);
+    if (!title) { tR += ""; }
+    else {
+      if (!title.startsWith("P - ")) title = `P - ${title}`;
+      folder = "📝 Problems";
+      await renameAndMove(title, folder);
+
+      let codeLang = "";
+      if (problemType === "coding") {
+        codeLang = await tp.system.suggester(
+          ["C++", "Python", "둘 다"],
+          ["cpp", "python", "both"]
+        ) || "cpp";
+      }
+
+      let tags = ["problem", `problem/${problemType}`, `difficulty/${difficulty}`];
+      if (source && source !== "other") tags.push(`source/${source}`);
+
+      fm = `---
+type: problem
+title: "${title}"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+problem_type: ${problemType}
+source: ${source}
+difficulty: ${difficulty}
+${codeLang ? `language: ${codeLang}` : ""}
+status: "[[🚜In Progress]]"
+solved: false
+tags:
+${tags.map(t => `  - ${t}`).join("\n")}
+---`;
+
+      let problemSection = "";
+      if (problemType === "coding") {
+        problemSection = `### 입력
+\`\`\`
+
+\`\`\`
+
+### 출력
+\`\`\`
+
+\`\`\`
+
+### 제한
+- 시간: 
+- 메모리: `;
+      } else if (problemType === "math" || problemType === "engineering") {
+        problemSection = `### Given (주어진 것)
+- 
+
+### Find (구할 것)
+- `;
+      } else {
+        problemSection = `### 문제/논제
+- `;
+      }
+
+      let solutionSection = "";
+      if (problemType === "coding") {
+        if (codeLang === "cpp" || codeLang === "both") {
+          solutionSection += `### C++
+\`\`\`cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    
+    return 0;
+}
+\`\`\`
+`;
+        }
+        if (codeLang === "python" || codeLang === "both") {
+          solutionSection += `
+### Python
+\`\`\`python
+
+\`\`\`
+`;
+        }
+        solutionSection += `
+### 복잡도
+- 시간: O()
+- 공간: O()`;
+      } else if (problemType === "math" || problemType === "engineering") {
+        solutionSection = `### Step 1
+$$
+
+$$
+
+### Step 2
+$$
+
+$$
+
+### 답
+$$
+\\boxed{}
+$$`;
+      } else {
+        solutionSection = `### 논증
+1. 
+2. 
+3. 
+
+### 결론
+- `;
+      }
+
+      body = `
+# ${title.replace("P - ", "")}
+
+> **${problemType}** | 난이도: **${difficulty}** | 출처: ${source} ${problemId}
+
+---
+
+## 📋 문제
+
+${problemSection}
+
+---
+
+## 🧠 접근
+
+### 첫 생각
+- 
+
+### 핵심 아이디어
+- 
+
+### 필요 개념
+- [[ ]]
+
+---
+
+## ✏️ 풀이
+
+${solutionSection}
+
+---
+
+## 🔍 복기
+
+### 맞았으면
+- 핵심:
+- 더 좋은 방법:
+
+### 틀렸으면
+- 실수:
+- 정답:
+
+---
+
+## 📝 FC
+#flashcards/${problemType}
+
+${title.replace("P - ", "")} 핵심:: 
+`;
+      tR += fm + body;
+    }
+  }
+
+// ==================== REFERENCE ====================
 } else if (kind === "reference") {
-  const refKind = await tp.system.suggester(["Paper(논문)","Book(책)","Doc/Other(문서/기타)"], ["paper","book","doc"]);
-  const url = await tp.system.prompt("URL(없으면 Enter):", "");
-  publishDate = await tp.system.prompt("publishDate(없으면 Enter):", "");
+  title = await tp.system.prompt("자료명:", "R - ");
+  if (!title) { tR += ""; }
+  else {
+    if (!title.startsWith("R - ")) title = `R - ${title}`;
+    const url = await tp.system.prompt("URL (없으면 Enter):", "") || "";
+    folder = "📖 Books";
+    await renameAndMove(title, folder);
 
-  folder = PATH.books;
+    fm = `---
+type: reference
+title: "${title}"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+source_url: "${url}"
+tags:
+  - reference
+  - tagging/needed
+---`;
 
-  indexArr = [
-    refKind === "paper" ? INDEX.research :
-    refKind === "book" ? INDEX.books :
-    INDEX.webclips
-  ];
+    body = `
+# ${title.replace("R - ", "")}
 
-  typeArr = ["reference"];
-  cmdsArr = [];
-  authors = [];
-  title = withPrefix("R - ", title);
-  tags = ["reference", refKind, ...extraTags];
-  applyTaggingNeeded();
+## 📋 Metadata
+- URL: ${url}
+- Author: 
+- Date: 
 
-  groupOne = "General";
+---
 
-  var META_REF = { refKind, area: "any", url };
+## 📝 Summary
+- 
 
+---
+
+## 💡 Key Points
+1. 
+2. 
+3. 
+
+---
+
+## 📎 Quotes
+> 
+
+---
+
+## 🔗 Related
+- [[ ]]
+`;
+    tR += fm + body;
+  }
+
+// ==================== WEB CLIP ====================
+} else if (kind === "webclip") {
+  title = await tp.system.prompt("제목:", "W - ");
+  if (!title) { tR += ""; }
+  else {
+    if (!title.startsWith("W - ")) title = `W - ${title}`;
+    const url = await tp.system.prompt("URL:", "") || "";
+    folder = "📥 Inbox/_webclip";
+    await renameAndMove(title, folder);
+
+    fm = `---
+type: webclip
+title: "${title}"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+source_url: "${url}"
+tags:
+  - webclip
+  - inbox
+---`;
+
+    body = `
+# ${title.replace("W - ", "")}
+
+## Source
+- URL: ${url}
+
+---
+
+## 📝 Content
+
+
+---
+
+## 💡 Why Clipped
+- 
+
+## Next
+- [ ] 필요시 Reference로 이동
+`;
+    tR += fm + body;
+  }
+
+// ==================== PROJECT ====================
+} else if (kind === "project") {
+  title = await tp.system.prompt("프로젝트명:", "PRJ - ");
+  if (!title) { tR += ""; }
+  else {
+    if (!title.startsWith("PRJ - ")) title = `PRJ - ${title}`;
+    const goal = await tp.system.prompt("목표 (한 줄):", "") || "";
+    const deadline = await tp.system.prompt("마감일 (없으면 Enter):", "") || "";
+    folder = "🎯 Projects";
+    await renameAndMove(title, folder);
+
+    fm = `---
+type: project
+title: "${title}"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+goal: "${goal}"
+deadline: "${deadline}"
+status: "[[🚜In Progress]]"
+progress: 0
+tags:
+  - project
+---`;
+
+    body = `
+# ${title.replace("PRJ - ", "")}
+
+> **Goal**: ${goal}
+> **Deadline**: ${deadline}
+
+---
+
+## 📋 Overview
+
+
+---
+
+## 🎯 Milestones
+- [ ] Milestone 1: 
+- [ ] Milestone 2: 
+- [ ] Milestone 3: 
+
+---
+
+## 📝 Log
+
+### ${NOW_DATE}
+- 프로젝트 시작
+
+---
+
+## 🔗 Resources
+- [[ ]]
+`;
+    tR += fm + body;
+  }
+
+// ==================== MEETING ====================
+} else if (kind === "meeting") {
+  const meetingType = await tp.system.suggester(
+    ["🏛️ 회장단", "🦿 Hexapod", "🚶 Bipedal", "📚 기타"],
+    ["회장단", "Hexapod", "Bipedal", "other"]
+  );
+  if (!meetingType) { tR += ""; }
+  else {
+    let meetingName = meetingType;
+    if (meetingType === "other") {
+      meetingName = await tp.system.prompt("회의명:", "") || "기타";
+    }
+    const num = await tp.system.prompt("회차:", "1") || "1";
+    const attendees = await tp.system.prompt("참석자 (쉼표):", "") || "";
+    
+    title = `MTG - ${NOW_DATE} ${meetingName} ${num}회`;
+    folder = "🗃️ Archive/Meetings";
+    await renameAndMove(title, folder);
+
+    fm = `---
+type: meeting
+title: "${meetingName} ${num}회"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+meeting_type: ${meetingName}
+meeting_num: ${num}
+attendees: [${attendees.split(",").map(a => `"${a.trim()}"`).join(", ")}]
+tags:
+  - meeting
+  - meeting/${meetingName}
+---`;
+
+    body = `
+# ${meetingName} ${num}회 회의록
+
+> 📅 **${NOW_DATE}** | 참석: ${attendees}
+
+---
+
+## 📋 안건
+1. [ ] 
+2. [ ] 
+3. [ ] 
+
+---
+
+## 📝 내용
+
+### 1. 
+- 
+
+### 2. 
+- 
+
+---
+
+## ✅ Action Items
+
+| 담당 | 할 일 | 마감 |
+|-----|------|-----|
+| | | |
+| | | |
+
+---
+
+## 📅 다음 회의
+- 일시: 
+- 안건: 
+
+---
+
+## 🔗 관련
+- 이전: [[ ]]
+- 프로젝트: [[ ]]
+`;
+    tR += fm + body;
+  }
+
+// ==================== QUESTION ====================
+} else if (kind === "question") {
+  const thinkingType = await tp.system.suggester(
+    ["❓ 미해결 질문", "💡 아이디어", "🤔 고민/딜레마", "🔗 연결점"],
+    ["question", "idea", "dilemma", "connection"]
+  );
+  if (!thinkingType) { tR += ""; }
+  else {
+    title = await tp.system.prompt("질문/아이디어 제목:", tp.file.title);
+    if (!title) { tR += ""; }
+    else {
+      if (!title.startsWith("Q - ")) title = `Q - ${title}`;
+      folder = "💡 Notes";
+      await renameAndMove(title, folder);
+
+      fm = `---
+type: thinking
+title: "${title}"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+thinking_type: ${thinkingType}
+status: "[[🌱Seed]]"
+resolved: false
+tags:
+  - thinking
+  - thinking/${thinkingType}
+---`;
+
+      body = `
+# ${title.replace("Q - ", "")}
+
+> **${thinkingType}**
+
+---
+
+## ❓ 핵심 질문/아이디어
+
+> 한 문장으로 정리
+
+---
+
+## 🤔 Context
+
+### 이 질문이 생긴 맥락
+- 
+
+### 왜 중요한가?
+- 
+
+---
+
+## 💭 현재 가설
+- 
+
+---
+
+## 🔍 조사
+
+### 찾아볼 것
+- [ ] 
+
+### 발견한 것
+- 
+
+---
+
+## ✅ Resolution (해결되면 작성)
+
+> 해결 여부: ⬜ 미해결 / ⬜ 해결됨 / ⬜ 보류
+
+### 결론/답변
+- 
+
+---
+
+## 🔗 Related
+- [[ ]]
+`;
+      tR += fm + body;
+    }
+  }
+
+// ==================== PEOPLE ====================
 } else if (kind === "people") {
   const pType = await tp.system.suggester(
-    ["지인", "공학 인물", "철학 인물", "불명(정보 부족)"],
-    ["acq","eng","phil","unk"]
+    ["지인", "공학 인물", "철학 인물", "불명"],
+    ["acq", "eng", "phil", "unk"]
   );
+  if (!pType) { tR += ""; }
+  else {
+    title = await tp.system.prompt("인물 이름:", tp.file.title);
+    if (!title) { tR += ""; }
+    else {
+      if (!title.startsWith("PPL - ")) title = `PPL - ${title}`;
+      const org = await tp.system.prompt("소속/조직 (없으면 Enter):", "") || "";
+      const role = await tp.system.prompt("한줄 설명 (없으면 Enter):", "") || "";
+      
+      folder = pType === "acq" ? "⚙️ Meta/People/Acquaintance" :
+               pType === "eng" ? "⚙️ Meta/People/Engineering" :
+               pType === "phil" ? "⚙️ Meta/People/Philosophy" :
+               "⚙️ Meta/People/Unknown";
+      await renameAndMove(title, folder);
 
-  folder =
-    pType === "acq" ? PATH.people_acq :
-    pType === "eng" ? PATH.people_eng :
-    pType === "phil" ? PATH.people_phil :
-    PATH.people_unk;
+      fm = `---
+type: people
+title: "${title}"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+organization: "${org}"
+role: "${role}"
+tags:
+  - people
+  - people/${pType}
+---`;
 
-  indexArr = [INDEX.people];
-  typeArr = ["basic"];
-  cmdsArr = [];
-  authors = [q(ME)];
-  title = withPrefix("PPL - ", title);
+      body = `
+# ${title.replace("PPL - ", "")}
 
-  const baseName = title.replace(/^PPL\s-\s*/,"");
-  const nametag = slugNoSpace(baseName);
+## Snapshot
+- **Role**: ${role}
+- **Organization**: ${org}
 
-  tags = ["people", `people/${nametag}`, `people/${pType}`, ...extraTags];
-  applyTaggingNeeded();
+---
 
-  var META_PPL = {
-    organization: await tp.system.prompt("소속/조직(없으면 Enter):", ""),
-    role: await tp.system.prompt("한줄 설명(없으면 Enter):", "")
-  };
+## Key points
+- 
 
-  groupOne = pType === "eng" ? "EE" : pType === "phil" ? "Phil" : "General";
-  statusOne = pType === "unk" ? "[[🌱Seed]]" : "[[🌿Sapling]]";
+---
 
-} else if (kind === "project") {
-  folder = PATH.projects;
-  indexArr = [INDEX.waypoint];
-  typeArr = ["project"];
-  cmdsArr = [];
-  authors = [q(ME)];
-  title = withPrefix("PRJ - ", title);
+## Links
+- 
+`;
+      tR += fm + body;
+    }
+  }
 
-  const domain = await tp.system.suggester(
-    ["Robotics", "Engineering", "Software", "General"],
-    ["Robotics","EE","CS","General"]
-  );
-  groupOne = domain;
-
-  tags = ["project", "build", ...extraTags];
-  applyTaggingNeeded();
-
-  var META_PRJ = {
-    goal: await tp.system.prompt("목표(한 줄):", ""),
-    deadline: await tp.system.prompt("대회/마감일(없으면 Enter):", ""),
-    repo: await tp.system.prompt("Repo/Drive 링크(없으면 Enter):", "")
-  };
-
-} else if (kind === "develop") {
-  folder = PATH.notes;
-  indexArr = [INDEX.review];
-  typeArr = ["develop"];
-  cmdsArr = [];
-  authors = [q(ME)];
-  title = withPrefix("DEV - ", title);
-
-  tags = ["develop","theory", ...extraTags];
-  applyTaggingNeeded();
-
-} else if (kind === "share") {
-  folder = PATH.archive;
-  indexArr = [INDEX.waypoint];
-  typeArr = ["basic"];
-  cmdsArr = [];
-  authors = [q(ME)];
-  title = withPrefix("SHARE - ", title);
-
-  tags = ["share","output", ...extraTags];
-  applyTaggingNeeded();
-}
-
-// ===== Move file =====
-await renameAndMove(title, folder);
-
-// ===== Frontmatter =====
-let fm = [];
-fm.push("---");
-fm.push(`tags:${yamlList(tags, 2)}`);
-fm.push(`aliases:${yamlList(aliases, 2)}`);
-fm.push(`index:${yamlList(indexArr.map(x => q(wikilink(x))), 2)}`);
-fm.push(`type:${yamlList(typeArr, 2)}`);
-fm.push(`title: ${q(title)}`);
-fm.push(`created: ${NOW_DATE}`);
-fm.push(`cover_url: ${q(cover_url)}`);
-fm.push(`updated: ${NOW_DT}`);
-fm.push(`my_rate: ${q(my_rate)}`);
-fm.push(`authors:${yamlList(authors, 2)}`);
-fm.push(`CMDS:${yamlList(cmdsArr, 2)}`);
-fm.push(`started: ${q(started)}`);
-fm.push(`status:${yamlList([q(wikilink(statusOne))], 2)}`);
-fm.push(`group:${yamlList([groupOne], 2)}`);
-fm.push(`publishDate: ${q(publishDate)}`);
-fm.push(`start_read_date: ${q(start_read_date)}`);
-fm.push(`finish_read_date: ${q(finish_read_date)}`);
-fm.push("---");
-
-// ===== Body =====
-let body = `\n# ${title}\n`;
-
-if (kind === "connect_lecture") {
-  body += `\n## Meta\n- Course: ${META_LECTURE.course}\n- Session: ${META_LECTURE.session}\n- Instructor: ${META_LECTURE.instructor}\n`;
-  body += `\n## Outline\n- \n\n## Notes\n- \n\n## Questions\n- \n\n## 개념 정리 필요\n- [[ ]] \n`;
-
-} else if (kind === "webclip") {
-  body += `\n## Source\n- URL: ${META_WEB.url}\n- Keep: ${META_WEB.keep}\n- Area: ${META_WEB.area}\n`;
-  body += `\n## Snapshot\n- What it is:\n- Why clipped:\n`;
-  body += `\n## Excerpts\n> \n\n## Next\n- [ ] 필요하면 Concept으로 발전\n`;
-
-} else if (kind === "reference") {
-  body += `\n## Source\n- URL: ${META_REF.url}\n- Kind: ${META_REF.refKind}\n- Area: ${META_REF.area}\n`;
-  body += `\n## Summary (원문 기반)\n- \n\n## Quotes\n> \n\n## Next\n- [ ] Concept으로 발전\n`;
-
-} else if (kind === "people") {
-  body += `\n## Snapshot\n- Role: ${META_PPL.role}\n- Organization: ${META_PPL.organization}\n\n`;
-  body += `## Key points\n- \n\n## Links\n- \n`;
-
-} else if (kind === "project") {
-  body += `\n## Goal\n- ${META_PRJ.goal}\n`;
-  body += `\n## Deadline\n- ${META_PRJ.deadline}\n`;
-  body += `\n## Repo/Drive\n- ${META_PRJ.repo}\n`;
-  body += `\n## Requirements\n- \n\n## Constraints\n- \n\n## Plan\n- Milestone 1:\n- Milestone 2:\n- Milestone 3:\n`;
-  body += `\n## Log\n- ${NOW_DATE} - \n`;
-  body += `\n## Decisions\n- \n`;
-  body += `\n## References\n- [[ ]] \n`;
-
-} else if (kind === "develop") {
-  body += `\n## Definitions\n- \n\n## Key results / Rules\n- \n\n## Examples\n- \n\n## Pitfalls\n- \n\n## References\n- [[ ]] \n`;
-
-} else if (kind === "share") {
-  body += `\n## Audience\n- \n\n## Outline\n- \n\n## Draft\n- \n\n## Sources\n- [[ ]] \n`;
-
-} else {
-  body += `\n## Notes\n- \n\n## Next\n- [ ] \n`;
-}
-
-tR += fm.join("\n") + body;
+} // end of else (kind was not null)
 }
 %>
-
