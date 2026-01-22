@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "23bc43a4b45000d8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "🗃️ Archive/Meetings/MTG - 2026-01-06 회장단 1회.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "MTG - 2026-01-06 회장단 1회"
-            }
-          },
-          {
             "id": "59daf262d5e2452c",
             "type": "leaf",
             "state": {
@@ -53,30 +29,6 @@
               },
               "icon": "lucide-file",
               "title": "P - 백준 Array part"
-            }
-          },
-          {
-            "id": "23a25da579dbb238",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📝 Problems/P - 10811.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "P - 10811"
             }
           },
           {
@@ -104,6 +56,30 @@
             }
           },
           {
+            "id": "2dbc8019f52008f8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
+            }
+          },
+          {
             "id": "b1bb5fa1bb7e7ad6",
             "type": "leaf",
             "state": {
@@ -128,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 3,
+        "currentTab": 2,
         "stacked": true
       }
     ],
@@ -183,7 +159,7 @@
             }
           },
           {
-            "id": "aaac03539d4b7d31",
+            "id": "c8965859d33958b4",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -600,6 +576,16 @@
             "id": "b8be2ace843fc990",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "f77c0f47265c83a5",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -607,7 +593,7 @@
             }
           }
         ],
-        "currentTab": 34
+        "currentTab": 35
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -688,10 +674,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "0d91a64ed8ebe9f9",
+  "active": "2dbc8019f52008f8",
   "lastOpenFiles": [
-    "📝 Problems/P - 10811.md",
     "📝 Problems/P - 1546.md",
+    "Untitled.md",
+    "📝 Problems/P - 10811.md",
     "💡 Notes/Concepts/C - Modern C++ Array.md",
     "💡 Notes/Concepts/C - Modern C++ Day 1.md",
     "💡 Notes/Problems/P - 백준 Array part.md",
@@ -720,7 +707,6 @@
     "📚 Lectures/2025-2/공업수학/L - ENG_05_열전도방정식 (Heat Equation).md",
     "📚 Lectures/2025-2/공업수학/L - ENG_04_파동방정식 (Wave Equation).md",
     "📚 Lectures/2025-2/공업수학/L - ENG_03_편미분방정식 개요 (PDE Introduction).md",
-    "📚 Lectures/2025-2/공업수학/L - ENG_02_푸리에 변환 (Fourier Transform).md",
     "📚 Lectures/2025-2/확률변수",
     "📚 Lectures/2025-2/철학적논리학",
     "📚 Lectures/2025-2/자료구조",
