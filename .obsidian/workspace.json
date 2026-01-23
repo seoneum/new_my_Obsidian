@@ -30,8 +30,57 @@
               "icon": "lucide-file",
               "title": "P - 1546"
             }
+          },
+          {
+            "id": "fd823dc1b5f431f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "💡 Notes/C - Modern C++ string part.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "C - Modern C++ string part"
+            }
+          },
+          {
+            "id": "5dc9dcca4b59b78c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "💡 Notes/Problems/Coding/P - 27866.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "P - 27866"
+            }
           }
         ],
+        "currentTab": 2,
         "stacked": true
       }
     ],
@@ -89,8 +138,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -600,8 +648,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "594488449eeb4160",
+  "active": "5dc9dcca4b59b78c",
   "lastOpenFiles": [
+    "💡 Notes/C - Modern C++ string part.md",
+    "💡 Notes/Problems/Coding/P - 27866.md",
+    "📝 Problems/P - 1546.md",
     "🏠 Dashboard.md",
     "💡 Notes/Feynman/FYN - 2026-01-09.md",
     "FYN - 수학, 철학.md",
@@ -616,13 +667,11 @@
     "JRN - 2026-01-23.md",
     "⚙️ Meta/Templates/Daily_Template.md",
     "⚙️ Meta/Templates/Feynman_Template.md",
-    "Untitled.md",
     "📚 Lectures/2025-2/확률변수/L - PRB_01_조합론 (Combinatorial Analysis).md",
     "📚 Lectures/2025-2/확률변수/L - PRB_04_확률변수 (Random Variables).md",
     "💡 Notes/Problems/P - 백준 Array part.md",
     "💡 Notes/Quick/N - 수학 독학 실천 가이드.md",
     "📚 Lectures/Math/L - MIT_18.01_1.md",
-    "📝 Problems/P - 1546.md",
     "⚙️ Meta/Guides/W - 수학 독학 4단계 프레임워크.md",
     "📚 Lectures/2026-1/Untitled 1.md",
     "📚 Lectures/2026-1/언어철학/언어철학.md",
@@ -634,7 +683,6 @@
     "⚙️ Meta/Guides/W - 수학 독학 5단계 프로세스.md",
     "📥 Inbox/_webclip/W - 수학 독학 능동적 연습법.md",
     "💡 Notes/Concepts/C - Modern C++ Array.md",
-    "📝 Problems/🚜In Progress.md",
     "📝 Problems",
     "Tags/#logic",
     "Tags/#philosophy",
