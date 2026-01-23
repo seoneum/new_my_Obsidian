@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📖 Books/Philosophy/B - 서양 철학사(초독).md",
+                "file": "📖 Books/Philosophy/B - 서양 철학사(단어, 개념).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "B - 서양 철학사(초독)"
+              "title": "B - 서양 철학사(단어, 개념)"
             }
           },
           {
@@ -77,6 +77,30 @@
               },
               "icon": "lucide-file",
               "title": "B - 서양 철학사 (초독)"
+            }
+          },
+          {
+            "id": "7921c8d60d00e884",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📥 Inbox/N - 2026_1학기_시간표 짜기~.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "N - 2026_1학기_시간표 짜기~"
             }
           }
         ],
@@ -648,10 +672,20 @@
   },
   "active": "5f6cb7fe8e42435a",
   "lastOpenFiles": [
-    "📖 Books/Philosophy/B - 서양 철학사(초독).md",
-    "📖 Books/B - 서양 철학사 (초독).md",
-    "💡 Notes/C - Modern C++ string part.md",
+    "💡 Notes/Concepts/C - 효과적인 독서법과 기억력 향상 전략.md",
+    "📖 Books/Philosophy/B - 서양 철학사(단어, 개념).md",
+    "🏠 Dashboard.md",
     "📥 Inbox/N - 2026_1학기_시간표 짜기~.md",
+    "📖 Books/B - 서양 철학사 (초독).md",
+    "📚 Lectures/2026-1/공업수학 1",
+    "📚 Lectures/2026-1/일반수학 2",
+    "📚 Lectures/2026-1/전자기학 1",
+    "📚 Lectures/2026-1/서양현대철학사",
+    "📚 Lectures/2026-1/존재론과 형이상학",
+    "📚 Lectures/2026-1/Untitled.md",
+    "📚 Lectures/2026-1/언어철학/언어철학.md",
+    "📚 Lectures/2026-1/2026-1.md",
+    "💡 Notes/C - Modern C++ string part.md",
     "📝 Problems/Baekjoon/P - Baekjoon 27866.md",
     "📝 Problems/Other/P - 나머지.md",
     "📝 Problems/Exam/P - Exam Practice 1a.md",
@@ -667,23 +701,13 @@
     "📝 Problems/Baekjoon/P - Baekjoon 11382.md",
     "💡 Notes/Problems/Coding/P - 27866.md",
     "📖 Books/Philosophy/B - 서양철학사 (초독).md",
-    "🏠 Dashboard.md",
     "📝 Problems/P - 1546.md",
     "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
-    "📝 Problems/Baekjoon/P - Baekjoon 10811.md",
     "📝 Problems/Other",
     "📝 Problems/Exam",
     "📝 Problems/MIT 18.01",
     "📝 Problems/Baekjoon",
-    "💡 Notes/Feynman/FYN - 2026-01-09.md",
-    "FYN - 수학, 철학.md",
-    "⚙️ Meta/Templates/Journal_Template.md",
     "💡 Notes/Problems/Philosophy",
-    "💡 Notes/Problems/Engineering",
-    "💡 Notes/Problems/Coding",
-    "💡 Notes/Problems/Math",
-    "📅 Daily/Journal",
-    "📚 Lectures/2026-1/언어철학",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",
