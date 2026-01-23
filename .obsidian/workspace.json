@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📝 Problems/P - 1546.md",
+                "file": "📚 Lectures/Math/L - MIT_18.01_1.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,31 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "P - 1546"
-            }
-          },
-          {
-            "id": "2dbc8019f52008f8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "L - MIT_18.01_1"
             }
           },
           {
@@ -85,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "💡 Notes/Concepts/C - Modern C++ Array.md",
+                "file": "💡 Notes/Quick/N - 수학 독학 실천 가이드.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,11 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "C - Modern C++ Array"
+              "title": "N - 수학 독학 실천 가이드"
             }
           }
         ],
-        "currentTab": 2,
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -173,8 +149,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -674,16 +649,28 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "2dbc8019f52008f8",
+  "active": "0d91a64ed8ebe9f9",
   "lastOpenFiles": [
+    "💡 Notes/Quick/N - 수학 독학 실천 가이드.md",
+    "📚 Lectures/Math/L - MIT_18.01_1.md",
     "📝 Problems/P - 1546.md",
+    "⚙️ Meta/Guides/W - 수학 독학 4단계 프레임워크.md",
+    "📚 Lectures/2026-1/Untitled 1.md",
+    "📚 Lectures/2026-1/언어철학/언어철학.md",
+    "📚 Lectures/2026-1/언어철학",
+    "📚 Lectures/2026-1/Untitled.md",
+    "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
+    "📚 Lectures/2026-1/2026-1.md",
+    "📚 Lectures/2026-1",
+    "⚙️ Meta/Guides/W - 수학 독학 5단계 프로세스.md",
+    "📥 Inbox/_webclip/W - 수학 독학 능동적 연습법.md",
+    "💡 Notes/Concepts/C - Modern C++ Array.md",
+    "📝 Problems/🚜In Progress.md",
     "Untitled.md",
     "📝 Problems/P - 10811.md",
-    "💡 Notes/Concepts/C - Modern C++ Array.md",
     "💡 Notes/Concepts/C - Modern C++ Day 1.md",
     "💡 Notes/Problems/P - 백준 Array part.md",
     "🗃️ Archive/Meetings/MTG - 2026-01-06 회장단 1회.md",
-    "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
     "📝 Problems",
     "Tags/#logic",
     "Tags/#philosophy",
@@ -697,21 +684,9 @@
     "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_04_도덕적 지위와 관계론.md",
     "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_03_인공적 도덕행위자와 책임.md",
     "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_02_신뢰할만한 인공지능.md",
-    "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_01_약인공지능 시대의 윤리적 위기.md",
-    "📚 Lectures/2025-2/철학적논리학/L - PHIL_06_존재와 보편자 (Existence & Universals).md",
-    "📚 Lectures/2025-2/철학적논리학/L - PHIL_05_형식적 도출 (Formal Derivation).md",
-    "📚 Lectures/2025-2/철학적논리학/L - PHIL_04_관계술어와 다중양화 (Relations & Multiple Quantifiers).md",
-    "📚 Lectures/2025-2/철학적논리학/L - PHIL_03_양화논리 기초 (Quantificational Logic).md",
-    "📚 Lectures/2025-2/철학적논리학/L - PHIL_02_정언논리 (Categorical Logic).md",
-    "📚 Lectures/2025-2/철학적논리학/L - PHIL_01_명제논리 기초 (Propositional Logic).md",
-    "📚 Lectures/2025-2/공업수학/L - ENG_05_열전도방정식 (Heat Equation).md",
-    "📚 Lectures/2025-2/공업수학/L - ENG_04_파동방정식 (Wave Equation).md",
-    "📚 Lectures/2025-2/공업수학/L - ENG_03_편미분방정식 개요 (PDE Introduction).md",
     "📚 Lectures/2025-2/확률변수",
     "📚 Lectures/2025-2/철학적논리학",
     "📚 Lectures/2025-2/자료구조",
-    "📚 Lectures/2025-2/인공지능의윤리",
-    "📚 Lectures/2025-2/공업수학",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",
