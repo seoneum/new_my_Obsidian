@@ -24,14 +24,14 @@ async function renameAndMove(newTitle, folder) {
 // ===== Choose Note Type =====
 const kind = await tp.system.suggester(
   [
-    "━━━ 📅 일상 ━━━",
-    "📅 DAILY: 하루 계획/마무리",
+    "━━━ 📝 메모 ━━━",
     "📝 MEMO: 빠른 메모",
     "━━━ 📚 학습 ━━━",
     "📚 LECTURE: 수업 노트",
     "📕 BOOK: 독서 노트",
     "💡 CONCEPT: 개념 정리",
     "📐 PROBLEM: 문제 풀이",
+    "🧠 FEYNMAN: 페인만 학습",
     "━━━ 📖 정리 ━━━",
     "📖 REFERENCE: 논문/책/자료",
     "🌐 WEB CLIP: 웹 저장",
@@ -43,8 +43,8 @@ const kind = await tp.system.suggester(
     "👤 PEOPLE: 인물 노트",
   ],
   [
-    null, "daily", "memo",
-    null, "lecture", "book", "concept", "problem",
+    null, "memo",
+    null, "lecture", "book", "concept", "problem", "feynman",
     null, "reference", "webclip",
     null, "project", "meeting",
     null, "question", "people"
@@ -61,103 +61,8 @@ let folder = "";
 let fm = "";
 let body = "";
 
-// ==================== DAILY ====================
-if (kind === "daily") {
-  const dayKind = await tp.system.suggester(
-    ["📚 공부", "🔧 프로젝트", "📚🔧 혼합", "🌴 휴식"],
-    ["study", "project", "mixed", "off"]
-  );
-  if (!dayKind) { tR += ""; }
-  else {
-    title = `D - ${NOW_DATE}`;
-    folder = "📅 Daily";
-    await renameAndMove(title, folder);
-
-    fm = `---
-type: daily
-title: "${NOW_DATE}"
-created: ${NOW_DATE}
-updated: ${NOW_DT}
-author: "${ME}"
-day_kind: ${dayKind}
-week: W${WEEK_NUM}
-tags:
-  - daily
-  - day/${dayKind}
----`;
-
-    body = `
-# ${NOW_DATE} (${WEEKDAY})
-
-## 🎯 Top 3
-1. [ ] 
-2. [ ] 
-3. [ ] 
-
----
-`;
-    if (dayKind === "study" || dayKind === "mixed") {
-      body += `
-## 📚 공부
-
-| 시간 | 과목 | 내용 |
-|-----|-----|-----|
-| 오전 | | |
-| 오후 | | |
-
-### 오늘 배운 것
-- 
-
-### 모르는 것
-- 
-`;
-    }
-    if (dayKind === "project" || dayKind === "mixed") {
-      body += `
-## 🔧 프로젝트
-
-### 작업
-- [ ] 
-
-### 진행
-- 
-
-### 막힌 것 → 내일
-- 
-`;
-    }
-    if (dayKind === "off") {
-      body += `
-## 🌴 휴식
-
-- [ ] 하고 싶은 것:
-- 한 것:
-`;
-    }
-    body += `
----
-
-## 🌙 마무리
-
-### 오늘 핵심 3줄
-1. 
-2. 
-3. 
-
-### 내일 우선
-1. 
-2. 
-
----
-
-## 📎 메모
-
-`;
-    tR += fm + body;
-  }
-
 // ==================== MEMO ====================
-} else if (kind === "memo") {
+if (kind === "memo") {
   title = await tp.system.prompt("메모 제목:", "N - ");
   if (!title) { tR += ""; }
   else {
@@ -475,7 +380,15 @@ ${conceptName} 예시::
     if (!title) { tR += ""; }
     else {
       if (!title.startsWith("P - ")) title = `P - ${title}`;
-      folder = "📝 Problems";
+      
+      // 문제 타입별 폴더 분류
+      const folderMap = {
+        "math": "💡 Notes/Problems/Math",
+        "coding": "💡 Notes/Problems/Coding",
+        "engineering": "💡 Notes/Problems/Engineering",
+        "philosophy": "💡 Notes/Problems/Philosophy"
+      };
+      folder = folderMap[problemType] || "💡 Notes/Problems";
       await renameAndMove(title, folder);
 
       let codeLang = "";
@@ -633,6 +546,114 @@ ${solutionSection}
 #flashcards/${problemType}
 
 ${title.replace("P - ", "")} 핵심:: 
+`;
+      tR += fm + body;
+    }
+  }
+
+// ==================== FEYNMAN ====================
+} else if (kind === "feynman") {
+  const group = await tp.system.suggester(
+    ["EE (전기전자)", "Phil (철학)", "SE (소프트웨어)", "Math (수학)", "Robotics", "SLAM", "AI", "General"],
+    ["EE", "Phil", "SE", "Math", "Robotics", "SLAM", "AI", "General"]
+  );
+  if (!group) { tR += ""; }
+  else {
+    title = await tp.system.prompt("학습 주제:", tp.file.title);
+    if (!title) { tR += ""; }
+    else {
+      // 파일명에 날짜 추가
+      const feynmanName = title;
+      title = `FYN - ${NOW_DATE} ${feynmanName}`;
+      
+      const difficulty = await tp.system.suggester(
+        ["🟢 Easy (기초)", "🟡 Medium (중급)", "🔴 Hard (심화)"],
+        ["easy", "medium", "hard"]
+      ) || "medium";
+      
+      // 💡 Notes/Feynman 폴더에 저장
+      folder = "💡 Notes/Feynman";
+      await renameAndMove(title, folder);
+
+      fm = `---
+type: feynman
+title: "${feynmanName}"
+created: ${NOW_DATE}
+updated: ${NOW_DT}
+author: "${ME}"
+group: ${group}
+difficulty: ${difficulty}
+status: "[[🌿Sapling]]"
+tags:
+  - feynman
+  - domain/${group.toLowerCase()}
+  - difficulty/${difficulty}
+confidence: 0
+---`;
+
+      body = `
+# ${feynmanName}
+
+> [!abstract] 학습 목표
+> 이 개념을 12살에게 설명할 수 있을 때까지 반복한다.
+
+---
+
+## 🎯 Step 1: Explain (설명하기)
+
+> **12살에게 설명하듯이** 비유와 쉬운 단어로 작성
+
+### 핵심 아이디어 (한 문장)
+- 
+
+### 쉬운 비유
+- 이것은 마치 _______ 와 같다. 왜냐하면 _______
+
+### 상세 설명
+1. 
+2. 
+3. 
+
+---
+
+## 🔍 Step 2: Identify Gaps (갭 찾기)
+
+### 모르는 것들
+| 갭 | 왜 모르지? | 어디서 찾지? |
+|-----|------------|--------------|
+| | | |
+
+---
+
+## 🔧 Step 3: Repair (다시 공부하기)
+
+### 참고 자료
+- [[ ]]
+
+### 새로 알게 된 것
+1. 
+2. 
+
+---
+
+## 📢 Step 4: Teach-back (다시 설명하기)
+
+### 3문장 버전
+1. 
+2. 
+3. 
+
+### 1문장 버전
+> 
+
+---
+
+## 📝 FC
+#flashcards/${group.toLowerCase()}
+
+${feynmanName} 정의:: 
+
+${feynmanName} 예시:: 
 `;
       tR += fm + body;
     }

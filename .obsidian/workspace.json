@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "69e2bda715f00852",
+        "id": "6cf848b91a8beb7d",
         "type": "tabs",
         "children": [
           {
-            "id": "59daf262d5e2452c",
+            "id": "594488449eeb4160",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "💡 Notes/Problems/P - 백준 Array part.md",
+                "file": "📝 Problems/P - 1546.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,59 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "P - 백준 Array part"
-            }
-          },
-          {
-            "id": "0d91a64ed8ebe9f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📚 Lectures/Math/L - MIT_18.01_1.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "L - MIT_18.01_1"
-            }
-          },
-          {
-            "id": "b1bb5fa1bb7e7ad6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "💡 Notes/Quick/N - 수학 독학 실천 가이드.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "N - 수학 독학 실천 가이드"
+              "title": "P - 1546"
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -133,23 +84,13 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
-          },
-          {
-            "id": "c8965859d33958b4",
-            "type": "leaf",
-            "state": {
-              "type": "mk-path-view",
-              "state": {},
-              "icon": "layout-grid",
-              "title": "Navigator"
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -561,6 +502,16 @@
             "id": "f77c0f47265c83a5",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "e60542014c389457",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -568,7 +519,7 @@
             }
           }
         ],
-        "currentTab": 35
+        "currentTab": 36
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -649,8 +600,26 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "0d91a64ed8ebe9f9",
+  "active": "594488449eeb4160",
   "lastOpenFiles": [
+    "🏠 Dashboard.md",
+    "💡 Notes/Feynman/FYN - 2026-01-09.md",
+    "FYN - 수학, 철학.md",
+    "⚙️ Meta/Templates/Journal_Template.md",
+    "📅 Daily/D - 2026-01-09.md",
+    "📅 Daily/D - 2026-01-23.md",
+    "💡 Notes/Problems/Philosophy",
+    "💡 Notes/Problems/Engineering",
+    "💡 Notes/Problems/Coding",
+    "💡 Notes/Problems/Math",
+    "📅 Daily/Journal",
+    "JRN - 2026-01-23.md",
+    "⚙️ Meta/Templates/Daily_Template.md",
+    "⚙️ Meta/Templates/Feynman_Template.md",
+    "Untitled.md",
+    "📚 Lectures/2025-2/확률변수/L - PRB_01_조합론 (Combinatorial Analysis).md",
+    "📚 Lectures/2025-2/확률변수/L - PRB_04_확률변수 (Random Variables).md",
+    "💡 Notes/Problems/P - 백준 Array part.md",
     "💡 Notes/Quick/N - 수학 독학 실천 가이드.md",
     "📚 Lectures/Math/L - MIT_18.01_1.md",
     "📝 Problems/P - 1546.md",
@@ -666,27 +635,9 @@
     "📥 Inbox/_webclip/W - 수학 독학 능동적 연습법.md",
     "💡 Notes/Concepts/C - Modern C++ Array.md",
     "📝 Problems/🚜In Progress.md",
-    "Untitled.md",
-    "📝 Problems/P - 10811.md",
-    "💡 Notes/Concepts/C - Modern C++ Day 1.md",
-    "💡 Notes/Problems/P - 백준 Array part.md",
-    "🗃️ Archive/Meetings/MTG - 2026-01-06 회장단 1회.md",
     "📝 Problems",
     "Tags/#logic",
     "Tags/#philosophy",
-    "Tags/#flashcards",
-    "N - Modern C++ baekjoon Array_part.md",
-    "⚙️ Meta/People/Philosophy/Giles Deleze.md",
-    "Tags",
-    "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_06_기본 소득.md",
-    "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_05_도덕 향상 비판적 검토.md",
-    "📚 Lectures/2025-2/철학적논리학/L - PHIL_07_수학철학 (Philosophy of Mathematics).md",
-    "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_04_도덕적 지위와 관계론.md",
-    "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_03_인공적 도덕행위자와 책임.md",
-    "📚 Lectures/2025-2/인공지능의윤리/L - AI윤리_02_신뢰할만한 인공지능.md",
-    "📚 Lectures/2025-2/확률변수",
-    "📚 Lectures/2025-2/철학적논리학",
-    "📚 Lectures/2025-2/자료구조",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",
