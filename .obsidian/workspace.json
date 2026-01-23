@@ -104,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -672,12 +672,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "7921c8d60d00e884",
+  "active": "5f6cb7fe8e42435a",
   "lastOpenFiles": [
+    "🎯 Projects/PRJ - 동민이 과외/2026-01-19 - 1회차.md",
+    "📖 Books/Philosophy/B - 서양 철학사(단어, 개념).md",
+    "💡 Notes/Concepts/C - 효과적인 독서법과 기억력 향상 전략.md",
     "📖 Books/B - 서양 철학사 (초독).md",
     "📥 Inbox/N - 2026_1학기_시간표 짜기~.md",
-    "💡 Notes/Concepts/C - 효과적인 독서법과 기억력 향상 전략.md",
-    "📖 Books/Philosophy/B - 서양 철학사(단어, 개념).md",
     "🏠 Dashboard.md",
     "📚 Lectures/2026-1/공업수학 1",
     "📚 Lectures/2026-1/일반수학 2",
@@ -704,7 +705,6 @@
     "💡 Notes/Problems/Coding/P - 27866.md",
     "📖 Books/Philosophy/B - 서양철학사 (초독).md",
     "📝 Problems/P - 1546.md",
-    "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
     "📝 Problems/Other",
     "📝 Problems/Exam",
     "📝 Problems/MIT 18.01",
