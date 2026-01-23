@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📝 Problems/P - 1546.md",
+                "file": "🏠 Dashboard.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "P - 1546"
+              "title": "🏠 Dashboard"
             }
           },
           {
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "💡 Notes/C - Modern C++ string part.md",
+                "file": "📖 Books/Philosophy/B - 서양 철학사(초독).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "C - Modern C++ string part"
+              "title": "B - 서양 철학사(초독)"
             }
           },
           {
-            "id": "5dc9dcca4b59b78c",
+            "id": "5f6cb7fe8e42435a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "💡 Notes/Problems/Coding/P - 27866.md",
+                "file": "📖 Books/B - 서양 철학사 (초독).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,12 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "P - 27866"
+              "title": "B - 서양 철학사 (초독)"
             }
           }
         ],
-        "currentTab": 2,
-        "stacked": true
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -618,8 +617,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5,
-    "collapsed": true
+    "width": 336.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -648,44 +646,44 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "5dc9dcca4b59b78c",
+  "active": "5f6cb7fe8e42435a",
   "lastOpenFiles": [
+    "📖 Books/Philosophy/B - 서양 철학사(초독).md",
+    "📖 Books/B - 서양 철학사 (초독).md",
     "💡 Notes/C - Modern C++ string part.md",
+    "📥 Inbox/N - 2026_1학기_시간표 짜기~.md",
+    "📝 Problems/Baekjoon/P - Baekjoon 27866.md",
+    "📝 Problems/Other/P - 나머지.md",
+    "📝 Problems/Exam/P - Exam Practice 1a.md",
+    "📝 Problems/MIT 18.01/P - MIT 18.01 PS1B.md",
+    "📝 Problems/MIT 18.01/P - MIT 18.01 PS1.md",
+    "📝 Problems/Baekjoon/P - Baekjoon while part.md",
+    "📝 Problems/Baekjoon/P - Baekjoon Array part.md",
+    "📝 Problems/Baekjoon/P - Baekjoon 2884.md",
+    "📝 Problems/Baekjoon/P - Baekjoon 2753.md",
+    "📝 Problems/Baekjoon/P - Baekjoon 2480.md",
+    "📝 Problems/Baekjoon/P - Baekjoon 2438.md",
+    "📝 Problems/Baekjoon/P - Baekjoon 14681.md",
+    "📝 Problems/Baekjoon/P - Baekjoon 11382.md",
     "💡 Notes/Problems/Coding/P - 27866.md",
-    "📝 Problems/P - 1546.md",
+    "📖 Books/Philosophy/B - 서양철학사 (초독).md",
     "🏠 Dashboard.md",
+    "📝 Problems/P - 1546.md",
+    "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
+    "📝 Problems/Baekjoon/P - Baekjoon 10811.md",
+    "📝 Problems/Other",
+    "📝 Problems/Exam",
+    "📝 Problems/MIT 18.01",
+    "📝 Problems/Baekjoon",
     "💡 Notes/Feynman/FYN - 2026-01-09.md",
     "FYN - 수학, 철학.md",
     "⚙️ Meta/Templates/Journal_Template.md",
-    "📅 Daily/D - 2026-01-09.md",
-    "📅 Daily/D - 2026-01-23.md",
     "💡 Notes/Problems/Philosophy",
     "💡 Notes/Problems/Engineering",
     "💡 Notes/Problems/Coding",
     "💡 Notes/Problems/Math",
     "📅 Daily/Journal",
-    "JRN - 2026-01-23.md",
-    "⚙️ Meta/Templates/Daily_Template.md",
-    "⚙️ Meta/Templates/Feynman_Template.md",
-    "📚 Lectures/2025-2/확률변수/L - PRB_01_조합론 (Combinatorial Analysis).md",
-    "📚 Lectures/2025-2/확률변수/L - PRB_04_확률변수 (Random Variables).md",
-    "💡 Notes/Problems/P - 백준 Array part.md",
-    "💡 Notes/Quick/N - 수학 독학 실천 가이드.md",
-    "📚 Lectures/Math/L - MIT_18.01_1.md",
-    "⚙️ Meta/Guides/W - 수학 독학 4단계 프레임워크.md",
-    "📚 Lectures/2026-1/Untitled 1.md",
-    "📚 Lectures/2026-1/언어철학/언어철학.md",
     "📚 Lectures/2026-1/언어철학",
-    "📚 Lectures/2026-1/Untitled.md",
-    "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
-    "📚 Lectures/2026-1/2026-1.md",
-    "📚 Lectures/2026-1",
-    "⚙️ Meta/Guides/W - 수학 독학 5단계 프로세스.md",
-    "📥 Inbox/_webclip/W - 수학 독학 능동적 연습법.md",
-    "💡 Notes/Concepts/C - Modern C++ Array.md",
-    "📝 Problems",
-    "Tags/#logic",
-    "Tags/#philosophy",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",

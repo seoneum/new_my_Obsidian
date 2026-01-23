@@ -178,12 +178,46 @@ tags:
       ["1독 (초독)", "2독 (재독)", "3독", "4독", "5독"],
       ["1", "2", "3", "4", "5"]
     ) || "1";
+
+    const genre = await tp.system.suggester(
+      ["🏛️ 철학", "📖 문학", "📚 인문학", "🔬 과학", "💼 자기계발", "📜 기타"],
+      ["Phil", "Lit", "Hum", "Sci", "Self", "Other"]
+    ) || "Other";
     
     const author = await tp.system.prompt("✍️ 저자:", "") || "";
+    const translator = await tp.system.prompt("🌐 역자 (없으면 Enter):", "") || "";
+    const publisher = await tp.system.prompt("🏢 출판사 (없으면 Enter):", "") || "";
+    const publishYear = await tp.system.prompt("📅 출판연도 (없으면 Enter):", "") || "";
+    const totalPages = await tp.system.prompt("📄 총 페이지 (없으면 Enter):", "") || "";
+    const chapterCount = parseInt(await tp.system.prompt("📖 챕터 수 (기본: 5):", "5")) || 5;
+
     const readingLabel = reading === "1" ? "초독" : reading === "2" ? "재독" : `${reading}독`;
     
+    // 이전 독서 링크 (2독 이상)
+    let prevReadingLink = "";
+    if (parseInt(reading) > 1) {
+      const prevNum = parseInt(reading) - 1;
+      const prevLabel = prevNum === 1 ? "초독" : prevNum === 2 ? "재독" : `${prevNum}독`;
+      prevReadingLink = `[[B - ${bookTitle} (${prevLabel})]]`;
+    }
+
+    // 회차별 목표 텍스트
+    let goalText = "";
+    if (reading === "1") goalText = "전체 흐름 파악, 인상적인 구절 표시, 모르는 단어/개념 체크";
+    else if (reading === "2") goalText = "구조 분석, 핵심 논증 정리, 초독 때 놓친 부분 보완";
+    else if (reading === "3") goalText = "비판적 읽기, 다른 책/개념과 연결, 나만의 해석 발전";
+    else goalText = "심화 분석, 특정 주제 집중 탐구, 글쓰기/발표 준비";
+
+    // 챕터 섹션 동적 생성
+    let chapterSections = "";
+    for (let i = 1; i <= chapterCount; i++) {
+      chapterSections += `### Chapter ${i}: \n**핵심 내용**\n- \n\n**인상적인 구절**\n> p. \n\n---\n\n`;
+    }
+
     title = `B - ${bookTitle} (${readingLabel})`;
-    folder = "📖 Books";
+    folder = genre === "Phil" ? "📖 Books/Philosophy" : 
+             genre === "Lit" ? "📖 Books/Literature" : 
+             `📖 Books/${genre}`;
     await renameAndMove(title, folder);
 
     fm = `---
@@ -192,55 +226,104 @@ title: "${bookTitle}"
 created: ${NOW_DATE}
 updated: ${NOW_DT}
 author: "${author}"
+translator: "${translator}"
+publisher: "${publisher}"
+publish_year: "${publishYear}"
+total_pages: ${totalPages || '""'}
+genre: ${genre}
 reading_count: ${reading}
+prev_reading: "${prevReadingLink}"
 status: "[[🚜In Progress]]"
 tags:
   - book
+  - book/${genre.toLowerCase()}
   - reading/${reading}독
 ---`;
+
+    const prevLine = prevReadingLink ? `> - **이전 독서**: ${prevReadingLink}` : "";
 
     body = `
 # ${bookTitle} (${readingLabel})
 
-> **저자**: ${author} | **독서 회차**: ${readingLabel}
+> [!info] 책 정보
+> - **저자**: ${author}
+> - **역자**: ${translator || "-"}
+> - **출판사**: ${publisher || "-"}
+> - **출판연도**: ${publishYear || "-"}
+> - **총 페이지**: ${totalPages || "-"}
+> - **독서 회차**: ${readingLabel}
+${prevLine}
 
 ---
 
 ## 🎯 이번 독서 목표
-- [ ] 
+
+> [!abstract] ${readingLabel} 목표
+> ${goalText}
+
+- [ ] 목표 1: 
+- [ ] 목표 2: 
+- [ ] 목표 3: 
 
 ---
 
 ## 📖 독서 진행
 
-| 날짜 | 페이지 | 메모 |
-|------|--------|------|
-| ${NOW_DATE} | p.1 - p. | |
+| 날짜 | 페이지 | 소요 시간 | 메모 |
+|------|--------|-----------|------|
+| ${NOW_DATE} | p.1 - p. | | |
+
+### 현재 진행률
+- 현재: p. / ${totalPages || "?"}
+- 진행률: %
 
 ---
 
-## 📝 챕터별 노트
+## 📝 챕터별 노트 (${chapterCount}개)
 
-### Chapter 1
+${chapterSections}
+
+## ⭐ 핵심 구절 모음
+
+> [!quote] p.
+> 
+
+---
+
+## 💡 떠오른 생각들
+
+### 연결되는 개념/책
+- [[ ]] - 
+- [[ ]] - 
+
+### 나의 해석/비평
 - 
 
 ---
 
-## ⭐ 핵심 구절
+## ❓ 질문 & 탐구거리
 
-> p.
+- [ ] Q: 
+  - A: 
 
 ---
 
-## 💡 떠오른 생각
-- 
+## 🔗 Cross-links
+
+### 관련 Merge 노트
+- [[ ]]
+
+### 같은 저자의 다른 책
+- [[ ]]
 
 ---
 
 ## 📝 FC
-#flashcards/book
+#flashcards/${genre.toLowerCase()}
 
-${bookTitle} 핵심:: 
+${bookTitle} 핵심 주제:: 
+
+${bookTitle}에서 가장 인상적인 구절:: 
 `;
     tR += fm + body;
   }
@@ -253,33 +336,134 @@ ${bookTitle} 핵심::
   );
   if (!domain) { tR += ""; }
   else {
+    // 세부 도메인 선택
+    let subDomain = "";
+    if (domain === "CS") {
+      subDomain = await tp.system.suggester(
+        ["C++", "Python", "알고리즘", "자료구조", "기타"],
+        ["cpp", "python", "algorithm", "ds", "other"]
+      ) || "cpp";
+    } else if (domain === "Math") {
+      subDomain = await tp.system.suggester(
+        ["공업수학1", "일반수학2", "선형대수", "미적분", "기타"],
+        ["공업수학", "일반수학", "linear", "calculus", "other"]
+      ) || "other";
+    } else if (domain === "Phil") {
+      subDomain = await tp.system.suggester(
+        ["언어철학", "존재론과형이상학", "서양현대철학사", "기타"],
+        ["언어철학", "존재론", "현대철학", "other"]
+      ) || "other";
+    } else if (domain === "EE") {
+      subDomain = await tp.system.suggester(
+        ["전자기학1", "회로", "기타"],
+        ["전자기학", "circuit", "other"]
+      ) || "other";
+    }
+
     title = await tp.system.prompt("개념 이름:", tp.file.title);
     if (!title) { tR += ""; }
     else {
+      // 난이도 선택
+      const level = await tp.system.suggester(
+        ["🟢 기초", "🟡 중급", "🔴 심화"],
+        ["basic", "mid", "adv"]
+      ) || "mid";
+
       if (!title.startsWith("C - ")) title = `C - ${title}`;
       const conceptName = title.replace("C - ", "");
-      folder = "💡 Notes";
+      folder = "💡 Notes/Concepts";
       await renameAndMove(title, folder);
+
+      // 태그 구성
+      let tags = ["concept", `concept/${domain.toLowerCase()}`];
+      if (subDomain && subDomain !== "other") tags.push(`topic/${subDomain}`);
+      tags.push(`level/${level}`);
 
       fm = `---
 type: concept
 title: "${conceptName}"
 created: ${NOW_DATE}
 updated: ${NOW_DT}
+author: "${ME}"
 domain: ${domain}
+${subDomain && subDomain !== "other" ? `topic: ${subDomain}` : ""}
+level: ${level}
 status: "[[🌿Sapling]]"
+confidence: 0
 tags:
-  - concept
-  - domain/${domain.toLowerCase()}
+${tags.map(t => `  - ${t}`).join("\n")}
 ---`;
 
+      // 정의 섹션 결정
+      let definitionSection = "";
+      if (domain === "CS") {
+        definitionSection = "```cpp\n// 기본 형태\n\n```";
+      } else if (domain === "Math" || domain === "EE") {
+        definitionSection = "$$\n\n$$";
+      } else {
+        definitionSection = "> ";
+      }
+
+      // 핵심 섹션 결정 (도메인별)
       let coreSection = "";
       if (domain === "CS") {
-        coreSection = "```cpp\n// 기본 형태\n\n```";
-      } else if (domain === "Math" || domain === "EE") {
-        coreSection = "$$\n\n$$";
+        coreSection = `### 문법
+\`\`\`cpp
+
+\`\`\`
+
+### 예시
+\`\`\`cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    return 0;
+}
+\`\`\`
+
+### 주의
+- `;
+      } else if (domain === "Math") {
+        coreSection = `### 공식
+$$
+
+$$
+
+### 증명 (간략)
+1. 
+2. 
+
+### 언제 사용?
+- `;
+      } else if (domain === "EE") {
+        coreSection = `### 원리
+- 
+
+### 수식
+$$
+
+$$
+
+### 적용
+- `;
+      } else if (domain === "Phil") {
+        coreSection = `### 핵심 논증
+1. 전제: 
+2. 전제: 
+3. 결론: 
+
+### 주요 철학자
+- 
+
+### 비판
+- `;
       } else {
-        coreSection = "> ";
+        coreSection = `### 핵심 포인트
+1. 
+2. 
+3. `;
       }
 
       body = `
@@ -291,7 +475,7 @@ tags:
 
 ## 📖 정의
 
-${coreSection}
+${definitionSection}
 
 ---
 
@@ -304,12 +488,16 @@ ${coreSection}
 
 ## 📐 핵심
 
-### 핵심 포인트
-1. 
-2. 
-3. 
+${coreSection}
 
-### 예시
+---
+
+## 📝 예시
+
+### 예시 1
+- 
+
+### 예시 2
 - 
 
 ---
@@ -323,6 +511,13 @@ ${coreSection}
 ## 🔗 연결
 - 선행: [[ ]]
 - 후행: [[ ]]
+- 관련: [[ ]]
+
+---
+
+## 📚 출처
+- 강의: [[ ]]
+- 교재: 
 
 ---
 
@@ -332,6 +527,8 @@ ${coreSection}
 ${conceptName} 정의:: 
 
 ${conceptName} 예시:: 
+
+${conceptName} 주의점::
 `;
       tR += fm + body;
     }
@@ -383,12 +580,12 @@ ${conceptName} 예시::
       
       // 문제 타입별 폴더 분류
       const folderMap = {
-        "math": "💡 Notes/Problems/Math",
-        "coding": "💡 Notes/Problems/Coding",
-        "engineering": "💡 Notes/Problems/Engineering",
-        "philosophy": "💡 Notes/Problems/Philosophy"
+        "math": "📝 Problems/Math",
+        "coding": "📝 Problems/Coding",
+        "engineering": "📝 Problems/Engineering",
+        "philosophy": "📝 Problems/Philosophy"
       };
-      folder = folderMap[problemType] || "💡 Notes/Problems";
+      folder = folderMap[problemType] || "📝 Problems";
       await renameAndMove(title, folder);
 
       let codeLang = "";
@@ -562,7 +759,6 @@ ${title.replace("P - ", "")} 핵심::
     title = await tp.system.prompt("학습 주제:", tp.file.title);
     if (!title) { tR += ""; }
     else {
-      // 파일명에 날짜 추가
       const feynmanName = title;
       title = `FYN - ${NOW_DATE} ${feynmanName}`;
       
@@ -571,7 +767,6 @@ ${title.replace("P - ", "")} 핵심::
         ["easy", "medium", "hard"]
       ) || "medium";
       
-      // 💡 Notes/Feynman 폴더에 저장
       folder = "💡 Notes/Feynman";
       await renameAndMove(title, folder);
 
@@ -586,9 +781,12 @@ difficulty: ${difficulty}
 status: "[[🌿Sapling]]"
 tags:
   - feynman
+  - merge
   - domain/${group.toLowerCase()}
   - difficulty/${difficulty}
 confidence: 0
+last_review: ${NOW_DATE}
+time_spent: 0
 ---`;
 
       body = `
@@ -601,7 +799,7 @@ confidence: 0
 
 ## 🎯 Step 1: Explain (설명하기)
 
-> **12살에게 설명하듯이** 비유와 쉬운 단어로 작성
+> **12살에게 설명하듯이** 비유와 쉬운 단어로 6~10문장 작성
 
 ### 핵심 아이디어 (한 문장)
 - 
@@ -609,42 +807,119 @@ confidence: 0
 ### 쉬운 비유
 - 이것은 마치 _______ 와 같다. 왜냐하면 _______
 
-### 상세 설명
+### 상세 설명 (6-10문장)
 1. 
 2. 
 3. 
+4. 
+5. 
+6. 
 
 ---
 
 ## 🔍 Step 2: Identify Gaps (갭 찾기)
 
+> 설명하다가 **막히거나 불확실한 부분**을 솔직하게 기록
+
+### 체크리스트
+- [ ] 용어 정의가 명확한가?
+- [ ] "왜?"에 답할 수 있는가?
+- [ ] 구체적인 예시가 있는가?
+- [ ] 반례/한계를 알고 있는가?
+
 ### 모르는 것들
 | 갭 | 왜 모르지? | 어디서 찾지? |
 |-----|------------|--------------|
 | | | |
+| | | |
+
+### 착각하고 있던 것 (Misconceptions)
+- 
 
 ---
 
 ## 🔧 Step 3: Repair (다시 공부하기)
 
+> 갭을 메우기 위해 **원본 자료로 돌아가서** 다시 학습
+
 ### 참고 자료
-- [[ ]]
+- 원본 링크: [[ ]]
+- 추가 자료: [[ ]]
+- 영상/강의:
 
 ### 새로 알게 된 것
 1. 
 2. 
+3. 
+
+### 학습 시간 기록
+- 시작: \`${tp.date.now("HH:mm")}\`
+- 종료:
+- 총 소요:
 
 ---
 
 ## 📢 Step 4: Teach-back (다시 설명하기)
+
+> Step 1보다 **더 짧고 명확하게** 압축
+
+### 6문장 버전
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
 
 ### 3문장 버전
 1. 
 2. 
 3. 
 
-### 1문장 버전
+### 1문장 버전 (엘리베이터 피치)
 > 
+
+---
+
+## 📊 Self-Assessment (자가 평가)
+
+### 이해도 점수 (1-5)
+- [ ] 1: 전혀 모름
+- [ ] 2: 대충 알지만 설명 못함
+- [ ] 3: 기본은 설명 가능
+- [ ] 4: 깊이 있게 설명 가능
+- [ ] 5: 다른 사람 가르칠 수 있음
+
+### 다음 복습
+- 언제: 
+- 무엇을:
+
+---
+
+## 💡 Examples & Exercises
+
+### 예제 1
+- 문제:
+- 풀이:
+
+### 예제 2
+- 문제:
+- 풀이:
+
+### 연습 문제 (스스로 풀어보기)
+- 
+
+---
+
+## 🔗 Cross-links
+
+### 관련 개념
+- 선행 지식: [[ ]]
+- 후행 지식: [[ ]]
+- 유사 개념: [[ ]]
+
+### 프로젝트 연결
+- [[ ]]
 
 ---
 
@@ -654,6 +929,10 @@ confidence: 0
 ${feynmanName} 정의:: 
 
 ${feynmanName} 예시:: 
+
+${feynmanName} vs _____:: 차이점
+
+왜 ${feynmanName}이 중요한가?::
 `;
       tR += fm + body;
     }
