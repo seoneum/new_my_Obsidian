@@ -56,36 +56,12 @@
             }
           },
           {
-            "id": "5f6cb7fe8e42435a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📖 Books/B - 서양 철학사 (초독).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "B - 서양 철학사 (초독)"
-            }
-          },
-          {
             "id": "7921c8d60d00e884",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📥 Inbox/N - 2026_1학기_시간표 짜기~.md",
+                "file": "🎯 Projects/PRJ - 동민이 과외/2026-01-19 - 1회차.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +76,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "N - 2026_1학기_시간표 짜기~"
+              "title": "2026-01-19 - 1회차"
+            }
+          },
+          {
+            "id": "5f6cb7fe8e42435a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "💡 Notes/Concepts/C - 효과적인 독서법과 기억력 향상 전략.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "C - 효과적인 독서법과 기억력 향상 전략"
             }
           }
         ],
@@ -670,13 +670,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "5f6cb7fe8e42435a",
+  "active": "7921c8d60d00e884",
   "lastOpenFiles": [
+    "📖 Books/B - 서양 철학사 (초독).md",
+    "📥 Inbox/N - 2026_1학기_시간표 짜기~.md",
     "💡 Notes/Concepts/C - 효과적인 독서법과 기억력 향상 전략.md",
     "📖 Books/Philosophy/B - 서양 철학사(단어, 개념).md",
     "🏠 Dashboard.md",
-    "📥 Inbox/N - 2026_1학기_시간표 짜기~.md",
-    "📖 Books/B - 서양 철학사 (초독).md",
     "📚 Lectures/2026-1/공업수학 1",
     "📚 Lectures/2026-1/일반수학 2",
     "📚 Lectures/2026-1/전자기학 1",
