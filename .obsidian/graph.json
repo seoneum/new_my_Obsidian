@@ -3,10 +3,39 @@
   "search": "",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "tag:#baekjoon  ",
+      "color": {
+        "a": 1,
+        "rgb": 16218313
+      }
+    },
+    {
+      "query": "tag:#calculus  ",
+      "color": {
+        "a": 1,
+        "rgb": 9734625
+      }
+    },
+    {
+      "query": "tag:#flashcards  ",
+      "color": {
+        "a": 1,
+        "rgb": 11927194
+      }
+    },
+    {
+      "query": "tag:김선음",
+      "color": {
+        "a": 1,
+        "rgb": 10048224
+      }
+    }
+  ],
   "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -17,6 +46,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.0513597284140569,
+  "scale": 0.11555938893162801,
   "close": true
 }

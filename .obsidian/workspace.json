@@ -102,9 +102,57 @@
               "icon": "lucide-file",
               "title": "C - 효과적인 독서법과 기억력 향상 전략"
             }
+          },
+          {
+            "id": "cfd1ae1f9d386d71",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📚 Lectures/Math/L - MIT_18.01_2.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "L - MIT_18.01_2"
+            }
+          },
+          {
+            "id": "f85f7191a3678184",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📅 Daily/D - 2026-01-23.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "D - 2026-01-23"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -227,14 +275,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CMDS/100. Inbox/100. anything/Dataview Test.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "pinned": true,
               "icon": "lucide-list",
-              "title": "Outline of Dataview Test"
+              "title": "Outline"
             }
           },
           {
@@ -297,25 +344,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CMDS/100. Inbox/100. anything/Dataview Test.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               },
               "pinned": true,
               "icon": "links-going-out",
-              "title": "Outgoing links from Dataview Test"
-            }
-          },
-          {
-            "id": "6812a9d94a57c602",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "empty",
-              "state": {},
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Outgoing links"
             }
           },
           {
@@ -331,256 +365,6 @@
             }
           },
           {
-            "id": "219c21a15df6a993",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "47821e815a0df249",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "bf570b4dcbe59e8b",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "f09c966125dbf9ce",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "fdd7c4620b1fe0ca",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "b000d779b0b23210",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "fd83c48ad5da9cd6",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "2bd97e838d131a41",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "db82250a43aef7de",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "04f78e176c2699c3",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "a7246a18b32433f0",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "2af05a40c6b82920",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "6f96861d59684185",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "10e89cd5569305ad",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "3d8ca2985b8f52b2",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "209b9be03b739c93",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "aa95b7ee5751bd5e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "59e8eca948bfacff",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "9b3d88656ce533c1",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "1e38b733d487e7e3",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "3dfc32acb5004e51",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "6025a9b4fdc27bdb",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "52cd745ce12dc41b",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "b8be2ace843fc990",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "f77c0f47265c83a5",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
             "id": "e60542014c389457",
             "type": "leaf",
             "state": {
@@ -591,7 +375,7 @@
             }
           }
         ],
-        "currentTab": 36
+        "currentTab": 5
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -642,8 +426,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5,
-    "collapsed": true
+    "width": 336.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -672,14 +455,19 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "5f6cb7fe8e42435a",
+  "active": "cfd1ae1f9d386d71",
   "lastOpenFiles": [
-    "🎯 Projects/PRJ - 동민이 과외/2026-01-19 - 1회차.md",
+    "💡 Notes/C - Modern C++ string part.md",
     "📖 Books/Philosophy/B - 서양 철학사(단어, 개념).md",
+    "🎯 Projects/PRJ - 동민이 과외/2026-01-19 - 1회차.md",
+    "🏠 Dashboard.md",
+    "📅 Daily/D - 2026-01-23.md",
+    "⚙️ Meta/People/김선음.md",
+    "📝 Problems/Coding/P - 9086.md",
+    "📝 Problems/Coding",
     "💡 Notes/Concepts/C - 효과적인 독서법과 기억력 향상 전략.md",
     "📖 Books/B - 서양 철학사 (초독).md",
     "📥 Inbox/N - 2026_1학기_시간표 짜기~.md",
-    "🏠 Dashboard.md",
     "📚 Lectures/2026-1/공업수학 1",
     "📚 Lectures/2026-1/일반수학 2",
     "📚 Lectures/2026-1/전자기학 1",
@@ -688,7 +476,6 @@
     "📚 Lectures/2026-1/Untitled.md",
     "📚 Lectures/2026-1/언어철학/언어철학.md",
     "📚 Lectures/2026-1/2026-1.md",
-    "💡 Notes/C - Modern C++ string part.md",
     "📝 Problems/Baekjoon/P - Baekjoon 27866.md",
     "📝 Problems/Other/P - 나머지.md",
     "📝 Problems/Exam/P - Exam Practice 1a.md",
@@ -702,14 +489,10 @@
     "📝 Problems/Baekjoon/P - Baekjoon 2438.md",
     "📝 Problems/Baekjoon/P - Baekjoon 14681.md",
     "📝 Problems/Baekjoon/P - Baekjoon 11382.md",
-    "💡 Notes/Problems/Coding/P - 27866.md",
-    "📖 Books/Philosophy/B - 서양철학사 (초독).md",
-    "📝 Problems/P - 1546.md",
     "📝 Problems/Other",
     "📝 Problems/Exam",
     "📝 Problems/MIT 18.01",
     "📝 Problems/Baekjoon",
-    "💡 Notes/Problems/Philosophy",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",
