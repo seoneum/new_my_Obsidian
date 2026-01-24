@@ -35,7 +35,18 @@ std::string s = "innerword";
 std::cout<<s[n];
 n번째 알파벳 나옴.
 
-//
+//char -> ASCII #11654
+char c = 'A';
+int i = c;
+std::cout<<i; //A->65
+// or
+std::cout<<(int)c; //65
+
+//string -> ASCII
+std::string s = "Hello";
+for(char c : s){
+	std::cout<<(int)c; // 아스키로 변경되어서 나옴
+}
 ```
 
 ---
