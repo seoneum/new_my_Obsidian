@@ -233,8 +233,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -490,7 +489,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "6b37cc84d6cca481",
+  "active": "7921c8d60d00e884",
   "lastOpenFiles": [
     "📝 Problems/Coding/P - 11654.md",
     "💡 Notes/C - Modern C++ string part.md",
