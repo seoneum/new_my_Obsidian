@@ -56,54 +56,6 @@
             }
           },
           {
-            "id": "6474d8261345397e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "B - 끝없는 이야기 (초독)"
-            }
-          },
-          {
-            "id": "fff912e351f8dd16",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "P - Baekjoon 1546"
-            }
-          },
-          {
             "id": "8f4765f667b7d88a",
             "type": "leaf",
             "state": {
@@ -150,9 +102,33 @@
               "icon": "lucide-file",
               "title": "P - 11720"
             }
+          },
+          {
+            "id": "fff912e351f8dd16",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📅 Daily/D - 2026-01-25.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "D - 2026-01-25"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -486,13 +462,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "6474d8261345397e",
+  "active": "fff912e351f8dd16",
   "lastOpenFiles": [
-    "📅 Daily/D - 2026-01-25.md",
-    "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
+    "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
     "📝 Problems/Coding/P - 11720.md",
     "📖 Books/Philosophy/R - 사랑의 단상.md",
-    "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
+    "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
+    "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
+    "📅 Daily/D - 2026-01-25.md",
     "💡 Notes/C - Modern C++ string part.md",
     "📥 Inbox/_quick/N - 방학 한 달 간의 계획.md",
     "📅 Daily/D - 2026-01-23.md",
@@ -519,7 +496,6 @@
     "📝 Problems/Other/P - 나머지.md",
     "📝 Problems/Exam/P - Exam Practice 1a.md",
     "📝 Problems/MIT 18.01/P - MIT 18.01 PS1B.md",
-    "📝 Problems/MIT 18.01/P - MIT 18.01 PS1.md",
     "📝 Problems/Other",
     "📝 Problems/Exam",
     "📝 Problems/MIT 18.01",
