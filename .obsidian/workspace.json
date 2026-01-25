@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "594488449eeb4160",
+            "id": "cfd1ae1f9d386d71",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,132 +32,12 @@
             }
           },
           {
-            "id": "fd823dc1b5f431f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📖 Books/Philosophy/B - 서양 철학사(단어, 개념).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "B - 서양 철학사(단어, 개념)"
-            }
-          },
-          {
-            "id": "7921c8d60d00e884",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "🎯 Projects/PRJ - 동민이 과외/2026-01-19 - 1회차.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-01-19 - 1회차"
-            }
-          },
-          {
-            "id": "5f6cb7fe8e42435a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "💡 Notes/C - Modern C++ string part.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "C - Modern C++ string part"
-            }
-          },
-          {
-            "id": "f7c6f5e2d67bc2c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📝 Problems/Coding/P - 11654.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "P - 11654"
-            }
-          },
-          {
-            "id": "cfd1ae1f9d386d71",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📚 Lectures/Math/L - MIT_18.01_2.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "L - MIT_18.01_2"
-            }
-          },
-          {
             "id": "f85f7191a3678184",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📅 Daily/D - 2026-01-23.md",
+                "file": "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -172,11 +52,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "D - 2026-01-23"
+              "title": "B - 사랑의 단상 (재독)"
+            }
+          },
+          {
+            "id": "8f4765f667b7d88a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📖 Books/Philosophy/R - 사랑의 단상.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "R - 사랑의 단상"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -411,6 +315,16 @@
             "id": "2f4c8ee0ad20d1a8",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "b0091954e94c7f6f",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -418,7 +332,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 13
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -499,16 +413,18 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "12671bd9f4a039ae",
+  "active": "f85f7191a3678184",
   "lastOpenFiles": [
+    "📖 Books/Philosophy/R - 사랑의 단상.md",
+    "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
+    "📅 Daily/D - 2026-01-23.md",
+    "🏠 Dashboard.md",
+    "📚 Lectures/Math/L - MIT_18.01_2.md",
     "📝 Problems/Coding/P - 11654.md",
     "💡 Notes/C - Modern C++ string part.md",
-    "💡 Notes/Concepts/C - 효과적인 독서법과 기억력 향상 전략.md",
-    "📚 Lectures/Math/L - MIT_18.01_2.md",
     "🎯 Projects/PRJ - 동민이 과외/2026-01-19 - 1회차.md",
+    "💡 Notes/Concepts/C - 효과적인 독서법과 기억력 향상 전략.md",
     "📖 Books/Philosophy/B - 서양 철학사(단어, 개념).md",
-    "🏠 Dashboard.md",
-    "📅 Daily/D - 2026-01-23.md",
     "⚙️ Meta/People/김선음.md",
     "📝 Problems/Coding/P - 9086.md",
     "📝 Problems/Coding",
@@ -531,8 +447,6 @@
     "📝 Problems/Baekjoon/P - Baekjoon Array part.md",
     "📝 Problems/Baekjoon/P - Baekjoon 2884.md",
     "📝 Problems/Baekjoon/P - Baekjoon 2753.md",
-    "📝 Problems/Baekjoon/P - Baekjoon 2480.md",
-    "📝 Problems/Baekjoon/P - Baekjoon 2438.md",
     "📝 Problems/Other",
     "📝 Problems/Exam",
     "📝 Problems/MIT 18.01",
