@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📅 Daily/D - 2026-01-25.md",
+                "file": "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "D - 2026-01-25"
+              "title": "B - 끝없는 이야기 (초독)"
             }
           },
           {
@@ -152,7 +152,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -486,15 +486,15 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "f85f7191a3678184",
+  "active": "6474d8261345397e",
   "lastOpenFiles": [
+    "📅 Daily/D - 2026-01-25.md",
+    "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
     "📝 Problems/Coding/P - 11720.md",
     "📖 Books/Philosophy/R - 사랑의 단상.md",
     "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
     "💡 Notes/C - Modern C++ string part.md",
     "📥 Inbox/_quick/N - 방학 한 달 간의 계획.md",
-    "📅 Daily/D - 2026-01-25.md",
-    "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
     "📅 Daily/D - 2026-01-23.md",
     "🏠 Dashboard.md",
     "📚 Lectures/Math/L - MIT_18.01_2.md",
