@@ -56,6 +56,54 @@
             }
           },
           {
+            "id": "6474d8261345397e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📅 Daily/D - 2026-01-25.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "D - 2026-01-25"
+            }
+          },
+          {
+            "id": "fff912e351f8dd16",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "P - Baekjoon 1546"
+            }
+          },
+          {
             "id": "8f4765f667b7d88a",
             "type": "leaf",
             "state": {
@@ -78,9 +126,33 @@
               "icon": "lucide-file",
               "title": "R - 사랑의 단상"
             }
+          },
+          {
+            "id": "d6e36d045db9ac6c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📝 Problems/Coding/P - 11720.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "P - 11720"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -137,7 +209,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -413,15 +486,19 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "f85f7191a3678184",
+  "active": "d6e36d045db9ac6c",
   "lastOpenFiles": [
     "📖 Books/Philosophy/R - 사랑의 단상.md",
+    "📝 Problems/Coding/P - 11720.md",
+    "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
+    "💡 Notes/C - Modern C++ string part.md",
+    "📥 Inbox/_quick/N - 방학 한 달 간의 계획.md",
+    "📅 Daily/D - 2026-01-25.md",
     "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
     "📅 Daily/D - 2026-01-23.md",
     "🏠 Dashboard.md",
     "📚 Lectures/Math/L - MIT_18.01_2.md",
     "📝 Problems/Coding/P - 11654.md",
-    "💡 Notes/C - Modern C++ string part.md",
     "🎯 Projects/PRJ - 동민이 과외/2026-01-19 - 1회차.md",
     "💡 Notes/Concepts/C - 효과적인 독서법과 기억력 향상 전략.md",
     "📖 Books/Philosophy/B - 서양 철학사(단어, 개념).md",
@@ -443,10 +520,6 @@
     "📝 Problems/Exam/P - Exam Practice 1a.md",
     "📝 Problems/MIT 18.01/P - MIT 18.01 PS1B.md",
     "📝 Problems/MIT 18.01/P - MIT 18.01 PS1.md",
-    "📝 Problems/Baekjoon/P - Baekjoon while part.md",
-    "📝 Problems/Baekjoon/P - Baekjoon Array part.md",
-    "📝 Problems/Baekjoon/P - Baekjoon 2884.md",
-    "📝 Problems/Baekjoon/P - Baekjoon 2753.md",
     "📝 Problems/Other",
     "📝 Problems/Exam",
     "📝 Problems/MIT 18.01",
