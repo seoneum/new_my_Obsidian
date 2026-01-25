@@ -380,3 +380,4 @@
 "event_logs:sources:modified": {"key":"sources:modified","ct":209137,"first_at":1765714187034,"last_at":1769310457791,"class_name":"EventLog","event_sources":{"obsidian:workspace.editor-change":191309,"obsidian:vault.modify":17828}},
 "event_logs:sources:imported": {"key":"sources:imported","ct":12279,"first_at":1765714125006,"last_at":1769310466249,"class_name":"EventLog"},
 "event_logs:item:embedded": {"key":"item:embedded","ct":20809,"first_at":1765714129227,"last_at":1769310466515,"class_name":"EventLog"},
+"event_logs:sources:opened": {"key":"sources:opened","ct":1900,"first_at":1765714175533,"last_at":1769313830072,"class_name":"EventLog","event_sources":{"active-leaf-change":1840,"open_source method":6,"file-open":54}},

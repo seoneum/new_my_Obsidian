@@ -152,7 +152,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -486,10 +486,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "d6e36d045db9ac6c",
+  "active": "f85f7191a3678184",
   "lastOpenFiles": [
-    "📖 Books/Philosophy/R - 사랑의 단상.md",
     "📝 Problems/Coding/P - 11720.md",
+    "📖 Books/Philosophy/R - 사랑의 단상.md",
     "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
     "💡 Notes/C - Modern C++ string part.md",
     "📥 Inbox/_quick/N - 방학 한 달 간의 계획.md",
