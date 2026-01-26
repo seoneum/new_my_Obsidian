@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IsaacLab_Flamingo_Guide.md",
+                "file": "IsaacLab_Flamingo_Master_Guide.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "IsaacLab_Flamingo_Guide"
+              "title": "IsaacLab_Flamingo_Master_Guide"
             }
           },
           {
@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📖 Books/R - Proximal Policy Optimization Algorithms.md",
+                "file": "🎯 Projects/PRJ - Bipedal.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "R - Proximal Policy Optimization Algorithms"
+              "title": "PRJ - Bipedal"
             }
           },
           {
@@ -473,16 +473,17 @@
   },
   "active": "18a5813680f8adb9",
   "lastOpenFiles": [
-    "IsaacLab_Flamingo_Master_Guide.md",
     "IsaacLab_Flamingo_Guide.md",
-    "IsaacLab_Flamingo_Master_Guide.md.download",
+    "📚 Lectures/26-1/기타/L - Introduction.md",
+    "🎯 Projects/PRJ - Bipedal.md",
+    "📖 Books/R - preBipedal/Flamingo_RL.md",
     "📚 Lectures/26-1/David_Silver's RL/L - David_Silver's RL 1주차.md",
+    "📖 Books/R - Proximal Policy Optimization Algorithms.md",
+    "IsaacLab_Flamingo_Master_Guide.md",
+    "IsaacLab_Flamingo_Master_Guide.md.download",
     "IsaacLab_Flamingo_Guide.md.download",
     "📚 Lectures/26-1/David_Silver's RL",
-    "📚 Lectures/26-1/기타/L - Introduction.md",
     "1707.06347v2.pdf.md",
-    "📖 Books/R - Proximal Policy Optimization Algorithms.md",
-    "📖 Books/R - preBipedal/Flamingo_RL.md",
     "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
     "📚 Lectures/26-1/기타",
     "📚 Lectures/26-1",
@@ -505,7 +506,6 @@
     "⚙️ Meta/People/김선음.md",
     "📝 Problems/Coding/P - 9086.md",
     "📝 Problems/Coding",
-    "📖 Books/B - 서양 철학사 (초독).md",
     "📚 Lectures/2026-1/공업수학 1",
     "📚 Lectures/2026-1/일반수학 2",
     "📚 Lectures/2026-1/전자기학 1",
