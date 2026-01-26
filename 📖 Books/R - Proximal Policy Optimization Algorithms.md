@@ -20,11 +20,39 @@ author:
 ---
 
 ## 📝 Summary
-- 강화학습(Reinforcement Learning)이란?
-	- Agent가 Environment와 상호작용하여 보상을 최대화하는 방향으로 최적의 행동 전략을 스스로 학습하는 machine learning 기법.
-	- Agent
-		- 
 
+### Abstract
+- 새로운 Policy Grandient 방법론 제시.
+- Stochastic Grandient Ascent를 사용하여 Surrogate 목적 함수를 최대화 함.
+- 기존의 방식은 sample 하나당 하나의 업데이트를 함. 하지만 PPO의 목적 함수는 여러 Epoch에 걸친 미니배치 업데이트를 함. (미니 배치 업데이트가 뭐지? 배치 사이즈를 쪼개서 한다는건가?)
+### Introduction
+- 기존 방법론의 한계
+	- Q-learning : 간단한 문제에서도 실패 + 이론적 이해 부족
+	- Vanila Policy Grandient : 데이터 효율성,견고성 낮음. 하나의 샘플에 하나의 업데이트
+	- Trust Region Policy Optimization : 구현 복잡. Quadratic Approximation 사용으로 확장성 낮음
+	- TRPO에서 발전한 방법으로 더 간단하고 범용적이고 덜 복잡합.
+	- First-order-optimization만 사용하면서 TRPO의 안정성과 효율성을 달성.
+	- **Cliped probability ratios**를 사용하는 목적 함수 개발.
+	- Cliped probability ratios : 하방(비관적 추정치)을 생성. 
+### Background
+- Policy Grandient Methods
+정책 $\pi_{\theta}(a|s)$의 성능을 최대화하기 위해 정책 파라미터 $\theta$를 경사 상승(Stochastic Gradient Ascent) 방식으로 업데이트하는 방법입니다. 정책 경사 추정량 $\hat{g}$는 다음과 같은 형태로 주어집니다. 
+$$
+\hat{g}​=\hat{E_{t}}​[∇_{θ}​logπ_{θ}​(a_{t}​∣s_{t}​)\hat{A^t}​]
+$$
+$\hat{g}$ : Grandient의 추정값. 이 방향으로 parameter업데이트.
+$∇_{\theta}​logπ_{\theta}(a_{t}​∣s_{t}​)$: "로그 확률의 기울기"입니다.
+	$πθ​(a_{t}∣s_{t}​)$ : 상태 $S_t$에서 행동 $a_t$를 선택할 확률.
+	$\theta$ : 신경망의 parameter
+	이 항은 특정 행동을 할 확률을 조정하기 위해 $\theta$를 조정함.
+$\hat{A_{t}}$ : Advantage 함수임. 업데이트의 크기, 방향(양/음)을 정하는 가중치
+
+- Advantage 함수
+ $$\hat{A_{t}} = Q(s_{t})​ - A(s_{t})$$
+	- $\hat{A}_t$ : 행동 $a_t$의 상대적 가치. (양수면 강화, 음수면 억제).
+	- $Q(s_t, a_t)$ : 행동 가치 함수. 상태 $s_t$에서 행동 $a_t$를 했을 때 얻은 실제(또는 예측) 보상 총합. 
+	- $V(s_t)$ : 상태 가치 함수 (Baseline). 상태 $s_t$에서 기대되는 평균 보상. 
+	- $Q - V$ : 행동의 결과에서 평균을 뺌으로써 학습의 분산(Variance)을 줄이는 역할.
 ---
 
 ## 💡 Key Points

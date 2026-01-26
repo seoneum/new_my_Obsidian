@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📅 Daily/D - 2026-01-26.md",
+                "file": "1707.06347v2.pdf.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "D - 2026-01-26"
+              "title": "1707.06347v2.pdf"
             }
           },
           {
@@ -80,6 +80,30 @@
             }
           },
           {
+            "id": "44728169134f3cd3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📚 Lectures/26-1/기타/L - Introduction.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "L - Introduction"
+            }
+          },
+          {
             "id": "a18fb7814784514f",
             "type": "leaf",
             "state": {
@@ -104,7 +128,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -448,12 +472,16 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "d6e36d045db9ac6c",
+  "active": "790a74b9a1fb1520",
   "lastOpenFiles": [
-    "📖 Books/R - preBipedal/Flamingo_RL.md",
-    "📖 Books/R - preBipedal",
+    "📚 Lectures/26-1/기타/L - Introduction.md",
+    "📚 Lectures/26-1/기타",
+    "📚 Lectures/26-1",
     "📖 Books/R - Proximal Policy Optimization Algorithms.md",
+    "📖 Books/R - preBipedal/Flamingo_RL.md",
+    "1707.06347v2.pdf.md",
     "📅 Daily/D - 2026-01-26.md",
+    "📖 Books/R - preBipedal",
     "📅 Daily/D - 2026-01-25.md",
     "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
     "📝 Problems/Coding/P - 11720.md",
@@ -480,11 +508,7 @@
     "📚 Lectures/2026-1/서양현대철학사",
     "📚 Lectures/2026-1/존재론과 형이상학",
     "📚 Lectures/2026-1/Untitled.md",
-    "📚 Lectures/2026-1/언어철학/언어철학.md",
-    "📚 Lectures/2026-1/2026-1.md",
     "📝 Problems/Other",
-    "📝 Problems/Exam",
-    "📝 Problems/MIT 18.01",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",
