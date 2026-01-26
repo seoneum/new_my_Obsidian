@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🏠 Dashboard.md",
+                "file": "📅 Daily/D - 2026-01-27.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "🏠 Dashboard"
+              "title": "D - 2026-01-27"
             }
           },
           {
@@ -126,9 +126,56 @@
               "icon": "lucide-file",
               "title": "Flamingo_RL"
             }
+          },
+          {
+            "id": "f84c3554d17e55fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "B - 사랑의 단상 (재독)"
+            }
+          },
+          {
+            "id": "54d8ec6bc9eca093",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📖 Books/Philosophy/R - 사랑의 단상.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "R - 사랑의 단상"
+            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -383,6 +430,26 @@
             "id": "deb4a1fedd074333",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "db0ee92dce1ca7b9",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "1718f753756718e3",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -390,7 +457,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 16
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -441,8 +508,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5,
-    "collapsed": true
+    "width": 336.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -471,20 +537,23 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "12671bd9f4a039ae",
+  "active": "1718f753756718e3",
   "lastOpenFiles": [
+    "🏠 Dashboard.md",
+    "📅 Daily/D - 2026-01-27.md",
+    "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
+    "📖 Books/Philosophy/R - 사랑의 단상.md",
+    "IsaacLab_Flamingo_Master_Guide.md",
     "IsaacLab_Flamingo_Guide.md",
     "📚 Lectures/26-1/기타/L - Introduction.md",
     "🎯 Projects/PRJ - Bipedal.md",
     "📖 Books/R - preBipedal/Flamingo_RL.md",
     "📚 Lectures/26-1/David_Silver's RL/L - David_Silver's RL 1주차.md",
     "📖 Books/R - Proximal Policy Optimization Algorithms.md",
-    "IsaacLab_Flamingo_Master_Guide.md",
     "IsaacLab_Flamingo_Master_Guide.md.download",
     "IsaacLab_Flamingo_Guide.md.download",
     "📚 Lectures/26-1/David_Silver's RL",
     "1707.06347v2.pdf.md",
-    "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
     "📚 Lectures/26-1/기타",
     "📚 Lectures/26-1",
     "📅 Daily/D - 2026-01-26.md",
@@ -492,19 +561,16 @@
     "📅 Daily/D - 2026-01-25.md",
     "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
     "📝 Problems/Coding/P - 11720.md",
-    "📖 Books/Philosophy/R - 사랑의 단상.md",
     "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
     "💡 Notes/C - Modern C++ string part.md",
     "📥 Inbox/_quick/N - 방학 한 달 간의 계획.md",
     "📅 Daily/D - 2026-01-23.md",
-    "🏠 Dashboard.md",
     "📚 Lectures/Math/L - MIT_18.01_2.md",
     "📝 Problems/Coding/P - 11654.md",
     "🎯 Projects/PRJ - 동민이 과외/2026-01-19 - 1회차.md",
     "💡 Notes/Concepts/C - 효과적인 독서법과 기억력 향상 전략.md",
     "📖 Books/Philosophy/B - 서양 철학사(단어, 개념).md",
     "⚙️ Meta/People/김선음.md",
-    "📝 Problems/Coding/P - 9086.md",
     "📝 Problems/Coding",
     "📚 Lectures/2026-1/공업수학 1",
     "📚 Lectures/2026-1/일반수학 2",
