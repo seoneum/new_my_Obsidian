@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📚 Lectures/26-1/David_Silver's RL/L - David_Silver's RL 1주차.md",
+                "file": "IsaacLab_Flamingo_Guide.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "L - David_Silver's RL 1주차"
+              "title": "IsaacLab_Flamingo_Guide"
             }
           },
           {
@@ -181,13 +181,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -475,9 +473,13 @@
   },
   "active": "18a5813680f8adb9",
   "lastOpenFiles": [
+    "IsaacLab_Flamingo_Master_Guide.md",
+    "IsaacLab_Flamingo_Guide.md",
+    "IsaacLab_Flamingo_Master_Guide.md.download",
+    "📚 Lectures/26-1/David_Silver's RL/L - David_Silver's RL 1주차.md",
+    "IsaacLab_Flamingo_Guide.md.download",
     "📚 Lectures/26-1/David_Silver's RL",
     "📚 Lectures/26-1/기타/L - Introduction.md",
-    "📚 Lectures/26-1/David_Silver's RL/L - David_Silver's RL 1주차.md",
     "1707.06347v2.pdf.md",
     "📖 Books/R - Proximal Policy Optimization Algorithms.md",
     "📖 Books/R - preBipedal/Flamingo_RL.md",
@@ -504,13 +506,9 @@
     "📝 Problems/Coding/P - 9086.md",
     "📝 Problems/Coding",
     "📖 Books/B - 서양 철학사 (초독).md",
-    "📥 Inbox/N - 2026_1학기_시간표 짜기~.md",
     "📚 Lectures/2026-1/공업수학 1",
     "📚 Lectures/2026-1/일반수학 2",
     "📚 Lectures/2026-1/전자기학 1",
-    "📚 Lectures/2026-1/서양현대철학사",
-    "📚 Lectures/2026-1/존재론과 형이상학",
-    "📝 Problems/Other",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",
