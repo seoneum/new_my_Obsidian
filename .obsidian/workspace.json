@@ -54,57 +54,9 @@
               "icon": "lucide-file",
               "title": "P - 11720"
             }
-          },
-          {
-            "id": "4ea9808fefbc6e06",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📝 Problems/Coding/P - 10809.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "P - 10809"
-            }
-          },
-          {
-            "id": "5ae6b1479449e90f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📚 Lectures/Math/L - MIT_18.01_14.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "L - MIT_18.01_14"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -161,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -467,10 +420,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "5ae6b1479449e90f",
+  "active": "9d0d4520c1ff019d",
   "lastOpenFiles": [
-    "📚 Lectures/Math/L - MIT_18.01_13.md",
     "📚 Lectures/Math/L - MIT_18.01_14.md",
+    "📚 Lectures/Math/L - MIT_18.01_13.md",
+    "📝 Problems/Coding/P - 10809.md",
     "📚 Lectures/Math/L - MIT_18.01_12.md",
     "📚 Lectures/Math/L - MIT_18.01_9.md",
     "📚 Lectures/Math/L - MIT_18.01_2.md",
@@ -479,7 +433,6 @@
     "📚 Lectures/Math/L - MIT_18.01_4.md",
     "📚 Lectures/Math/L - MIT_18.01_5.md",
     "📅 Daily/D - 2026-01-27.md",
-    "📝 Problems/Coding/P - 10809.md",
     "📝 Problems/Coding/P - 11720.md",
     "💡 Notes/Concepts/C - Modern C++ Day 1.md",
     "📝 Problems/Baekjoon/P - Baekjoon Array part.md",
