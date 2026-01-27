@@ -78,9 +78,33 @@
               "icon": "lucide-file",
               "title": "P - 10809"
             }
+          },
+          {
+            "id": "5ae6b1479449e90f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📚 Lectures/Math/L - MIT_18.01_14.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "L - MIT_18.01_14"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -137,8 +161,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "5dca81cd9c53a861",
@@ -444,14 +467,23 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "4ea9808fefbc6e06",
+  "active": "5ae6b1479449e90f",
   "lastOpenFiles": [
-    "📝 Problems/Coding/P - 11720.md",
+    "📚 Lectures/Math/L - MIT_18.01_13.md",
+    "📚 Lectures/Math/L - MIT_18.01_14.md",
+    "📚 Lectures/Math/L - MIT_18.01_12.md",
+    "📚 Lectures/Math/L - MIT_18.01_9.md",
+    "📚 Lectures/Math/L - MIT_18.01_2.md",
+    "📚 Lectures/Math/L - MIT_18.01_3.md",
+    "📚 Lectures/Math/L - MIT_18.01_6.md",
+    "📚 Lectures/Math/L - MIT_18.01_4.md",
+    "📚 Lectures/Math/L - MIT_18.01_5.md",
+    "📅 Daily/D - 2026-01-27.md",
     "📝 Problems/Coding/P - 10809.md",
+    "📝 Problems/Coding/P - 11720.md",
     "💡 Notes/Concepts/C - Modern C++ Day 1.md",
     "📝 Problems/Baekjoon/P - Baekjoon Array part.md",
     "💡 Notes/Concepts/C - Modern C++ Array.md",
-    "📅 Daily/D - 2026-01-27.md",
     "🎯 Projects/PRJ - Bipedal.md",
     "IsaacLab_Flamingo_Master_Guide.md",
     "🏠 Dashboard.md",
@@ -468,16 +500,7 @@
     "1707.06347v2.pdf.md",
     "📚 Lectures/26-1/기타",
     "📚 Lectures/26-1",
-    "📅 Daily/D - 2026-01-26.md",
     "📖 Books/R - preBipedal",
-    "📅 Daily/D - 2026-01-25.md",
-    "📝 Problems/Baekjoon/P - Baekjoon 1546.md",
-    "📖 Books/Literature/B - 끝없는 이야기 (초독).md",
-    "💡 Notes/C - Modern C++ string part.md",
-    "📥 Inbox/_quick/N - 방학 한 달 간의 계획.md",
-    "📅 Daily/D - 2026-01-23.md",
-    "📚 Lectures/Math/L - MIT_18.01_2.md",
-    "📝 Problems/Coding/P - 11654.md",
     "📝 Problems/Coding",
     "📚 Lectures/2026-1/공업수학 1",
     "📚 Lectures/2026-1/일반수학 2",

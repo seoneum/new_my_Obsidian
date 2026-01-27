@@ -1,11 +1,13 @@
 ---
 type: lecture
-title: L - MIT_18.10_12
+title: L - MIT_18.01_12
 created: 2026-01-06
 updated: 2026-01-18T16:42:53
-author: [[김선음]]
+author:
+  - - 김선음
 group: SE
-status: [[🚜In Progress]]
+status:
+  - - 🚜In Progress
 tags:
   - lecture
   - lecture/SE
@@ -19,7 +21,7 @@ domain:
 cmds: connect
 ---
 
-# L - MIT_18.10_13
+# L - MIT_18.01_13
 
 ## Meta
 - Course: Single value calculus
