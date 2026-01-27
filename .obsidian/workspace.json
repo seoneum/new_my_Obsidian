@@ -54,9 +54,57 @@
               "icon": "lucide-file",
               "title": "P - 11720"
             }
+          },
+          {
+            "id": "0400a3cfb26578f8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📝 Problems/Coding/P - 2675.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "P - 2675"
+            }
+          },
+          {
+            "id": "8f484cbf198fd486",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📚 Lectures/26-1/David Silver's RL/L - David Silver's RL 2주차.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "L - David Silver's RL 2주차"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -332,6 +380,16 @@
             "id": "1718f753756718e3",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "21c4c0e6b04741fa",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -339,7 +397,7 @@
             }
           }
         ],
-        "currentTab": 16
+        "currentTab": 17
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -420,8 +478,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "9d0d4520c1ff019d",
+  "active": "21c4c0e6b04741fa",
   "lastOpenFiles": [
+    "📚 Lectures/26-1/David Silver's RL",
+    "📝 Problems/Coding/P - 2675.md",
+    "📚 Lectures/26-1/David Silver's RL/L - David Silver's RL 2주차.md",
+    "📝 Problems/Coding/P - 11720.md",
     "📚 Lectures/Math/L - MIT_18.01_14.md",
     "📚 Lectures/Math/L - MIT_18.01_13.md",
     "📝 Problems/Coding/P - 10809.md",
@@ -433,7 +495,6 @@
     "📚 Lectures/Math/L - MIT_18.01_4.md",
     "📚 Lectures/Math/L - MIT_18.01_5.md",
     "📅 Daily/D - 2026-01-27.md",
-    "📝 Problems/Coding/P - 11720.md",
     "💡 Notes/Concepts/C - Modern C++ Day 1.md",
     "📝 Problems/Baekjoon/P - Baekjoon Array part.md",
     "💡 Notes/Concepts/C - Modern C++ Array.md",
@@ -445,12 +506,9 @@
     "IsaacLab_Flamingo_Guide.md",
     "📚 Lectures/26-1/기타/L - Introduction.md",
     "📖 Books/R - preBipedal/Flamingo_RL.md",
-    "📚 Lectures/26-1/David_Silver's RL/L - David_Silver's RL 1주차.md",
-    "📖 Books/R - Proximal Policy Optimization Algorithms.md",
     "IsaacLab_Flamingo_Master_Guide.md.download",
     "IsaacLab_Flamingo_Guide.md.download",
     "📚 Lectures/26-1/David_Silver's RL",
-    "1707.06347v2.pdf.md",
     "📚 Lectures/26-1/기타",
     "📚 Lectures/26-1",
     "📖 Books/R - preBipedal",
