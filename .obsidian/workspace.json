@@ -397,7 +397,7 @@
             }
           }
         ],
-        "currentTab": 17
+        "currentTab": 7
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -478,7 +478,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "21c4c0e6b04741fa",
+  "active": "12671bd9f4a039ae",
   "lastOpenFiles": [
     "📚 Lectures/26-1/David Silver's RL",
     "📝 Problems/Coding/P - 2675.md",
