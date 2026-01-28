@@ -431,7 +431,7 @@
             }
           }
         ],
-        "currentTab": 18
+        "currentTab": 7
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -512,7 +512,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "4a5bfd32f08d531e",
+  "active": "12671bd9f4a039ae",
   "lastOpenFiles": [
     "📚 Lectures/26-1/David Silver's RL/L - David Silver's RL 2주차.md",
     "📚 Lectures/26-1/David Silver's RL",
