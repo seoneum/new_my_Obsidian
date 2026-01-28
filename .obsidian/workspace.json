@@ -128,7 +128,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -424,6 +424,16 @@
             "id": "09d1b69490b62d4f",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "40dc718cc535ab55",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -431,7 +441,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 19
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -512,8 +522,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "12671bd9f4a039ae",
+  "active": "8f484cbf198fd486",
   "lastOpenFiles": [
+    "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
     "📚 Lectures/26-1/David Silver's RL/L - David Silver's RL 2주차.md",
     "📚 Lectures/26-1/David Silver's RL",
     "📝 Problems/Coding/P - 2675.md",
@@ -535,7 +546,6 @@
     "🎯 Projects/PRJ - Bipedal.md",
     "IsaacLab_Flamingo_Master_Guide.md",
     "🏠 Dashboard.md",
-    "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
     "📖 Books/Philosophy/R - 사랑의 단상.md",
     "IsaacLab_Flamingo_Guide.md",
     "📚 Lectures/26-1/기타/L - Introduction.md",

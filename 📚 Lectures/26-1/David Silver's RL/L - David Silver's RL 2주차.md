@@ -85,9 +85,36 @@ $$
 		- 지연 보상보다 단기 보상을 선호하는 이유
 			- 미래 불확실성 :
 			  환경에 대한 완벽한 모델을 가지고 있지 않음
-			- 수학적 편의성 :
+			- **수학적 편의성** :
 			  가르치기 쉽고 이해하기 쉬움.
 			  MP에 cycle이 있고 계속 보상을 받는 경우 평가가 무한대가 되는 무한리턴을 방지.
+			- 금융 환경
+			 이자율을 할인 함수를 생각할 수 있음.
+			 $\gamma$를 이자율의 역수로 생각
+			- 인지 모델
+			  동물/인간은 즉각적 보상 선호.
+			  생물학적 의사 결정 작동 방식에 대한 인지 모델.
+		- 모든 것에 $\gamma$를 적용하진 않음. Undiscounted MRPs존재.
+			- 편의를 위해 인위적으로 넣은 것임
+			- 유한한 리턴 내에서는 $\gamma$필요 없음
+			- 또 다른 공식화는 **Average Reward Formulation**
+	4) Value Function & Bellman Equation
+		- 가치 함수
+			- Expectation -> Value Function
+			- Value Function ($V(s)$) : 어떤 상태 S부터 얻게 될 장기 가치(Long-term Value)
+			$$
+V(s) = \mathbb{E}[G_t | S_t = s]
+$$
+			- MRP에서 가치함수는 얼마나 많은 보상을 얻을지 측정한다.
+		- Bellman Equation
+			- Value Function이 따르는 Recursive Decomposition를 나타냅니다.
+			- $$
+
+V(s) = \mathbb{E}[R_{t+1} + \gamma V(S_{t+1}) | S_t = s]
+
+$$
+            - **$R_{t+1}$:** 즉각적인 보상.
+			- **$\gamma V(S_{t+1})$:** 다음 상태($S_{t+1}$)의 가치에 할인 인자($\gamma$)를 곱한 값.
 ## 📝 Notes
 
 ### 핵심 1
