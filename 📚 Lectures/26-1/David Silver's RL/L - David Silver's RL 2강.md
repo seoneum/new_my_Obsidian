@@ -10,7 +10,7 @@ tags:
   - lecture
   - course/David Silver's RL
 ---
-# David Silver's RL 2주차
+# David Silver's RL 2강
 
 > **David Silver's RL** | 2주차
 
@@ -42,6 +42,7 @@ tags:
 		- 상태 전이 확률 : State Transition Probability
 		$$P_{ss'} = P[S_{t+1} = s'|S_{t} = s]$$
 		- S에서 S'로 전이할 확률임.
+		- [[L - PRB_03_조건부 확률과 독립 (Conditional Probability)]]]
 	5) Transition Probability Matrix
 		- 전이 확률의 아이디어를 갖게 되면 완전한 행렬로 구성할 수 있다.
 		- 상태 1-> 상태 2-> ... 상태 N으로 끝날 확률을 알려줌
@@ -52,19 +53,21 @@ tags:
 		- 반복적으로 sampling하는 Random Process임.
 		- Markov Properties를 가진 무작위 상태의 순서 $S_{1}, S_{2}, S_{3}\dots$
 		- 필요 요소
-			- 상태 공간(S) : 우리가 있을 수 있는 상태들의 집합
+			- 상태 공간(S) : 우리가 있을 수 있는 상태들의 집합. 유한함.
 			- 전이 확률(P) : 한 상태에서 다음 상태로 어떻게 전이하는지의 확률
 		- 이 것으로 전체 system의 Dynamics를 정의할 수 있음.
 		- Action, Reward없이 환경, 규칙, 진화와 같은 역학은 S와 P matrix로 정의 가능
 	2) Markov Chain
 		- 하나의 S에서 S', S''로 넘어갈 확률을 선으로 이어서 각 확률을 적음.
+		- ![[Pasted image 20260128200914.png|400]]
 3. Markov Reward Process
 	- 보상을 추가할 것임.
 	1) MRP의 정의
 		- 일종의 가치판단이 추가된 MP.
 		- MP(S, P)에 두 가지를 추가.
 		1) 보상함수 $R$
-			- 어떤 상태$S$에서 시작할 때 그 상태에서 얻는 **즉각적인 보상**을 알려줌
+			$R_{s} = E[R_{t+1} | S_{t}=s]$ 
+			- [[L - PRB_06_연속확률변수 (Continuous Random Variables)]]
 		2) 할인 인자 $\gamma$
 			- 미래 보상에 대한 현재 가치 결정
 		e.g.) 각 상태에 보상 함수 올림. Markov Chain을 따라 갔을 때 최대 누적 보상을 쟁취
@@ -115,6 +118,7 @@ V(s) = \mathbb{E}[R_{t+1} + \gamma V(S_{t+1}) | S_t = s]
 $$
             - **$R_{t+1}$:** 즉각적인 보상.
 			- **$\gamma V(S_{t+1})$:** 다음 상태($S_{t+1}$)의 가치에 할인 인자($\gamma$)를 곱한 값.
+			- ![[Pasted image 20260128200949.png]]
 ## 📝 Notes
 
 ### 핵심 1
