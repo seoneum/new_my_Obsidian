@@ -102,9 +102,33 @@
               "icon": "lucide-file",
               "title": "L - David Silver's RL 2주차"
             }
+          },
+          {
+            "id": "4a5bfd32f08d531e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📖 Books/Philosophy/B - 사랑의 단상 (재독).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "B - 사랑의 단상 (재독)"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -390,6 +414,16 @@
             "id": "21c4c0e6b04741fa",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "09d1b69490b62d4f",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -397,7 +431,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 18
       },
       {
         "id": "fd0bf750fffcaa0b",
@@ -478,11 +512,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "12671bd9f4a039ae",
+  "active": "4a5bfd32f08d531e",
   "lastOpenFiles": [
+    "📚 Lectures/26-1/David Silver's RL/L - David Silver's RL 2주차.md",
     "📚 Lectures/26-1/David Silver's RL",
     "📝 Problems/Coding/P - 2675.md",
-    "📚 Lectures/26-1/David Silver's RL/L - David Silver's RL 2주차.md",
     "📝 Problems/Coding/P - 11720.md",
     "📚 Lectures/Math/L - MIT_18.01_14.md",
     "📚 Lectures/Math/L - MIT_18.01_13.md",
@@ -515,7 +549,6 @@
     "📝 Problems/Coding",
     "📚 Lectures/2026-1/공업수학 1",
     "📚 Lectures/2026-1/일반수학 2",
-    "📚 Lectures/2026-1/전자기학 1",
     "⚙️ Meta/attachments/Pasted image 20251221181950.png",
     "⚙️ Meta/attachments/Pasted image 20251221180732.png",
     "⚙️ Meta/attachments/Pasted image 20251221180648.png",
